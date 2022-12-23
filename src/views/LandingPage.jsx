@@ -1,5 +1,3 @@
-// Asi los pushea
-
 import { Box } from "@mui/system";
 import React from "react";
 import Brands from "../components/Brands";
