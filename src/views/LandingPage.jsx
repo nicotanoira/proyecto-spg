@@ -1,9 +1,24 @@
 // Asi los pushea
 
-import React from 'react'
+import { Box } from "@mui/system";
+import React from "react";
+import Brands from "../components/Brands";
+import Values from "../components/Values";
 
 export default function LandingPage() {
-  return (
-    <div>LandingPage</div>
-  )
+	const styles = {
+		container: {
+			// height: "15rem",
+			// display: "flex",
+			// alignItems: "center",
+			// justifyContent: "center",
+			// flexDirection: "column",
+		},
+	};
+	return (
+		<Box sx={styles.container}>
+			<Brands />
+			<Values />
+		</Box>
+	);
 }
