@@ -1,9 +1,10 @@
-// Asi los pushea
-
 import React from 'react'
+import Footer from '../components/Footer'
 
 export default function LandingPage() {
-  return (
-    <div>LandingPage</div>
-  )
+    return (
+        <>
+            <Footer />
+        </>
+    )
 }
