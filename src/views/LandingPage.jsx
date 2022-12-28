@@ -1,7 +1,9 @@
+
 import { Box } from "@mui/system";
 import React from "react";
 import Brands from "../components/Brands";
 import Values from "../components/Values";
+
 
 export default function LandingPage() {
 	const styles = {
