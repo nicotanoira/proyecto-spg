@@ -121,7 +121,7 @@ export default function Footer() {
                     <Box component="img" src={ICON_LINKEDIN} sx={styles.icons} />
                   </a>
 
-                  <a href="https://www.instagram.com/spg_digital/" >
+                  <a href="https://www.facebook.com/profile.php?id=100088834549930/" >
                     <Box component="img" src={ICON_FACEBOOK} sx={styles.icons} />
                   </a>
                 </Box>
