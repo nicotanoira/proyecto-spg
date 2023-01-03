@@ -18,7 +18,7 @@ export default function LandingPage() {
 	return (
 		<Box sx={styles.container}>
 			<Brands />
-			<Values />
+			<Values /> 
 		</Box>
 	);
 }
