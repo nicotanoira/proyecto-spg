@@ -16,7 +16,7 @@ function SPG() {
 				<Route exact path="/3D-configurators" element={<Services3D />} />
 				<Route exact path="/2D-configurators" element={<Services2D />} />
 			</Routes>
-			{/* <Footer /> */}
+			<Footer />
 		</BrowserRouter>
 	);
 }
