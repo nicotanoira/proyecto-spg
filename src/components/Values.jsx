@@ -6,8 +6,20 @@ import Puzzle from "../assets/Puzzle.svg";
 
 const Values = () => {
 	const styles = {
-		container: {},
-		// text: { marginTop: "4rem", marginBottom: "-4rem" },
+		container: {
+			container: {
+				backgroundColor: "#df1212",
+				display: "flex",
+				alignItems: "center",
+				justifyContent: "center",
+				flexDirection: "column",
+			},
+		},
+		text: {
+			textAlign: "center",
+			marginTop: "4rem",
+			marginBottom: "5rem",
+		},
 		laptop: {
 			display: "flex",
 			alignItems: "center",
@@ -16,9 +28,7 @@ const Values = () => {
 			marginRight: "20rem",
 			gap: "10rem",
 		},
-		text: {
-			marginTop: "5rem",
-		},
+
 		magnet: {
 			display: "flex",
 			alignItems: "center",
@@ -93,18 +103,6 @@ const Values = () => {
 					</Box>
 				</Box>
 			</Box>
-			{/* //logos */}
-			{/* <Box sx={styles.logos}>
-				<Box>
-					<Box component="img" src={Laptop} width={295} />
-				</Box>
-				<Box>
-					<Box component="img" src={Magnet} width={295} />
-				</Box>{" "}
-				<Box>
-					<Box component="img" src={Puzzle} width={295} />
-				</Box>
-			</Box> */}
 		</Box>
 	);
 };
