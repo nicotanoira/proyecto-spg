@@ -1,10 +1,9 @@
-
 import { Box } from "@mui/system";
 import React from "react";
 import About from "../components/About";
 import Brands from "../components/Brands";
+import ForYou from "../components/ForYou";
 import Values from "../components/Values";
-
 
 export default function LandingPage() {
 	const styles = {
@@ -21,6 +20,7 @@ export default function LandingPage() {
 			<About />
 			<Brands />
 			<Values />
+			<ForYou />
 		</Box>
 	);
 }
