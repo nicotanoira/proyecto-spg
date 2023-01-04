@@ -16,6 +16,8 @@ const ForYou = () => {
 			alignItems: "center",
 			justifyContent: "center",
 			flexDirection: "column",
+			background: "linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #F3F3EF 100%)",
+			paddingBottom: "2rem"
 		},
 		text: { textAlign: "center", marginTop: "4rem" },
 

@@ -1,5 +1,6 @@
 import { Box } from "@mui/system";
 import React from "react";
+import About from "../components/About";
 import Brands from "../components/Brands";
 import Values from "../components/Values";
 import Forms from "../components/Forms";
@@ -17,10 +18,11 @@ export default function LandingPage() {
 	};
 	return (
 		<Box sx={styles.container}>
+			<About />
 			<Brands />
 			<Values />
-			<Forms />
 			<ForYou />
+			<Forms />
 		</Box>
 	);
 }
