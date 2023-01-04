@@ -20,6 +20,7 @@ const drawerWidth = 240;
 const navItems = [
   { name: "3D Configurators", source: "/3D-configurators" },
   { name: "2D Configurators", source: "/2D-configurators" },
+  { name: "Renderings", source: "/renderings" }
   /* { name: "Contact" }, */
 ];
 
@@ -49,11 +50,12 @@ function DrawerAppBar(props) {
             </ListItem>
           </Link>
         ))}
-        <ListItem key={"Contact"} sx={{ color: "black" }} disablePadding>
+        {/* CONTACT */}
+        {/* <ListItem key={"Contact"} sx={{ color: "black" }} disablePadding>
           <ListItemButton sx={{ textAlign: "center" }}>
             <ListItemText primary={"Contact"} />
           </ListItemButton>
-        </ListItem>
+        </ListItem> */}
       </List>
     </Box>
   );
@@ -103,9 +105,9 @@ function DrawerAppBar(props) {
                 </Button>
               </Link>
             ))}
-            <Button key={"Contact"} sx={{ color: "black" }}>
+            {/* <Button key={"Contact"} sx={{ color: "black" }}>
               {"Contact"}
-            </Button>
+            </Button> */}
           </Box>
         </Toolbar>
       </AppBar>

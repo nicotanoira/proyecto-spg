@@ -2,6 +2,8 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import BostonWhaler from "../assets/boston-whaler.svg";
 import SeaRay from "../assets/sea-ray.svg";
+import { Link } from "react-router-dom";
+
 
 const Brands = () => {
 	const styles = {
@@ -35,10 +37,14 @@ const Brands = () => {
 			{/* //logos */}
 			<Box sx={styles.logos}>
 				<Box>
-					<Box component="img" src={SeaRay} width={295} />
+					<a target="_blank" href="https://www.searay.lat/lat/en.html" >
+						<Box component="img" src={SeaRay} width={295} />
+					</a>
 				</Box>
 				<Box>
-					<Box component="img" src={BostonWhaler} width={295} />
+					<a target="_blank" href="https://www.bostonwhaler.com/" >
+						<Box component="img" src={BostonWhaler} width={295} />
+					</a>
 				</Box>
 			</Box>
 		</Box>

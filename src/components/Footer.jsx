@@ -17,17 +17,17 @@ import { Facebook } from '@mui/icons-material';
 
 const styles = {
   container: {
-    marginTop: '1em',
+    marginTop: "1em",
     padding: 0,
-    backgroundColor: '#aabdbd',
-    borderRadius: '6px',
+    backgroundColor: "#aabdbd",
+    borderRadius: "6px"
   },
   text: {
-    color: 'white',
+    color: "white"
   },
   textTitle: {
-    color: 'white',
-    weight: '1200',
+    color: "white",
+    weight: "1200"
   },
   rightColumn: {
     display: 'flex',
@@ -87,56 +87,43 @@ export default function Footer() {
             <></>
           </Grid>
 
-          {/* Right column */}
-          <Grid item xs={4} sx={styles.rightColumn}>
-            <Box sx={{ textAlign: 'start', display: 'flex' }}>
-              <Box component='img' src={ICON_PHONE} sx={styles.iconsContact} />
-              <Box>
-                <Typography mt={2} sx={styles.textTitle}>
-                  Phone
-                </Typography>
-                <Typography sx={styles.text}>+01 (305) 790 - 2129</Typography>
-              </Box>
-            </Box>
-            <Box sx={{ textAlign: 'start', display: 'flex' }}>
-              <Box component='img' src={ICON_EMAIL} sx={styles.iconsContact} />
-              <Box>
-                <Typography sx={styles.textTitle} mt={2}>
-                  Email
-                </Typography>
-                <Typography sx={styles.text}>
-                  Sebastian@spgdigitalcorp.com
-                </Typography>
-              </Box>
-            </Box>
-            <Box sx={{ textAlign: 'start', display: 'flex' }}>
-              <Box
-                component='img'
-                src={ICON_LOCATION}
-                sx={styles.iconsContact}
-              />
-              <Box>
-                <Typography sx={styles.textTitle} mt={2}>
-                  Location
-                </Typography>
-                <Typography sx={styles.text}>
-                  550 ocean 2c drive key Biscayne 33149
-                </Typography>
-              </Box>
-            </Box>
-            <Box sx={{ textAlign: 'start', marginBottom: '0.25rem' }}>
-              <a href='https://www.instagram.com/spg_digital/'>
-                <Box component='img' src={ICON_INSTAGRAM} sx={styles.icons} />
-              </a>
+            {/* Right column */}
+            <Grid item xs={4} sx={styles.rightColumn}>
+                <Box sx={{ textAlign: "start", display: "flex" }}>
+                  <Box component="img" src={ICON_PHONE} sx={styles.iconsContact} />
+                  <Box>
+                    <Typography mt={2} sx={styles.textTitle}>Phone</Typography>
+                    <Typography sx={styles.text}>+01 (305) 790 - 2129</Typography>
+                  </Box>
+                </Box>
+                <Box sx={{ textAlign: "start", display: "flex" }}>
+                  <Box component="img" src={ICON_EMAIL} sx={styles.iconsContact} />
+                  <Box>
+                    <Typography sx={styles.textTitle} mt={2}>Email</Typography>
+                    <Typography sx={styles.text}>Sebastian@spgdigitalcorp.com</Typography>
+                  </Box>
+                </Box>
+                <Box sx={{ textAlign: "start", display: "flex" }}>
+                  <Box component="img" src={ICON_LOCATION} sx={styles.iconsContact} />
+                  <Box>
+                    <Typography sx={styles.textTitle} mt={2}>Location</Typography>
+                    <Typography sx={styles.text}>550 ocean 2c drive key Biscayne 33149</Typography>
+                  </Box>
+                </Box>
+                <Box sx={{ textAlign: "start", marginBottom: "0.25rem" }}>
+                  <a target="_blank" href="https://www.instagram.com/spg_digital/" >
+                    <Box component="img" src={ICON_INSTAGRAM} sx={styles.icons} />
+                  </a>
 
-              <a href='https://www.linkedin.com/company/spg-digital/about//'>
-                <Box component='img' src={ICON_LINKEDIN} sx={styles.icons} />
-              </a>
+                  <a target="_blank" href="https://www.linkedin.com/company/spg-digital/about//" >
+                    <Box component="img" src={ICON_LINKEDIN} sx={styles.icons} />
+                  </a>
 
-              <a href='https://www.instagram.com/spg_digital/'>
-                <Box component='img' src={ICON_FACEBOOK} sx={styles.icons} />
-              </a>
-            </Box>
+                  <a target="_blank" href="https://www.instagram.com/spg_digital/" >
+                    <Box component="img" src={ICON_FACEBOOK} sx={styles.icons} />
+                  </a>
+                </Box>
+            </Grid>
           </Grid>
         </Grid>
       </Box>
