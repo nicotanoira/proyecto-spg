@@ -58,6 +58,7 @@ const styles = {
   },
   logoFooter: {
     width: 300,
+    // margin: "0 auto",
     // height: 320,
     paddingLeft: "2em",
   }
@@ -73,11 +74,23 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function Footer() {
   return (
+<<<<<<< Updated upstream
     <Container maxWidth="100vw" sx={styles.container}>
         <Box
           sx={{ flexGrow: 1, height: "320", }}
         >
           <Grid container spacing={3}>
+=======
+    <Container maxWidth='100vw' sx={styles.container}>
+      <Box sx={{ flexGrow: 1, height: '320' }}>
+        <Grid container spacing={3}>
+          
+          {/* Left column */}
+          <Grid item xs={4} sx={{ padding: '0', display: "flex", justifyContent: "center" }}>
+            <Box component='img' src={LogoBlanco} sx={styles.logoFooter} />
+            {/* <Typography sx={styles.text}>SPG DIGITAL CORP</Typography> */}
+          </Grid>
+>>>>>>> Stashed changes
 
             {/* Left column */}
             <Grid item xs={4} sx={{ padding: "0"}} >
@@ -90,45 +103,50 @@ export default function Footer() {
               <></>
             </Grid>
 
-            {/* Right column */}
-            <Grid item xs={4} sx={styles.rightColumn}>
-                <Box sx={{ textAlign: "start", display: "flex" }}>
-                  <Box component="img" src={ICON_PHONE} sx={styles.iconsContact} />
-                  <Box>
-                    <Typography mt={2} sx={styles.textTitle}>Phone</Typography>
-                    <Typography sx={styles.text}>+01 (305) 790 - 2129</Typography>
-                  </Box>
+          {/* Right column */}
+          <Grid item xs={4} sx={styles.rightColumn}>
+              <Box sx={{ textAlign: "start", display: "flex" }}>
+                <Box component="img" src={ICON_PHONE} sx={styles.iconsContact} />
+                <Box>
+                  <Typography mt={2} sx={styles.textTitle}>Phone</Typography>
+                  <Typography sx={styles.text}>+01 (305) 790 - 2129</Typography>
                 </Box>
-                <Box sx={{ textAlign: "start", display: "flex" }}>
-                  <Box component="img" src={ICON_EMAIL} sx={styles.iconsContact} />
-                  <Box>
-                    <Typography sx={styles.textTitle} mt={2}>Email</Typography>
-                    <Typography sx={styles.text}>Sebastian@spgdigitalcorp.com</Typography>
-                  </Box>
+              </Box>
+              <Box sx={{ textAlign: "start", display: "flex" }}>
+                <Box component="img" src={ICON_EMAIL} sx={styles.iconsContact} />
+                <Box>
+                  <Typography sx={styles.textTitle} mt={2}>Email</Typography>
+                  <Typography sx={styles.text}>Sebastian@spgdigitalcorp.com</Typography>
                 </Box>
-                <Box sx={{ textAlign: "start", display: "flex" }}>
-                  <Box component="img" src={ICON_LOCATION} sx={styles.iconsContact} />
-                  <Box>
-                    <Typography sx={styles.textTitle} mt={2}>Location</Typography>
-                    <Typography sx={styles.text}>550 ocean 2c drive key Biscayne 33149</Typography>
-                  </Box>
+              </Box>
+              <Box sx={{ textAlign: "start", display: "flex" }}>
+                <Box component="img" src={ICON_LOCATION} sx={styles.iconsContact} />
+                <Box>
+                  <Typography sx={styles.textTitle} mt={2}>Location</Typography>
+                  <Typography sx={styles.text}>550 ocean 2c drive key Biscayne 33149</Typography>
                 </Box>
-                <Box sx={{ textAlign: "start", marginBottom: "0.25rem" }}>
-                  <a target="_blank" href="https://www.instagram.com/spg_digital/" >
-                    <Box component="img" src={ICON_INSTAGRAM} sx={styles.icons} />
-                  </a>
+              </Box>
+              <Box sx={{ textAlign: "start", marginBottom: "0.25rem" }}>
+                <a target="_blank" href="https://www.instagram.com/spg_digital/" >
+                  <Box component="img" src={ICON_INSTAGRAM} sx={styles.icons} />
+                </a>
 
-                  <a target="_blank" href="https://www.linkedin.com/company/spg-digital/about//" >
-                    <Box component="img" src={ICON_LINKEDIN} sx={styles.icons} />
-                  </a>
+                <a target="_blank" href="https://www.linkedin.com/company/spg-digital/about//" >
+                  <Box component="img" src={ICON_LINKEDIN} sx={styles.icons} />
+                </a>
 
-                  <a target="_blank" href="https://www.instagram.com/spg_digital/" >
-                    <Box component="img" src={ICON_FACEBOOK} sx={styles.icons} />
-                  </a>
-                </Box>
-            </Grid>
+                <a target="_blank" href="https://www.instagram.com/spg_digital/" >
+                  <Box component="img" src={ICON_FACEBOOK} sx={styles.icons} />
+                </a>
+              </Box>
           </Grid>
+<<<<<<< Updated upstream
         </Box>
+=======
+          
+        </Grid>
+      </Box>
+>>>>>>> Stashed changes
     </Container>
   )
 }

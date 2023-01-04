@@ -4,6 +4,8 @@ import About from "../components/About";
 import Brands from "../components/Brands";
 import ForYou from "../components/ForYou";
 import Values from "../components/Values";
+import Forms from '../components/Forms';
+import Banner from '../components/Banner';
 
 export default function LandingPage() {
 	const styles = {
@@ -17,10 +19,12 @@ export default function LandingPage() {
 	};
 	return (
 		<Box sx={styles.container}>
+			<Banner />
 			<About />
 			<Brands />
 			<Values />
 			<ForYou />
+			<Forms />
 		</Box>
 	);
 }
