@@ -1,10 +1,15 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import React from "react";
 
 import Member1 from "../assets/Member1.png";
 import Member2 from "../assets/Member2.png";
 import Member3 from "../assets/Member3.png";
 const ForYou = () => {
+	const theme = useTheme();
+	const down600px = useMediaQuery(theme.breakpoints.down("sm"));
+	const down900px = useMediaQuery(theme.breakpoints.down("md"));
+	const down1200px = useMediaQuery(theme.breakpoints.down("lg"));
+
 	const styles = {
 		container: {
 			display: "flex",
