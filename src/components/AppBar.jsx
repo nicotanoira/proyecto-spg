@@ -66,7 +66,7 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ backgroundColor: "#F3F2EE" }}>
+      <AppBar component="nav" sx={{ backgroundColor: "#F3F2EE", padding: "0" }}>
         <Toolbar>
           {/* Menu Hamburguesa */}
           <IconButton
@@ -74,7 +74,13 @@ function DrawerAppBar(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none", color: "#73807F" } }}
+            sx={{ 
+              mr: 2,
+              display: { 
+                sm: "none",
+                color: "#73807F"
+              }
+            }}
           >
             <MenuIcon />
           </IconButton>
@@ -111,7 +117,9 @@ function DrawerAppBar(props) {
           </Box>
         </Toolbar>
       </AppBar>
-      <Box component="nav">
+      <Box component="nav" sx={{
+        
+      }}>
         <Drawer
           container={container}
           variant="temporary"
@@ -131,7 +139,13 @@ function DrawerAppBar(props) {
           {drawer}
         </Drawer>
       </Box>
-      <Box component="main" sx={{ p: 3 }}>
+      <Box component="main" sx={{ 
+        p: 3,
+        '@media (min-width: 600px)': {
+          padding: 0,
+        },
+
+      }}>
         <Toolbar />
       </Box>
     </Box>
