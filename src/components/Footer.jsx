@@ -114,15 +114,15 @@ export default function Footer() {
                   </Box>
                 </Box>
                 <Box sx={{ textAlign: "start", marginBottom: "0.25rem" }}>
-                  <a href="https://www.instagram.com/spg_digital/" >
+                  <a target="_blank" href="https://www.instagram.com/spg_digital/" >
                     <Box component="img" src={ICON_INSTAGRAM} sx={styles.icons} />
                   </a>
 
-                  <a href="https://www.linkedin.com/company/spg-digital/about//" >
+                  <a target="_blank" href="https://www.linkedin.com/company/spg-digital/about//" >
                     <Box component="img" src={ICON_LINKEDIN} sx={styles.icons} />
                   </a>
 
-                  <a href="https://www.instagram.com/spg_digital/" >
+                  <a target="_blank" href="https://www.instagram.com/spg_digital/" >
                     <Box component="img" src={ICON_FACEBOOK} sx={styles.icons} />
                   </a>
                 </Box>
