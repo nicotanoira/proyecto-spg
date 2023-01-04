@@ -4,6 +4,7 @@ import About from "../components/About";
 import Brands from "../components/Brands";
 import ForYou from "../components/ForYou";
 import Values from "../components/Values";
+import Forms from '../components/Forms';
 
 export default function LandingPage() {
 	const styles = {
@@ -21,6 +22,7 @@ export default function LandingPage() {
 			<Brands />
 			<Values />
 			<ForYou />
+      <Forms />
 		</Box>
 	);
 }
