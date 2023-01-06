@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 
 const Brands = () => {
 	const theme = useTheme();
-	const down600px = useMediaQuery(theme.breakpoints.down("sm"));
+	
+	const down900px = useMediaQuery(theme.breakpoints.down("md"));
 	const styles = {
 		container: {
 			backgroundColor: "#F9F8F4",
@@ -19,15 +20,18 @@ const Brands = () => {
 		},
 		text: {
 			paddingTop: "4rem",
-			paddingBottom: !down600px && "-4rem",
+			textAlign:"center",
+			paddingBottom: !down900px && "-4rem",
+					
+		
 		},
 		logos: {
 			display: "flex",
 			alignItems: "center",
 			justifyContent: "center",
-
-			gap: !down600px && "4rem",
-			marginBottom: down600px ? "-2rem" : "-6rem",
+		
+			gap: !down900px && "4rem",
+			marginBottom: down900px ? "-2rem" : "-6rem",
 		},
 	};
 	return (
@@ -44,12 +48,12 @@ const Brands = () => {
 			<Box sx={styles.logos}>
 				<Box>
 					<a target="_blank" href="https://www.searay.lat/lat/en.html">
-						<Box component="img" src={SeaRay} width={295} />
+						<Box component="img" src={SeaRay} width={down900px ? 190 : 295} />
 					</a>
 				</Box>
 				<Box>
 					<a target="_blank" href="https://www.bostonwhaler.com/">
-						<Box component="img" src={BostonWhaler} width={295} />
+						<Box component="img" src={BostonWhaler} width={down900px ? 190 : 295} />
 					</a>
 				</Box>
 			</Box>
