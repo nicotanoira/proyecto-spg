@@ -70,7 +70,7 @@ const styles = {
   },
 };
 
-export default function Forms() {
+export default function Contact() {
   return (
     <Container sx={styles.container} maxWidth='100vw'>
       {/* TITULO */}

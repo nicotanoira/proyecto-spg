@@ -50,13 +50,11 @@ export default function Banner() {
                 </Box>
 
                 <Box sx={styles.middleTextBox} >
-                    <Typography variant="h2" sx={{ height: "fit-content", fontSize: "70px"}}>TAILORING</Typography>
-                    <Typography variant="h2" sx={{ height: "fit-content", fontSize: "70px"}} gutterBottom>SOLUTIONS</Typography>
+                    <Typography variant="h2" sx={{ height: "fit-content", fontSize: "70px"}} gutterBottom>TAILORING<br/>SOLUTIONS</Typography>
                 </Box>
 
                 <Box sx={styles.lowerTextBox} >
-                    <Typography variant="body1" sx={{ fontSize: "22px" }} >We have the power to help you strengthen</Typography>
-                    <Typography variant="body1" sx={{ fontSize: "22px" }} >your customers' shopping experience</Typography>
+                    <Typography variant="body1" sx={{ fontSize: "22px" }} >We have the power to help you strengthen<br/>your customers' shopping experience</Typography>
                 </Box>
 
             </Box>

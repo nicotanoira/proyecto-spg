@@ -35,6 +35,7 @@ export default function Footer() {
 			padding: 0,
 			backgroundColor: down900px ? "#273339" : "#aabdbd",
 			borderRadius: "6px",
+			minWidth: "100vw",
 		},
 		leftColumn: {
 			display: down900px && "flex",
@@ -86,8 +87,8 @@ export default function Footer() {
 	};
 
 	return (
-		<Container maxWidth="100vw" sx={styles.container}>
-			<Box sx={{ flexGrow: 1, height: "320" }}>
+		<Container sx={styles.container}>
+			<Box sx={{ flexGrow: 1, height: "320", width: down900px && " 70vw" }}>
 				<Grid sx={styles.leftColumn} container spacing={3}>
 					{/* Left column */}
 					<Grid item xs={4} sx={{ padding: "0" }}>
