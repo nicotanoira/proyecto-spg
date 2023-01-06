@@ -8,18 +8,18 @@ import ThirdImage from '../assets/ILLUSTRACION_SPG-03.svg'
 
 
 export default function About() {
-  
+
   const styles = {
     container: {
-      width: "100vw",
-      padding: 0, 
+      margin: "6.5rem 0",
+      padding: 0,
       backgroundColor: "white",
     },
     containerBoxed: {
       display: "flex",
       width: "fit-content",
       margin: "0 auto",
-      justifyContent: "center", 
+      justifyContent: "center",
     },
     containerLeftColumn: {
       display: "flex",
@@ -66,13 +66,13 @@ export default function About() {
       height: 230,
       backgroundColor: "#F5F5F5",
       borderRadius: "18rem",
-        '&:hover': {
-          transition: "200ms",
-          boxShadow: "0px 0px 12px 5px rgba(39, 51, 57, 0.14)",
-        },
+      '&:hover': {
+        transition: "all .35s ease-out",
+        boxShadow: "0px 0px 12px 5px rgba(39, 51, 57, 0.14)",
+      },
     }
   }
-  
+
   return (
     <Container maxWidth="100vw" sx={styles.container}>
 
