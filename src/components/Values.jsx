@@ -1,31 +1,58 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import Laptop from "../assets/Laptop.svg";
 import Magnet from "../assets/Magnet.svg";
 import Puzzle from "../assets/Puzzle.svg";
 
 const Values = () => {
+	const theme = useTheme();
+	const down600px = useMediaQuery(theme.breakpoints.down("sm"));
+	const down900px = useMediaQuery(theme.breakpoints.down("md"));
+	const down1200px = useMediaQuery(theme.breakpoints.down("lg"));
 	const styles = {
-		container: {},
-		// text: { marginTop: "4rem", marginBottom: "-4rem" },
+		container: {
+			// backgroundColor: "red",
+			display: "flex",
+			alignItems: "center",
+			justifyContent: "center",
+			flexDirection: "column",
+		},
+		text: {
+			textAlign: "center",
+			marginTop: "4rem",
+		},
 		laptop: {
 			display: "flex",
 			alignItems: "center",
 			justifyContent: "center",
 			textAlign: "start",
-			marginRight: "20rem",
-			gap: "10rem",
+			transform: !down1200px && "translateX(-12rem)",
+			// marginLeft: !down900px && "30rem",
+
+			gap: down1200px ? "2rem" : "10rem",
+			textSize: "1.2rem",
 		},
-		text: {
-			marginTop: "5rem",
-		},
+
 		magnet: {
 			display: "flex",
 			alignItems: "center",
 			justifyContent: "center",
-			marginLeft: "30rem",
-			gap: "10rem",
+			marginLeft: !down1200px && "30rem",
+			gap: down1200px ? "2rem" : "10rem",
+			textSize: "1.2rem",
 			textAlign: "end",
+		},
+		puzzle: {
+			display: "flex",
+			alignItems: "center",
+			justifyContent: "center",
+			textAlign: "start",
+			transform: !down1200px && "translateX(-12rem)",
+			marginLeft: !down1200px && "30rem",
+			marginRight: !down1200px && "20rem",
+			gap: down1200px ? "2rem" : "10rem",
+			textSize: "1.2rem",
+			paddingBottom: "4rem",
 		},
 	};
 	return (
@@ -40,7 +67,7 @@ const Values = () => {
 			</Box>
 			{/* LAPTOP */}
 			<Box sx={styles.laptop}>
-				<Box component="img" src={Laptop} width={295} />
+				<Box component="img" src={Laptop} width={down900px ? 200 : 295} />
 				<Box width={325}>
 					<Typography
 						variant="subtitle2"
@@ -49,7 +76,11 @@ const Values = () => {
 					>
 						EVERY DETAIL IS IMPORTANT
 					</Typography>
-					<Typography variant="body2" gutterBottom>
+					<Typography
+						variant="body2"
+						gutterBottom
+						// sx={{ fontSize: down900px && "12px" }}
+					>
 						Design, development and technology teams focused on creating state
 						of the art atelier experiences for your customers
 					</Typography>
@@ -71,12 +102,12 @@ const Values = () => {
 						your clients can experience them.
 					</Typography>
 				</Box>{" "}
-				<Box component="img" src={Magnet} width={295} sx={{}} />
+				<Box component="img" src={Magnet} width={down900px ? 200 : 295} />
 			</Box>
 			{/* PUZZLE */}
 			<Box>
-				<Box sx={styles.laptop}>
-					<Box component="img" src={Puzzle} width={295} />
+				<Box sx={styles.puzzle}>
+					<Box component="img" src={Puzzle} width={down900px ? 200 : 295} />
 					<Box width={300}>
 						<Typography
 							variant="subtitle2"
@@ -93,18 +124,6 @@ const Values = () => {
 					</Box>
 				</Box>
 			</Box>
-			{/* //logos */}
-			{/* <Box sx={styles.logos}>
-				<Box>
-					<Box component="img" src={Laptop} width={295} />
-				</Box>
-				<Box>
-					<Box component="img" src={Magnet} width={295} />
-				</Box>{" "}
-				<Box>
-					<Box component="img" src={Puzzle} width={295} />
-				</Box>
-			</Box> */}
 		</Box>
 	);
 };
