@@ -4,7 +4,7 @@ import About from "../components/About";
 import Brands from "../components/Brands";
 import Values from "../components/Values";
 import Banner from '../components/Banner';
-import Forms from "../components/Forms";
+import Contact from "../components/Contact";
 import ForYou from "../components/ForYou";
 
 export default function LandingPage() {
@@ -24,7 +24,7 @@ export default function LandingPage() {
 			<Brands />
 			<Values />
 			<ForYou />
-			<Forms />
+			<Contact />
 		</Box>
 	);
 }

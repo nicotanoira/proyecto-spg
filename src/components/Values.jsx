@@ -16,6 +16,7 @@ const Values = () => {
 			alignItems: "center",
 			justifyContent: "center",
 			flexDirection: "column",
+			gap: down1200px && "2rem"
 		},
 		text: {
 			textAlign: "center",
@@ -29,8 +30,8 @@ const Values = () => {
 			transform: !down1200px && "translateX(-12rem)",
 			// marginLeft: !down900px && "30rem",
 
-			gap: down1200px ? "2rem" : "10rem",
-			textSize: "1.2rem",
+			gap: down1200px ? ".8rem" : "10rem",
+			
 		},
 
 		magnet: {
@@ -38,7 +39,7 @@ const Values = () => {
 			alignItems: "center",
 			justifyContent: "center",
 			marginLeft: !down1200px && "30rem",
-			gap: down1200px ? "2rem" : "10rem",
+	gap: down1200px ? ".8rem" : "10rem",
 			textSize: "1.2rem",
 			textAlign: "end",
 		},
@@ -50,7 +51,7 @@ const Values = () => {
 			transform: !down1200px && "translateX(-12rem)",
 			marginLeft: !down1200px && "30rem",
 			marginRight: !down1200px && "20rem",
-			gap: down1200px ? "2rem" : "10rem",
+	gap: down1200px ? ".8rem" : "10rem",
 			textSize: "1.2rem",
 			paddingBottom: "4rem",
 		},
@@ -67,19 +68,19 @@ const Values = () => {
 			</Box>
 			{/* LAPTOP */}
 			<Box sx={styles.laptop}>
-				<Box component="img" src={Laptop} width={down900px ? 200 : 295} />
-				<Box width={325}>
+				<Box component="img" src={Laptop} width={down900px ? 170 : 295} />
+				<Box width={down900px ? 200 :325} sx={{padding:".2rem"}}>
 					<Typography
 						variant="subtitle2"
 						gutterBottom
-						sx={{ fontWeight: "bold" }}
+						sx={{ fontWeight: "bold",  fontSize: down900px && "10px"}}
 					>
 						EVERY DETAIL IS IMPORTANT
 					</Typography>
 					<Typography
 						variant="body2"
 						gutterBottom
-						// sx={{ fontSize: down900px && "12px" }}
+						sx={{ fontSize: down900px && "10px" }}
 					>
 						Design, development and technology teams focused on creating state
 						of the art atelier experiences for your customers
@@ -88,35 +89,35 @@ const Values = () => {
 			</Box>
 			{/* MAGNET */}
 			<Box sx={styles.magnet}>
-				<Box width={285}>
+				<Box width={down900px ? 200 :325} sx={{padding:".26rem"}}>
 					<Typography
 						variant="subtitle2"
 						gutterBottom
-						sx={{ fontWeight: "bold" }}
+						sx={{ fontWeight: "bold",  fontSize: down900px && "10.5px"}}
 					>
 						THE ACCURACY
 					</Typography>
-					<Typography variant="body2" gutterBottom>
+					<Typography variant="body2" gutterBottom 	sx={{ fontSize: down900px && "10px" }}>
 						We are here to provide you the best solutions to enhance your
 						customer's experience. You have great products, we will make sure
 						your clients can experience them.
 					</Typography>
 				</Box>{" "}
-				<Box component="img" src={Magnet} width={down900px ? 200 : 295} />
+				<Box component="img" src={Magnet} width={down900px ? 170 : 295} />
 			</Box>
 			{/* PUZZLE */}
 			<Box>
 				<Box sx={styles.puzzle}>
-					<Box component="img" src={Puzzle} width={down900px ? 200 : 295} />
-					<Box width={300}>
+					<Box component="img" src={Puzzle} width={down900px ? 140 : 295} />
+					<Box width={down900px ? 200 :325} sx={{padding:".4rem"}}>
 						<Typography
 							variant="subtitle2"
 							gutterBottom
-							sx={{ fontWeight: "bold" }}
+							sx={{ fontWeight: "bold",  fontSize: down900px && "10px", paddingRight:"1rem"}}
 						>
 							YOUR CLIENTS ARE OUR CLIENTS
 						</Typography>
-						<Typography variant="body2" gutterBottom>
+						<Typography variant="body2" gutterBottom 	sx={{ fontSize: down900px && "10px" }}>
 							Your customer's buying experience is your brand and the image you
 							sell them; we know that. We have the tools to make them inmerse
 							into your products and brand.
