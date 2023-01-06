@@ -3,7 +3,7 @@ import React from "react";
 import About from "../components/About";
 import Brands from "../components/Brands";
 import Values from "../components/Values";
-import Banner from '../components/Banner';
+import Banner from "../components/Banner";
 import Contact from "../components/Contact";
 import ForYou from "../components/ForYou";
 
@@ -20,11 +20,11 @@ export default function LandingPage() {
 	return (
 		<Box sx={styles.container}>
 			<Banner />
-			<About />
+			{/* <About /> */}
 			<Brands />
 			<Values />
-			<ForYou />
-			<Contact />
+			{/* <ForYou />
+			<Contact /> */}
 		</Box>
 	);
 }
