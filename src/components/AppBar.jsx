@@ -20,6 +20,7 @@ const drawerWidth = 240;
 const navItems = [
   { name: "3D Configurators", source: "/3D-configurators" },
   { name: "2D Configurators", source: "/2D-configurators" },
+  { name: "Renderings", source: "/renderings" }
   /* { name: "Contact" }, */
 ];
 
@@ -49,11 +50,12 @@ function DrawerAppBar(props) {
             </ListItem>
           </Link>
         ))}
-        <ListItem key={"Contact"} sx={{ color: "black" }} disablePadding>
+        {/* CONTACT */}
+        {/* <ListItem key={"Contact"} sx={{ color: "black" }} disablePadding>
           <ListItemButton sx={{ textAlign: "center" }}>
             <ListItemText primary={"Contact"} />
           </ListItemButton>
-        </ListItem>
+        </ListItem> */}
       </List>
     </Box>
   );
@@ -64,7 +66,7 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ backgroundColor: "#F3F2EE" }}>
+      <AppBar component="nav" sx={{ backgroundColor: "#F3F2EE", padding: "0" }}>
         <Toolbar>
           {/* Menu Hamburguesa */}
           <IconButton
@@ -72,7 +74,13 @@ function DrawerAppBar(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none", color: "#73807F" } }}
+            sx={{ 
+              mr: 2,
+              display: { 
+                sm: "none",
+                color: "#73807F"
+              }
+            }}
           >
             <MenuIcon />
           </IconButton>
@@ -103,13 +111,15 @@ function DrawerAppBar(props) {
                 </Button>
               </Link>
             ))}
-            <Button key={"Contact"} sx={{ color: "black" }}>
+            {/* <Button key={"Contact"} sx={{ color: "black" }}>
               {"Contact"}
-            </Button>
+            </Button> */}
           </Box>
         </Toolbar>
       </AppBar>
-      <Box component="nav">
+      <Box component="nav" sx={{
+        
+      }}>
         <Drawer
           container={container}
           variant="temporary"
@@ -129,7 +139,13 @@ function DrawerAppBar(props) {
           {drawer}
         </Drawer>
       </Box>
-      <Box component="main" sx={{ p: 3 }}>
+      <Box component="main" sx={{ 
+        p: 3,
+        '@media (min-width: 600px)': {
+          padding: 0,
+        },
+
+      }}>
         <Toolbar />
       </Box>
     </Box>

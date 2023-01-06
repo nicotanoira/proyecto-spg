@@ -19,10 +19,9 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 10,
     backgroundColor: 'White',
     borderRadius: '6px',
-    width: '100vw',
+    margin: "8.5rem 0",
   },
   mainBox: {
     textAlign: 'start',
@@ -73,7 +72,7 @@ const styles = {
 
 export default function Forms() {
   return (
-    <Container sx={styles.container} maxWidth={'100vw'}>
+    <Container sx={styles.container} maxWidth='100vw'>
       {/* TITULO */}
       <Box sx={{ flextDirection: 'column' }}>
         <Box sx={{ textAlign: 'start' }}>
@@ -118,21 +117,21 @@ export default function Forms() {
                   </Box>
                 </Box>
                 <Box sx={{ textAlign: 'start', marginBottom: '0.25rem' }}>
-                  <a href='https://www.instagram.com/spg_digital/'>
+                  <a target="_blank" href='https://www.instagram.com/spg_digital/'>
                     <Box
                       component='img'
                       src={ICON_INSTAGRAM}
                       sx={styles.icons}
                     />
                   </a>
-                  <a href='https://www.linkedin.com/company/spg-digital/about//'>
+                  <a target="_blank" href='https://www.linkedin.com/company/spg-digital/about//'>
                     <Box
                       component='img'
                       src={ICON_LINKEDIN}
                       sx={styles.icons}
                     />
                   </a>
-                  <a href='https://www.instagram.com/spg_digital/'>
+                  <a target="_blank" href='https://www.instagram.com/spg_digital/'>
                     <Box
                       component='img'
                       src={ICON_FACEBOOK}
