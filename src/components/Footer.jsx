@@ -32,17 +32,16 @@ export default function Footer() {
 	const styles = {
 		container: {
 			marginTop: "1em",
-		
 			padding: 0,
 			backgroundColor: down900px ? "#273339" : "#aabdbd",
 			borderRadius: "6px",
+			minWidth: "100vw",
 		},
 		leftColumn: {
 			display: down900px && "flex",
 			alignItems: down900px && "center",
 			justifyContent: down900px && "center",
-			flexDirection: down900px && "column",	
-		    width: down900px &&"70vw"
+			flexDirection: down900px && "column",
 		},
 		text: {
 			color: "white",
@@ -88,8 +87,8 @@ export default function Footer() {
 	};
 
 	return (
-		<Container maxWidth="100vw" sx={styles.container}>
-			<Box sx={{ flexGrow: 1, height: "320" }}>
+		<Container sx={styles.container}>
+			<Box sx={{ flexGrow: 1, height: "320", width: down900px && " 70vw" }}>
 				<Grid sx={styles.leftColumn} container spacing={3}>
 					{/* Left column */}
 					<Grid item xs={4} sx={{ padding: "0" }}>
@@ -109,11 +108,11 @@ export default function Footer() {
 								textAlign: down900px ? "center" : "start",
 								display: "flex",
 								flexDirection: down900px && "column",
-							
+								alignItems: "ce",
 							}}
 						>
 							<Box component="img" src={ICON_PHONE} sx={styles.iconsContact} />
-							<Box sx={{marginBottom:down900px && "-3.5rem"}} >
+							<Box>
 								<Typography mt={2} sx={styles.textTitle}>
 									Phone
 								</Typography>
@@ -127,7 +126,7 @@ export default function Footer() {
 							}}
 						>
 							<Box component="img" src={ICON_EMAIL} sx={styles.iconsContact} />
-							<Box >
+							<Box sx={{}}>
 								<Typography sx={styles.textTitle} mt={2}>
 									Email
 								</Typography>
@@ -141,7 +140,6 @@ export default function Footer() {
 								textAlign: down900px ? "center" : "start",
 								display: "flex",
 								flexDirection: down900px && "column",
-								marginTop:down900px && "1.5rem"
 							}}
 						>
 							<Box
@@ -149,7 +147,7 @@ export default function Footer() {
 								src={ICON_LOCATION}
 								sx={styles.iconsContact}
 							/>
-							<Box >
+							<Box>
 								<Typography sx={styles.textTitle} mt={2}>
 									Location
 								</Typography>
