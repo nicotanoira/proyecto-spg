@@ -37,10 +37,10 @@ export default function CustomerExp() {
     <Container maxWidth='100vw' sx={styles.container}>
       {/* TITULO */}
       <Box sx={styles.title}>
-        <Typography variant='h6' gutterBottom>
+        <Typography variant='h6' gutterBottom letterSpacing={2}>
           WHY IT IMPROVES YOUR
         </Typography>
-        <Typography variant='h3' gutterBottom>
+        <Typography variant='h3' gutterBottom letterSpacing={3.1}>
           CUSTOMERS' EXPERIENCE
         </Typography>
       </Box>
