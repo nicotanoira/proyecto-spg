@@ -37,6 +37,7 @@ export default function ConfiguratorBanner() {
             width: 300,
             height: 300,
             marginBottom: "2rem",
+            marginLeft: "-3.3rem",
         },
         leftContainer: {
             display: "flex",
@@ -67,3 +68,4 @@ export default function ConfiguratorBanner() {
     </Container>
   )
 }
+
