@@ -18,21 +18,27 @@ export default function ConfiguratorBanner() {
         contentContainer: {
             paddingLeft: "2rem",
             display: "flex",
+            padding: 0,
+                '@media (min-width: 600px)': {
+                padding: 0,
+            },
         },
         image: {
-            paddingTop: "4rem",
-            paddingLeft: "4rem",
-            height: "90vh",
-            width: "35vw",
+            paddingTop: "2rem",
+            paddingLeft: "1rem",
+            // height: "85vh",
+            // backgroundColor: "blue",
         },
         logo: {
             width: 300,
             height: 300,
             marginBottom: "2rem",
+            marginLeft: "-3.3rem",
         },
         leftContainer: {
             display: "flex",
             flexDirection: "column",
+            marginLeft: "4rem",
         },
 
     };
@@ -44,9 +50,13 @@ export default function ConfiguratorBanner() {
             <Container sx={styles.leftContainer} >
                 <Box component="img" src={LogoNegro} sx={styles.logo} />
 
-                <Typography variant="h3" sx={{ fontSize: "35px"}}>INTERACTIVE EXPERIENCES</Typography>
-                <Typography variant="h1" sx={{ fontSize: "60px"}} gutterBottom>3D CONFIGURATORS</Typography>
-                <Typography variant="body1" sx={{ fontSize: "25px", whiteSpace: "pre-wrap" }} >3D experience to help your client explore, play and<br/>personalize your products in an easy web browser,<br/>responsive and mobile oriented.</Typography>
+                <Typography variant="h3" sx={{ fontSize: "35px", letterSpacing: "4px"}}>INTERACTIVE EXPERIENCES</Typography>
+                <Typography variant="h1" sx={{ fontSize: "70px", letterSpacing: "6px"}} gutterBottom>3D CONFIGURATORS</Typography>
+                <Typography variant="body1" sx={{ fontSize: "25px", whiteSpace: "pre-wrap" }} >
+                    3D experience to help your client explore, play and<br/>
+                    personalize your products in an easy web browser,<br/>
+                    responsive and mobile oriented.
+                </Typography>
             </Container>
 
             <Container sx={styles.rightContainer} >
@@ -57,3 +67,4 @@ export default function ConfiguratorBanner() {
     </Container>
   )
 }
+
