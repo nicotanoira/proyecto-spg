@@ -18,21 +18,32 @@ export default function ConfiguratorBanner() {
         contentContainer: {
             paddingLeft: "2rem",
             display: "flex",
+            padding: 0,
+                '@media (min-width: 600px)': {
+                padding: 0,
+            },
+        },
+        rightContainer: {
+            marginRight: "4rem",
+            display: "flex",
+            justifyContent: "center",
         },
         image: {
-            paddingTop: "4rem",
-            paddingLeft: "4rem",
-            height: "90vh",
-            width: "35vw",
+            paddingTop: "3rem",
+            paddingLeft: "1rem",
+            height: "100%", 
         },
         logo: {
             width: 300,
             height: 300,
             marginBottom: "2rem",
+            marginLeft: "-3.3rem",
         },
         leftContainer: {
             display: "flex",
+            flex: "1 0 60%",
             flexDirection: "column",
+            marginLeft: "5rem",
         },
 
     };
@@ -44,9 +55,9 @@ export default function ConfiguratorBanner() {
             <Container sx={styles.leftContainer} >
                 <Box component="img" src={LogoNegro} sx={styles.logo} />
 
-                <Typography variant="h3" sx={{ fontSize: "35px"}}>INTERACTIVE EXPERIENCES</Typography>
-                <Typography variant="h1" sx={{ fontSize: "60px"}} gutterBottom>3D CONFIGURATORS</Typography>
-                <Typography variant="body1" sx={{ fontSize: "25px", whiteSpace: "pre-wrap" }} >3D experience to help your client explore, play and<br/>personalize your products in an easy web browser,<br/>responsive and mobile oriented.</Typography>
+                <Typography variant="h3" sx={{ fontSize: "400%", letterSpacing: "4px"}}>INTERACTIVE EXPERIENCES</Typography>
+                <Typography variant="h1" sx={{ fontSize: "620%", letterSpacing: "6px"}} gutterBottom>3D CONFIGURATORS</Typography>
+                <Typography variant="body1" sx={{ fontSize: "250%", whiteSpace: "pre-wrap" }} >3D experience to help your client explore, play and<br/>personalize your products in an easy web browser,<br/>responsive and mobile oriented.</Typography>
             </Container>
 
             <Container sx={styles.rightContainer} >
@@ -57,3 +68,4 @@ export default function ConfiguratorBanner() {
     </Container>
   )
 }
+
