@@ -2,11 +2,18 @@ import React from "react";
 import { Box, Container } from "@mui/system";
 import BannerWeb from "../assets/banner_web-01.png";
 import BannerMobile from "../assets/banner-mobile.png";
-import { Typography, useMediaQuery, useTheme } from "@mui/material";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import {
+	Button,
+	IconButton,
+	Typography,
+	useMediaQuery,
+	useTheme,
+} from "@mui/material";
 
 export default function Banner() {
 	const theme = useTheme();
-	const down700px = useMediaQuery("(min-width:700px)");
+	const down600px = useMediaQuery(theme.breakpoints.down("sm"));
 	const down900px = useMediaQuery(theme.breakpoints.down("md"));
 	const down1200px = useMediaQuery(theme.breakpoints.down("lg"));
 	const styles = {
@@ -24,17 +31,30 @@ export default function Banner() {
 		},
 		image: {
 			width: "100%",
-			// height: down700px && "80vh",
+			// height: down600px && "80vh",
 			padding: "0",
 		},
 		textBox: {
 			position: "absolute",
 			display: "flex",
 			flexDirection: "column",
-			right: "8vw",
-			top: "13vh",
-			textAlign: "end",
+			alignItems: { xs: "center" },
+			justifyContent: { xs: "center" },
+			padding: { xs: "2rem" },
+			// right: "8vw",
+			// top: "13vw",
+			textAlign: { xs: "center", md: "end" },
 		},
+		button: {
+			backgroundColor: "#273339",
+			borderRadius: "1000px",
+			fontSize: "10px",
+			padding: "6px 10px",
+			color: "#ffffffce",
+			textTransform: "capitalize",
+			width: "10rem",
+		},
+		icon: { marginLeft: "2px", transform: "scale(.8)" },
 	};
 
 	return (
@@ -68,20 +88,47 @@ export default function Banner() {
 				</Box>
 
 				<Box sx={styles.lowerTextBox}>
-					<Typography
-						variant="body1"
-						sx={{ fontSize: down900px ? "14px" : down1200px ? "18px" : "22px" }}
-					>
-						We have the power to help you strengthen
-						<br />
-						your customers' shopping experience
-					</Typography>
+					{!down600px ? (
+						<Typography
+							variant="body1"
+							sx={{
+								fontSize: down900px ? "14px" : down1200px ? "18px" : "22px",
+							}}
+						>
+							We have the power to help you strengthen
+							<br />
+							your customers' shopping experience
+						</Typography>
+					) : (
+						<>
+							<Typography
+								variant="body1"
+								sx={{
+									fontSize: down900px ? "14px" : down1200px ? "18px" : "22px",
+									marginBottom: { xs: "12px" },
+								}}
+							>
+								We have the power to help you strengthen your customers'
+								shopping experience creating innovative product imaging
+								solutions.
+							</Typography>
+							<IconButton
+								size="small"
+								endIcon
+								variant="contained"
+								sx={styles.button}
+							>
+								Contact Us
+								<MailOutlineIcon sx={styles.icon} fontSize="small" />
+							</IconButton>
+						</>
+					)}
 				</Box>
 			</Box>
 
 			<Box
 				component="img"
-				src={down700px ? BannerMobile : BannerWeb}
+				src={!down600px ? BannerWeb : BannerMobile}
 				sx={styles.image}
 			/>
 		</Container>
