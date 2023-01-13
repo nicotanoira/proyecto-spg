@@ -88,7 +88,7 @@ export default function Footer() {
 
 	return (
 		<Container sx={styles.container}>
-			<Box sx={{ flexGrow: 1, height: "320", width: down900px && " 70vw" }}>
+			<Box sx={{ flexGrow: 1, height: "320" }}>
 				<Grid sx={styles.leftColumn} container spacing={3}>
 					{/* Left column */}
 					<Grid item xs={4} sx={{ padding: "0" }}>
