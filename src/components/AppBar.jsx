@@ -1,26 +1,26 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import CssBaseline from "@mui/material/CssBaseline";
-import Divider from "@mui/material/Divider";
-import Drawer from "@mui/material/Drawer";
-import IconButton from "@mui/material/IconButton";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
-import MenuIcon from "@mui/icons-material/Menu";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import { Link } from "react-router-dom";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import CssBaseline from '@mui/material/CssBaseline';
+import Divider from '@mui/material/Divider';
+import Drawer from '@mui/material/Drawer';
+import IconButton from '@mui/material/IconButton';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import MenuIcon from '@mui/icons-material/Menu';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
 const navItems = [
-  { name: "3D Configurators", source: "/3D-configurators" },
-  { name: "2D Configurators", source: "/2D-configurators" },
-  { name: "Renderings", source: "/renderings" }
+  { name: '3D Configurators', source: '/3D-configurators' },
+  { name: '2D Configurators', source: '/2D-configurators' },
+  { name: 'Renderings', source: '/renderings-and-models' },
   /* { name: "Contact" }, */
 ];
 
@@ -33,18 +33,18 @@ function DrawerAppBar(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Link style={{ textDecoration: "none" }} to="/">
-        <Typography variant="h6" sx={{ my: 2, color: "black" }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+      <Link style={{ textDecoration: 'none' }} to='/'>
+        <Typography variant='h6' sx={{ my: 2, color: 'black' }}>
           SPG
         </Typography>
       </Link>
       <Divider />
       <List>
         {navItems.map((item) => (
-          <Link style={{ textDecoration: "none" }} to={item.source}>
-            <ListItem key={item.name} sx={{ color: "black" }} disablePadding>
-              <ListItemButton sx={{ textAlign: "center" }}>
+          <Link style={{ textDecoration: 'none' }} to={item.source}>
+            <ListItem key={item.name} sx={{ color: 'black' }} disablePadding>
+              <ListItemButton sx={{ textAlign: 'center' }}>
                 <ListItemText primary={item.name} />
               </ListItemButton>
             </ListItem>
@@ -64,32 +64,32 @@ function DrawerAppBar(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ backgroundColor: "#F3F2EE", padding: "0" }}>
+      <AppBar component='nav' sx={{ backgroundColor: '#F3F2EE', padding: '0' }}>
         <Toolbar>
           {/* Menu Hamburguesa */}
           <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
+            color='inherit'
+            aria-label='open drawer'
+            edge='start'
             onClick={handleDrawerToggle}
-            sx={{ 
+            sx={{
               mr: 2,
-              display: { 
-                sm: "none",
-                color: "#73807F"
-              }
+              display: {
+                sm: 'none',
+                color: '#73807F',
+              },
             }}
           >
             <MenuIcon />
           </IconButton>
-          <Link style={{ textDecoration: "none" }} to="/">
+          <Link style={{ textDecoration: 'none' }} to='/'>
             <Typography
-              variant="h6"
-              component="div"
+              variant='h6'
+              component='div'
               sx={{
-                display: { xs: "none", sm: "block", color: "black" },
+                display: { xs: 'none', sm: 'block', color: 'black' },
               }}
             >
               SPG
@@ -98,15 +98,15 @@ function DrawerAppBar(props) {
           <Box
             sx={{
               display: {
-                xs: "none",
-                sm: "block",
-                marginInlineStart: "auto",
+                xs: 'none',
+                sm: 'block',
+                marginInlineStart: 'auto',
               },
             }}
           >
             {navItems.map((item) => (
-              <Link style={{ textDecoration: "none" }} to={item.source}>
-                <Button key={item.name} sx={{ color: "black" }}>
+              <Link style={{ textDecoration: 'none' }} to={item.source}>
+                <Button key={item.name} sx={{ color: 'black' }}>
                   {item.name}
                 </Button>
               </Link>
@@ -117,21 +117,19 @@ function DrawerAppBar(props) {
           </Box>
         </Toolbar>
       </AppBar>
-      <Box component="nav" sx={{
-        
-      }}>
+      <Box component='nav' sx={{}}>
         <Drawer
           container={container}
-          variant="temporary"
+          variant='temporary'
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: "block", sm: "none" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
+            display: { xs: 'block', sm: 'none' },
+            '& .MuiDrawer-paper': {
+              boxSizing: 'border-box',
               width: drawerWidth,
             },
           }}
@@ -139,13 +137,15 @@ function DrawerAppBar(props) {
           {drawer}
         </Drawer>
       </Box>
-      <Box component="main" sx={{ 
-        p: 3,
-        '@media (min-width: 600px)': {
-          padding: 0,
-        },
-
-      }}>
+      <Box
+        component='main'
+        sx={{
+          p: 3,
+          '@media (min-width: 600px)': {
+            padding: 0,
+          },
+        }}
+      >
         <Toolbar />
       </Box>
     </Box>
