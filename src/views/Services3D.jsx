@@ -18,6 +18,7 @@ import {
   thirdImageDescription,
   fourthImageDescription,
 } from '../constants/services3D/constants';
+import VideoBanner from '../components/VideoBanner';
 
 export default function Services3D() {
   return (
@@ -39,6 +40,8 @@ export default function Services3D() {
         thirdImageDescription={thirdImageDescription}
         fourthImageDescription={fourthImageDescription}
       />
+      <CustomerExp />
+      <VideoBanner />
     </div>
   );
 }
