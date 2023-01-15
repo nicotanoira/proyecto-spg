@@ -20,7 +20,7 @@ const drawerWidth = 240;
 const navItems = [
 	{ name: "3D Configurators", source: "/3D-configurators" },
 	{ name: "2D Configurators", source: "/2D-configurators" },
-	{ name: "Renderings", source: "/renderings" },
+	{ name: "Renderings", source: "/renderings-and-models" },
 	/* { name: "Contact" }, */
 ];
 

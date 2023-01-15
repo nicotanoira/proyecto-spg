@@ -1,6 +1,5 @@
 import React from 'react';
 import ConfiguratorBanner from '../components/ConfiguratorBanner';
-import CustomerExp from '../components/CustomersExp';
 import FourImagesDisplay from '../components/FourImagesDisplay';
 import {
   topTitle,
@@ -40,7 +39,6 @@ export default function Services3D() {
         thirdImageDescription={thirdImageDescription}
         fourthImageDescription={fourthImageDescription}
       />
-      <CustomerExp />
       <VideoBanner />
     </div>
   );

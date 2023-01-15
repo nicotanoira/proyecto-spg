@@ -70,6 +70,7 @@ export default function VideoBanner() {
     const company = "SEARAY"
     const model = "400SLX"
     const text = "3D configurator to help your<br>clients feel your product like<br>their own."
+    const video3D = "https://www.youtube.com/watch?v=Yu7myWY8tVU&ab_channel=ConstanzaAgnoletti"
 
     return (
         <Container maxWidth="100vw" sx={styles.container}>
@@ -80,7 +81,7 @@ export default function VideoBanner() {
                     width='90%'
                     height='60vh'
 
-                    url='https://www.youtube.com/watch?v=FzWQg7hH80g&ab_channel=MINITECASTV' />
+                    url={video3D} />
                 </Box>
 
                 <Box sx={styles.rightContainer}>
