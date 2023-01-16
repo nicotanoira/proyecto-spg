@@ -42,6 +42,7 @@ export default function Footer() {
 			alignItems: down900px && "center",
 			justifyContent: down900px && "center",
 			flexDirection: down900px && "column",
+			marginLeft: down900px && "-4.5rem",
 		},
 		text: {
 			color: "white",
@@ -108,7 +109,7 @@ export default function Footer() {
 								textAlign: down900px ? "center" : "start",
 								display: "flex",
 								flexDirection: down900px && "column",
-								alignItems: "ce",
+								alignItems: "center",
 							}}
 						>
 							<Box component="img" src={ICON_PHONE} sx={styles.iconsContact} />
@@ -173,14 +174,16 @@ export default function Footer() {
 								<Box component="img" src={ICON_LINKEDIN} sx={styles.icons} />
 							</a>
 
-                  <a target="_blank" href="https://www.facebook.com/profile.php?id=100088834549930/" >
-                    <Box component="img" src={ICON_FACEBOOK} sx={styles.icons} />
-                  </a>
-
-                </Box>
-            </Grid>
-          </Grid>
-        </Box>
-    </Container>
-  )
+							<a
+								target="_blank"
+								href="https://www.facebook.com/profile.php?id=100088834549930/"
+							>
+								<Box component="img" src={ICON_FACEBOOK} sx={styles.icons} />
+							</a>
+						</Box>
+					</Grid>
+				</Grid>
+			</Box>
+		</Container>
+	);
 }
