@@ -26,7 +26,7 @@ export default function ConfiguratorBanner() {
         rightContainer: {
             marginRight: "4rem",
             display: "flex",
-            justifyContent: "center",
+            justifyContent: "start",
         },
         image: {
             paddingTop: "3rem",
@@ -34,16 +34,17 @@ export default function ConfiguratorBanner() {
             height: "100%", 
         },
         logo: {
-            width: 300,
-            height: 300,
+            width: 280,
+            height: 280,
             marginBottom: "2rem",
             marginLeft: "-3.3rem",
         },
         leftContainer: {
             display: "flex",
-            flex: "1 0 60%",
+            flex: "1 0 50%",
             flexDirection: "column",
             marginLeft: "5rem",
+            width: "fit-content"
         },
 
     };
@@ -55,9 +56,9 @@ export default function ConfiguratorBanner() {
             <Container sx={styles.leftContainer} >
                 <Box component="img" src={LogoNegro} sx={styles.logo} />
 
-                <Typography variant="h3" sx={{ fontSize: "400%", letterSpacing: "4px"}}>INTERACTIVE EXPERIENCES</Typography>
-                <Typography variant="h1" sx={{ fontSize: "620%", letterSpacing: "6px"}} gutterBottom>3D CONFIGURATORS</Typography>
-                <Typography variant="body1" sx={{ fontSize: "250%", whiteSpace: "pre-wrap" }} >3D experience to help your client explore, play and<br/>personalize your products in an easy web browser,<br/>responsive and mobile oriented.</Typography>
+                <Typography variant="h3" sx={{ fontSize: "260%", letterSpacing: "3px"}}>INTERACTIVE EXPERIENCES</Typography>
+                <Typography variant="h1" sx={{ fontSize: "500%", letterSpacing: "5px" }} gutterBottom>3D CONFIGURATORS</Typography>
+                <Typography variant="body1" sx={{ fontSize: "200%", whiteSpace: "pre-wrap" }} >3D experience to help your client explore, play and<br/>personalize your products in an easy web browser,<br/>responsive and mobile oriented.</Typography>
             </Container>
 
             <Container sx={styles.rightContainer} >
