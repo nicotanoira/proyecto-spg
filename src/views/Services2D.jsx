@@ -1,5 +1,6 @@
 import React from 'react';
 import FourImagesDisplay from '../components/FourImagesDisplay';
+import RightVideoBanner from '../components/RightVideoBanner';
 import {
   topTitle,
   bottomTitle,
@@ -36,6 +37,7 @@ export default function Services2D() {
         thirdImageDescription={thirdImageDescription}
         fourthImageDescription={fourthImageDescription}
       />
+      <RightVideoBanner />
     </div>
   );
 }

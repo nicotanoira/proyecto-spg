@@ -16,6 +16,7 @@ import {
   thirdImageDescription,
   fourthImageDescription,
 } from '../constants/renderings/constants';
+import CarouselBanner from '../components/CarouselBanner';
 
 export default function RendersAndModelServices() {
   return (
@@ -36,6 +37,7 @@ export default function RendersAndModelServices() {
         thirdImageDescription={thirdImageDescription}
         fourthImageDescription={fourthImageDescription}
       />
+      <CarouselBanner />
     </div>
   );
 }
