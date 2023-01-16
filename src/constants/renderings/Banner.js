@@ -1,9 +1,7 @@
 // IMPORT THE IMAGE'S FILE
-
 import image from '../../assets/ILLUSTRACION_BANNER_RENDERINGS.svg';
 
 // TITLE
-
 const topTitleBanner = 'STATIC & DYNAMIC';
 const bottomTitleBanner = 'RENDERINGS';
 
@@ -18,4 +16,9 @@ const imageBanner = image;
 
 // EXPORT
 
-export { topTitleBanner, bottomTitleBanner, imageBanner, descriptionBanner };
+export { 
+  topTitleBanner, 
+  bottomTitleBanner, 
+  imageBanner, 
+  descriptionBanner 
+};

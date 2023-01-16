@@ -1,6 +1,7 @@
 import React from 'react';
 import FourImagesDisplay from '../components/FourImagesDisplay';
 import ConfiguratorBanner from '../components/ConfiguratorBanner';
+import Contact from "../components/Contact";
 import {
   topTitleBanner,
   bottomTitleBanner,
@@ -24,8 +25,16 @@ import {
   fourthImageDescription,
 } from '../constants/services3D/constants';
 import VideoBanner from '../components/VideoBanner';
+import { useLocation } from "react-router-dom";
+import { useEffect } from 'react';
 
 export default function Services3D() {
+  const { pathname } = useLocation();
+	
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [pathname])
+
   return (
     <div>
       <ConfiguratorBanner
@@ -51,6 +60,7 @@ export default function Services3D() {
         fourthImageDescription={fourthImageDescription}
       />
       <VideoBanner />
+      <Contact />
     </div>
   );
 }

@@ -6,8 +6,16 @@ import Values from "../components/Values";
 import Banner from "../components/Banner";
 import Contact from "../components/Contact";
 import ForYou from "../components/ForYou";
+import { useLocation } from "react-router-dom";
+import { useEffect } from 'react';
 
 export default function LandingPage() {
+	const { pathname } = useLocation();
+	
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [pathname])
+
 	const styles = {
 		container: {
 			display: "flex",
