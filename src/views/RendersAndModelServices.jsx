@@ -1,5 +1,6 @@
 import React from 'react';
 import FourImagesDisplay from '../components/FourImagesDisplay';
+import ConfiguratorBanner from '../components/ConfiguratorBanner';
 import {
   topTitle,
   bottomTitle,
@@ -16,10 +17,22 @@ import {
   thirdImageDescription,
   fourthImageDescription,
 } from '../constants/renderings/constants';
+import {
+  topTitleBanner,
+  bottomTitleBanner,
+  imageBanner,
+  descriptionBanner,
+} from '../constants/renderings/Banner';
 
 export default function RendersAndModelServices() {
   return (
     <div>
+      <ConfiguratorBanner
+        topTitleBanner={topTitleBanner}
+        bottomTitleBanner={bottomTitleBanner}
+        imageBanner={imageBanner}
+        descriptionBanner={descriptionBanner}
+      />
       <FourImagesDisplay
         topTitle={topTitle}
         bottomTitle={bottomTitle}
