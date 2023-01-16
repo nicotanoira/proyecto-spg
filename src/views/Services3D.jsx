@@ -1,6 +1,12 @@
 import React from 'react';
-import ConfiguratorBanner from '../components/ConfiguratorBanner';
 import FourImagesDisplay from '../components/FourImagesDisplay';
+import ConfiguratorBanner from '../components/ConfiguratorBanner';
+import {
+  topTitleBanner,
+  bottomTitleBanner,
+  imageBanner,
+  descriptionBanner,
+} from '../constants/services3D/Banner';
 import {
   topTitle,
   bottomTitle,
@@ -22,7 +28,12 @@ import VideoBanner from '../components/VideoBanner';
 export default function Services3D() {
   return (
     <div>
-      <ConfiguratorBanner />
+      <ConfiguratorBanner
+        topTitleBanner={topTitleBanner}
+        bottomTitleBanner={bottomTitleBanner}
+        imageBanner={imageBanner}
+        descriptionBanner={descriptionBanner}
+      />
       <FourImagesDisplay
         topTitle={topTitle}
         bottomTitle={bottomTitle}
