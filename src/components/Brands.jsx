@@ -38,14 +38,14 @@ const Brands = () => {
 			<Box sx={styles.text}>
 				<Typography
 					variant="h7"
-					sx={{ fontSize: { xs: "17px", md: "20px" } }}
+					sx={{ fontSize: { xs: "17px", md: "20px" }, letterSpacing: "2px" }}
 					gutterBottom
 				>
 					BRANDS THAT
 				</Typography>
 				<Typography
 					variant="h4"
-					sx={{ fontSize: { xs: "35px", md: "50px" } }}
+					sx={{ fontSize: { xs: "35px", md: "50px" }, letterSpacing: "2px" }}
 					gutterBottom
 				>
 					TRUSTED US

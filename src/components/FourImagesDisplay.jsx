@@ -1,10 +1,6 @@
 import { Typography } from '@mui/material';
 import { Box, Container } from '@mui/system';
 import React from 'react';
-import ILLUSTRACION_ARTISANS from '../assets/ILLUSTRACION_ARTISANS.svg';
-import ILLUSTRACION_BETTER_EXP from '../assets/ILLUSTRACION_BETTER_EXP.svg';
-import ILLUSTRACION_TIME from '../assets/ILLUSTRACION_TIME.svg';
-import ILLUSTRACION_VIRTUAL from '../assets/ILLUSTRACION_VIRTUAL.svg';
 
 const styles = {
   container: {
@@ -32,7 +28,7 @@ const styles = {
   },
 };
 
-const topTitle = 'WHY IT IMPROVES YOUR';
+/* const topTitle = 'WHY IT IMPROVES YOUR'; */
 
 export default function FourImagesDisplay({
   topTitle,
@@ -69,7 +65,7 @@ export default function FourImagesDisplay({
           <Typography
             variant='subtitle2'
             gutterBottom
-            sx={{ fontWeight: 'bold' }}
+            sx={{ fontWeight: 'bold', }}
             dangerouslySetInnerHTML={{ __html: firstImageTitle }}
           />
           <Typography

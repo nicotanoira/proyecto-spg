@@ -3,6 +3,13 @@ import { Box, Container } from "@mui/system";
 import { Typography, Button } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ReactPlayer from "react-player";
+import {
+	video3D,
+	company,
+	model,
+	text,
+	buttonText,
+} from "../constants/renderings/videoBanner.js";
 
 export default function VideoBanner() {
 	const styles = {
@@ -10,22 +17,20 @@ export default function VideoBanner() {
 			padding: "5rem",
 			backgroundColor: "red",
 			display: "flex",
-			// position: "relative",
 			"@media (min-width: 600px)": {
 				padding: "5rem 0",
 			},
 			background:
 				"linear-gradient(90deg, rgba(235, 233, 228, 0.55) 0%, rgba(255, 255, 255, 0) 88.02%);",
 		},
-		leftContainer: {
+		textContainer: {
 			display: "flex",
 			justifyContent: "flex-end",
-			// alignItems: "center",
-			flex: "1 0 65%",
+			flex: "1 0 75%",
 			alignItems: "flex-end",
 		},
-		rightContainer: {
-			flex: "1 0 35%",
+		videoContainer: {
+			flex: "1 0 25%",
 			display: "flex",
 			paddingLeft: "5rem",
 			flexDirection: "column",
@@ -55,7 +60,7 @@ export default function VideoBanner() {
 			color: "white",
 			padding: "8px 10px",
 			borderColor: "gray",
-			fontSize: "75%",
+			fontSize: "90%",
 			fontWeight: "200",
 			letterSpacing: "0.5px",
 			backgroundColor: "#273339",
@@ -68,27 +73,20 @@ export default function VideoBanner() {
 		},
 	};
 
-	const company = "SEARAY";
-	const model = "400SLX";
-	const text =
-		"3D configurator to help your<br>clients feel your product like<br>their own.";
-	const video3D =
-		"https://www.youtube.com/watch?v=Yu7myWY8tVU&ab_channel=ConstanzaAgnoletti";
-
 	return (
 		<Container maxWidth="100vw" sx={styles.container}>
-			<Box sx={styles.leftContainer}>
+			<Box sx={styles.textContainer}>
 				<ReactPlayer
 					style={{
 						flexDirection: "flex-end",
 					}}
 					width="90%"
-					height="60vh"
+					height="77vh"
 					url={video3D}
 				/>
 			</Box>
 
-			<Box sx={styles.rightContainer}>
+			<Box sx={styles.videoContainer}>
 				<Typography
 					variant="h2"
 					fontWeight="bold"
@@ -130,7 +128,7 @@ export default function VideoBanner() {
 						// />}
 						// variant='outlined'
 					>
-						See our work
+						{buttonText}
 					</Button>
 				</Box>
 			</Box>
