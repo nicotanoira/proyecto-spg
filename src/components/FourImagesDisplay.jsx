@@ -65,7 +65,7 @@ export default function FourImagesDisplay({
           <Typography
             variant='subtitle2'
             gutterBottom
-            sx={{ fontWeight: 'bold' }}
+            sx={{ fontWeight: 'bold', }}
             dangerouslySetInnerHTML={{ __html: firstImageTitle }}
           />
           <Typography

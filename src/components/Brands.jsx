@@ -37,10 +37,10 @@ const Brands = () => {
 	return (
 		<Box sx={styles.container}>
 			<Box sx={styles.text}>
-				<Typography variant="h7" gutterBottom>
+				<Typography variant="h7" gutterBottom sx={{letterSpacing: "2px"}}>
 					BRANDS THAT
 				</Typography>
-				<Typography variant="h4" gutterBottom>
+				<Typography variant="h4" gutterBottom sx={{letterSpacing: "2px"}}>
 					TRUSTED US
 				</Typography>
 			</Box>
