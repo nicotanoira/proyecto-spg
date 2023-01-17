@@ -37,7 +37,7 @@ const Values = () => {
 			display: "flex",
 			alignItems: "center",
 			justifyContent: "center",
-			marginLeft: !down1200px && "30rem",
+			marginLeft: !down1200px && "26rem",
 			gap: down1200px ? ".2rem" : "4rem",
 			paddingLeft: "1rem",
 			textAlign: "end",
@@ -76,7 +76,7 @@ const Values = () => {
 			{/* LAPTOP */}
 			<Box sx={styles.laptop}>
 				<Box component="img" src={Laptop} width={down900px ? 200 : 400} />
-				<Box width={down900px ? 200 : 450} sx={{ padding: "1rem" }}>
+				<Box width={down900px ? 200 : 450} sx={{ paddingRight: "2rem" }}>
 					<Typography
 						variant="subtitle2"
 						gutterBottom
@@ -96,7 +96,7 @@ const Values = () => {
 			</Box>
 			{/* MAGNET */}
 			<Box sx={styles.magnet}>
-				<Box width={down900px ? 200 : 375} sx={{ padding: ".26rem" }}>
+				<Box width={down900px ? 200 : 390} sx={{ padding: ".26rem" }}>
 					<Typography
 						variant="subtitle2"
 						gutterBottom

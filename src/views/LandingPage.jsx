@@ -7,14 +7,14 @@ import Banner from "../components/Banner";
 import Contact from "../components/Contact";
 import ForYou from "../components/ForYou";
 import { useLocation } from "react-router-dom";
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 export default function LandingPage() {
 	const { pathname } = useLocation();
-	
+
 	useEffect(() => {
 		window.scrollTo(0, 0);
-	}, [pathname])
+	}, [pathname]);
 
 	const styles = {
 		container: {
@@ -22,6 +22,7 @@ export default function LandingPage() {
 			alignItems: "center",
 			justifyContent: "center",
 			flexDirection: "column",
+			overflowX: "hidden",
 		},
 	};
 	return (

@@ -124,10 +124,24 @@ const ForYou = () => {
 				)}
 				{!down900px && (
 					<Box sx={styles.text}>
-						<Typography variant="h7" gutterBottom>
+						<Typography
+							variant="h7"
+							gutterBottom
+							sx={{
+								fontSize: { xs: "17px", md: "20px" },
+								letterSpacing: "2px",
+							}}
+						>
 							WE ARE HERE
 						</Typography>
-						<Typography variant="h4" gutterBottom>
+						<Typography
+							variant="h4"
+							gutterBottom
+							sx={{
+								fontSize: { xs: "35px", md: "50px" },
+								letterSpacing: "2px",
+							}}
+						>
 							FOR YOU
 						</Typography>
 					</Box>
