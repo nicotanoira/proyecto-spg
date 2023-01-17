@@ -31,7 +31,7 @@ export default function LandingPage() {
 			<About />
 			<Brands />
 			<Values />
-			<ForYou />
+			{/* <ForYou /> */}
 			<Contact />
 		</Box>
 	);

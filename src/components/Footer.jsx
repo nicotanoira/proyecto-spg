@@ -33,11 +33,15 @@ export default function Footer() {
 		container: {
 			marginTop: "1em",
 			padding: 0,
+			"@media (min-width: 600px)": {
+				padding: 0,
+			},
 			backgroundColor: down900px ? "#273339" : "#aabdbd",
 			borderRadius: "6px",
 			minWidth: "100vw",
 		},
-		leftColumn: {
+		gridContainer: {
+			width: "100%",
 			display: down900px && "flex",
 			alignItems: down900px && "center",
 			justifyContent: down900px && "center",
@@ -46,7 +50,7 @@ export default function Footer() {
 		},
 		text: {
 			color: "white",
-			width: "auto",
+			width: "fit-content",
 		},
 		textTitle: {
 			color: "white",
@@ -55,13 +59,10 @@ export default function Footer() {
 		rightColumn: {
 			display: "flex",
 			flexDirection: "column",
-			flexWrap: "wrap",
 		},
 		rightColumnRow: {
 			flex: "1 0 25%" /* explanation below */,
-			margin: "5px",
 			height: "100px",
-			backgroundColor: "blue",
 		},
 		icons: {
 			width: down900px ? "45px" : "37px",
@@ -88,13 +89,14 @@ export default function Footer() {
 	};
 
 	return (
-		<Container sx={styles.container}>
+		<Container maxWidth={"100%"} sx={styles.container}>
 			<Box sx={{ flexGrow: 1, height: "320" }}>
-				<Grid sx={styles.leftColumn} container spacing={3}>
+				<Grid sx={styles.gridContainer} container spacing={3}>
 					{/* Left column */}
-					<Grid item xs={4} sx={{ padding: "0" }}>
-						<Box component="img" src={LogoBlanco} sx={styles.logoFooter} />
-						{/* <Typography sx={styles.text}>SPG DIGITAL CORP</Typography> */}
+					<Grid item xs={4} sx={{ padding: "0", margin: "0", width: "100%" }}>
+						<Link style={{ textDecoration: "none" }} to={'/'}>
+							<Box component="img" src={LogoBlanco} sx={styles.logoFooter} />
+						</Link>
 					</Grid>
 
 					{/* Middle column */}

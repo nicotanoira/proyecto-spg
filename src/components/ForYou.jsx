@@ -22,10 +22,14 @@ const ForYou = () => {
 			alignItems: "center",
 			justifyContent: "center",
 			flexDirection: "column",
+			padding: 0,
+			"@media (min-width: 600px)": {
+				padding: 0,
+			},
 			background:
 				"linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #F3F3EF 100%)",
-			minWidth: "100vw",
-
+			// minWidth: "100vw",
+			maxWidth: "100vw",
 			padding: "2rem",
 		},
 		containerLeftColumn: {
@@ -79,7 +83,7 @@ const ForYou = () => {
 		},
 	};
 	return (
-		<Container sx={styles.container}>
+		<Container maxWidth={"100%"} sx={styles.container}>
 			<Box
 				sx={{
 					display: "flex",
