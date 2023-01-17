@@ -75,7 +75,6 @@ export default function FourImagesDisplay({
           <Typography
             variant='body2'
             gutterBottom
-            sx={{fontFamily: 'Inter',}}
             dangerouslySetInnerHTML={{ __html: firstImageDescription }}
           />
         </Box>
