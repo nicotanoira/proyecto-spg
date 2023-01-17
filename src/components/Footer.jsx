@@ -42,7 +42,7 @@ export default function Footer() {
 			alignItems: down900px && "center",
 			justifyContent: down900px && "center",
 			flexDirection: down900px && "column",
-			marginLeft: down900px && "-4.5rem",
+			marginLeft: down900px && "-4.8rem",
 		},
 		text: {
 			color: "white",

@@ -6,11 +6,12 @@ import { Link } from "react-router-dom";
 
 const Brands = () => {
 	const theme = useTheme();
-	
+
 	const down900px = useMediaQuery(theme.breakpoints.down("md"));
 	const styles = {
 		container: {
 			backgroundColor: "#F9F8F4",
+			width: "100vw",
 			display: "flex",
 			alignItems: "center",
 			justifyContent: "center",
@@ -20,16 +21,14 @@ const Brands = () => {
 		},
 		text: {
 			paddingTop: "4rem",
-			textAlign:"center",
-			paddingBottom: !down900px && "-4rem",
-					
-		
+			textAlign: "center",
+			paddingBottom: { xs: "-4rem" },
 		},
 		logos: {
 			display: "flex",
 			alignItems: "center",
 			justifyContent: "center",
-		
+			marginTop: down900px ? "-2rem" : "-6rem",
 			gap: !down900px && "4rem",
 			marginBottom: down900px ? "-2rem" : "-6rem",
 		},
@@ -37,10 +36,18 @@ const Brands = () => {
 	return (
 		<Box sx={styles.container}>
 			<Box sx={styles.text}>
-				<Typography variant="h7" gutterBottom>
+				<Typography
+					variant="h7"
+					sx={{ fontSize: { xs: "17px", md: "20px" } }}
+					gutterBottom
+				>
 					BRANDS THAT
 				</Typography>
-				<Typography variant="h4" gutterBottom>
+				<Typography
+					variant="h4"
+					sx={{ fontSize: { xs: "35px", md: "50px" } }}
+					gutterBottom
+				>
 					TRUSTED US
 				</Typography>
 			</Box>
@@ -48,12 +55,16 @@ const Brands = () => {
 			<Box sx={styles.logos}>
 				<Box>
 					<a target="_blank" href="https://www.searay.lat/lat/en.html">
-						<Box component="img" src={SeaRay} width={down900px ? 190 : 295} />
+						<Box component="img" src={SeaRay} width={down900px ? 190 : 350} />
 					</a>
 				</Box>
 				<Box>
 					<a target="_blank" href="https://www.bostonwhaler.com/">
-						<Box component="img" src={BostonWhaler} width={down900px ? 190 : 295} />
+						<Box
+							component="img"
+							src={BostonWhaler}
+							width={down900px ? 190 : 350}
+						/>
 					</a>
 				</Box>
 			</Box>

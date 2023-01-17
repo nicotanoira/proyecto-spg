@@ -43,7 +43,7 @@ export default function Banner() {
 			padding: { xs: "2rem" },
 			// right: "8vw",
 			// top: "13vw",
-			textAlign: { xs: "center", md: "end" },
+			textAlign: { xs: "center" },
 		},
 		button: {
 			backgroundColor: "#273339",
@@ -64,6 +64,7 @@ export default function Banner() {
 					<Typography
 						variant="h5"
 						sx={{
+							marginRight: { xs: "", md: "-10rem" },
 							fontSize: down900px ? "12px" : down1200px ? "16px" : "20px",
 						}}
 						gutterBottom
