@@ -6,25 +6,32 @@ import Values from "../components/Values";
 import Banner from "../components/Banner";
 import Contact from "../components/Contact";
 import ForYou from "../components/ForYou";
+import { useLocation } from "react-router-dom";
+import { useEffect } from 'react';
 
 export default function LandingPage() {
+	const { pathname } = useLocation();
+	
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [pathname])
+
 	const styles = {
 		container: {
-			// height: "15rem",
-			// display: "flex",
-			// alignItems: "center",
-			// justifyContent: "center",
-			// flexDirection: "column",
+			display: "flex",
+			alignItems: "center",
+			justifyContent: "center",
+			flexDirection: "column",
 		},
 	};
 	return (
 		<Box sx={styles.container}>
 			<Banner />
-			{/* <About /> */}
+			<About />
 			<Brands />
 			<Values />
-			{/* <ForYou />
-			<Contact /> */}
+			<ForYou />
+			<Contact />
 		</Box>
 	);
 }
