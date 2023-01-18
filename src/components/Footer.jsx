@@ -26,33 +26,39 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function Footer() {
 	const theme = useTheme();
-	const down600px = useMediaQuery(theme.breakpoints.down("sm"));
-	const down900px = useMediaQuery(theme.breakpoints.down("md"));
+	const down960px = useMediaQuery(theme.breakpoints.down("md"));
 	const down1200px = useMediaQuery(theme.breakpoints.down("lg"));
+	const down2000px = useMediaQuery(theme.breakpoints.down("xl"));
+
+	console.log("md", down960px);
+	console.log("lg", down1200px);
+	console.log("xl", down2000px);
 	const styles = {
 		container: {
+			display: "flex",
+			justifyContent: "space-around",
 			marginTop: "1em",
 			padding: 0,
 			"@media (min-width: 600px)": {
 				padding: 0,
 			},
-			backgroundColor: down900px ? "#273339" : "#aabdbd",
+			backgroundColor: down960px ? "#273339" : "#AABDBD",
 			borderRadius: "6px",
 			minWidth: "0",
 			display: "flex"
 		},
 		boxContainer: {
-			width: "100%",
 			minWidth: "0",
 			display: "flex",
 			alignItems: "center",
-			justifyContent: "space-between",
-			flexDirection: "row",
-			padding: "1rem 5rem",
+			justifyContent: "space-around",
+			flexDirection:  down960px ? "column" : "row",
+			padding: "2rem 9rem",
 		},
 		text: {
 			color: "white",
 			width: "fit-content",
+			whiteSpace: "nowrap",
 		},
 		textTitle: {
 			color: "white",
@@ -64,30 +70,38 @@ export default function Footer() {
 			padding: "0 2rem",
 		},
 		rightColumnRow: {
-			flex: "1 0 25%" /* explanation below */,
-			height: "100px",
-		},
-		icons: {
-			width: down900px ? "45px" : "37px",
-			height: down900px ? "45px" : "37px",
-			color: "white",
-			marginTop: down900px ? "1.2rem" : "15px",
+			textAlign: down960px ? "center" : "start",
+			display: "flex",
+			flexDirection: down960px && "column",
 			alignItems: "center",
-			marginRight: "1.5rem",
+			marginTop: down960px ? "1rem" : "0",
 		},
+		// CERRADO
+		icons: {
+			width: !down960px ? "37px" : "60px",
+			height: !down960px ? "37px" : "60px",
+			color: "white",
+			marginTop: !down960px ? "15px" : "6rem",
+			marginRight: !down960px ? "1.5rem" : 0,
+			alignItems: "center",
+			
+
+		},
+		// CERRADO
 		iconsContact: {
-			textAlign: down900px ? "center" : "start",
-			height: "34px",
+			textAlign: "start",
+			height: "37px",
+			width: "37px",
 			color: "white",
 			marginTop: "15px",
-
-			marginRight: !down900px && "1.25rem",
+			marginRight: !down960px ? "1.25rem" : 0,
 		},
+		// CERRADO
 		logoFooter: {
 			width: 300,
 			// height: 320,
-			paddingLeft: !down900px && "2em",
-			paddingRight: down900px && "4rem",
+			// paddingLeft: !down960px && "2em",
+			// paddingRight: down960px && "4rem",
 		},
 	};
 
@@ -95,7 +109,7 @@ export default function Footer() {
 		<Container maxWidth="100%" sx={styles.container}>
 				<Box sx={styles.boxContainer}>
 					{/* Left column */}
-					<Box sx={{ padding: "0", margin: "0", width: "100%" }}>
+					<Box sx={{ padding: "0", margin: "0" }}>
 						<Link style={{ textDecoration: "none" }} to={'/'}>
 							<Box component="img" src={LogoBlanco} sx={styles.logoFooter} />
 						</Link>
@@ -105,33 +119,33 @@ export default function Footer() {
 
 					{/* Right column */}
 					<Box sx={styles.rightColumn}>
+
 						{/* Phone */}
 						<Box
 							sx={{
-								textAlign: down900px ? "center" : "start",
+								textAlign: down960px ? "center" : "start",
 								display: "flex",
-								flexDirection: down900px && "column",
+								flexDirection: down960px && "column",
 								alignItems: "center",
+								marginTop: down960px ? "4rem" : "0",
 							}}
 						>
 							<Box component="img" src={ICON_PHONE} sx={styles.iconsContact} />
 							<Box>
-								<Typography mt={2} sx={styles.textTitle}>
+								<Typography sx={styles.textTitle}>
 									Phone
 								</Typography>
 								<Typography sx={styles.text}>+01 (305) 790 - 2129</Typography>
 							</Box>
 						</Box>
+
 						{/* Email */}
 						<Box
-							sx={{
-								textAlign: down900px ? "center" : "start",
-								display: !down900px && "flex",
-							}}
+							sx={styles.rightColumnRow}
 						>
 							<Box component="img" src={ICON_EMAIL} sx={styles.iconsContact} />
 							<Box sx={{}}>
-								<Typography sx={styles.textTitle} mt={2}>
+								<Typography sx={styles.textTitle} >
 									Email
 								</Typography>
 								<Typography sx={styles.text}>
@@ -139,25 +153,18 @@ export default function Footer() {
 								</Typography>
 							</Box>
 						</Box>
+
 						{/* Location */}
 						<Box
-							sx={{
-								textAlign: down900px ? "center" : "start",
-								display: "flex",
-								flexDirection: down900px && "column",
-							}}
+							sx={styles.rightColumnRow}
 						>
-							<Box
-								component="img"
-								src={ICON_LOCATION}
-								sx={styles.iconsContact}
-							/>
+							<Box component="img" src={ICON_LOCATION} sx={styles.iconsContact} />
 							<Box>
-								<Typography sx={styles.textTitle} mt={2}>
+								<Typography sx={styles.textTitle}>
 									Location
 								</Typography>
 								<Typography sx={styles.text}>
-									550 ocean 2c drive key Biscayne 33149
+									550 ocean 2c drive key Biscayne 33149 
 								</Typography>
 							</Box>
 						</Box>
@@ -165,8 +172,10 @@ export default function Footer() {
 						{/* Social Media */}
 						<Box
 							sx={{
-								textAlign: down900px ? "center" : "start",
+								textAlign: "start",
 								marginBottom: "0.25rem",
+								display: "flex",
+								justifyContent: down960px ? "space-around" : "start",
 							}}
 						>
 							<a target="_blank" href="https://www.instagram.com/spg_digital/">
