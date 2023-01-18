@@ -80,7 +80,7 @@ export default function About() {
 				lg: "190px",
 				xl: "230px",
 			},
-			backgroundColor: "#F5F5F5",
+			backgroundColor: "#F9F8F4",
 			borderRadius: "18rem",
 			"&:hover": {
 				transition: "all .35s ease-out",

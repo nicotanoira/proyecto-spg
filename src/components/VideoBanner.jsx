@@ -20,8 +20,8 @@ export default function VideoBanner() {
 			"@media (min-width: 600px)": {
 				padding: "5rem 0",
 			},
-			background:
-				"linear-gradient(90deg, rgba(235, 233, 228, 0.55) 0%, rgba(255, 255, 255, 0) 88.02%);",
+			background: 
+        		"linear-gradient(180deg, #FFFFFF 0%, #F3F3EF 100%)",
 		},
 		textContainer: {
 			display: "flex",
@@ -110,7 +110,7 @@ export default function VideoBanner() {
 					gutterBottom
 					dangerouslySetInnerHTML={{ __html: text }}
 				/>
-				<Box sx={styles.flexButton}>
+				{/* <Box sx={styles.flexButton}>
 					<Button
 						sx={styles.button}
 						// startIcon={<ArrowForwardIosIcon
@@ -130,7 +130,7 @@ export default function VideoBanner() {
 					>
 						{buttonText}
 					</Button>
-				</Box>
+				</Box> */}
 			</Box>
 		</Container>
 	);
