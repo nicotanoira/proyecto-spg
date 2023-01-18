@@ -43,7 +43,7 @@ export default function Banner() {
 			padding: { xs: "2rem" },
 			// right: "8vw",
 			// top: "13vw",
-			textAlign: { xs: "center" },
+			textAlign: { xs: "center", md: "end" },
 		},
 		button: {
 			backgroundColor: "#273339",

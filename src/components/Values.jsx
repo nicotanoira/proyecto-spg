@@ -80,7 +80,7 @@ const Values = () => {
 					<Typography
 						variant="subtitle2"
 						gutterBottom
-						sx={{ fontWeight: "bold", fontSize: { xs: "20px", md: "25px" } }}
+						sx={{ fontSize: { xs: "20px", md: "25px" } }}
 					>
 						EVERY DETAIL IS IMPORTANT
 					</Typography>
@@ -100,7 +100,7 @@ const Values = () => {
 					<Typography
 						variant="subtitle2"
 						gutterBottom
-						sx={{ fontWeight: "bold", fontSize: { xs: "20px", md: "25px" } }}
+						sx={{ fontSize: { xs: "20px", md: "25px" } }}
 					>
 						THE ACCURACY
 					</Typography>
@@ -125,7 +125,6 @@ const Values = () => {
 							variant="subtitle2"
 							gutterBottom
 							sx={{
-								fontWeight: "bold",
 								fontSize: { xs: "20px", md: "25px" },
 							}}
 						>
