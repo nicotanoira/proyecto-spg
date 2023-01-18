@@ -36,7 +36,6 @@ export default function Footer() {
 	const styles = {
 		container: {
 			display: "flex",
-			justifyContent: "space-around",
 			marginTop: "1em",
 			padding: 0,
 			"@media (min-width: 600px)": {
@@ -48,10 +47,11 @@ export default function Footer() {
 			display: "flex"
 		},
 		boxContainer: {
+			width: "100%",
 			minWidth: "0",
 			display: "flex",
 			alignItems: "center",
-			justifyContent: "space-around",
+			justifyContent: "space-between",
 			flexDirection:  down960px ? "column" : "row",
 			padding: "2rem 9rem",
 		},
@@ -76,7 +76,6 @@ export default function Footer() {
 			alignItems: "center",
 			marginTop: down960px ? "1rem" : "0",
 		},
-		// CERRADO
 		icons: {
 			width: !down960px ? "37px" : "60px",
 			height: !down960px ? "37px" : "60px",
@@ -87,7 +86,6 @@ export default function Footer() {
 			
 
 		},
-		// CERRADO
 		iconsContact: {
 			textAlign: "start",
 			height: "37px",
@@ -96,12 +94,8 @@ export default function Footer() {
 			marginTop: "15px",
 			marginRight: !down960px ? "1.25rem" : 0,
 		},
-		// CERRADO
 		logoFooter: {
 			width: 300,
-			// height: 320,
-			// paddingLeft: !down960px && "2em",
-			// paddingRight: down960px && "4rem",
 		},
 	};
 
@@ -122,6 +116,7 @@ export default function Footer() {
 
 						{/* Phone */}
 						<Box
+							// SX for MARGIN TOP for LOGO REPSONSIVE
 							sx={{
 								textAlign: down960px ? "center" : "start",
 								display: "flex",

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Box } from "@mui/system";
 import FourImagesDisplay from '../components/FourImagesDisplay';
 import ConfiguratorBanner from '../components/ConfiguratorBanner';
 import Contact from "../components/Contact";
@@ -35,8 +36,17 @@ export default function RendersAndModelServices() {
 		window.scrollTo(0, 0);
 	}, [pathname])
 
-  return (
-    <div>
+  const styles = {
+		container: {
+			display: "flex",
+			alignItems: "center",
+			justifyContent: "center",
+			flexDirection: "column",
+			overflowX: "hidden",
+		},
+	};
+	return (
+		<Box sx={styles.container}>
       <ConfiguratorBanner
         topTitleBanner={topTitleBanner}
         bottomTitleBanner={bottomTitleBanner}
@@ -61,6 +71,6 @@ export default function RendersAndModelServices() {
       />
       <CarouselBanner />
       <Contact />
-    </div>
+    </Box>
   );
 }
