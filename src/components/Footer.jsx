@@ -38,15 +38,17 @@ export default function Footer() {
 			},
 			backgroundColor: down900px ? "#273339" : "#aabdbd",
 			borderRadius: "6px",
-			minWidth: "100vw",
+			minWidth: "0",
+			display: "flex"
 		},
-		gridContainer: {
+		boxContainer: {
 			width: "100%",
-			display: down900px && "flex",
-			alignItems: down900px && "center",
-			justifyContent: down900px && "center",
-			flexDirection: down900px && "column",
-			marginLeft: down900px && "-4.8rem",
+			minWidth: "0",
+			display: "flex",
+			alignItems: "center",
+			justifyContent: "space-between",
+			flexDirection: "row",
+			padding: "1rem 5rem",
 		},
 		text: {
 			color: "white",
@@ -59,6 +61,7 @@ export default function Footer() {
 		rightColumn: {
 			display: "flex",
 			flexDirection: "column",
+			padding: "0 2rem",
 		},
 		rightColumnRow: {
 			flex: "1 0 25%" /* explanation below */,
@@ -89,23 +92,20 @@ export default function Footer() {
 	};
 
 	return (
-		<Container maxWidth={"100%"} sx={styles.container}>
-			<Box sx={{ flexGrow: 1, height: "320" }}>
-				<Grid sx={styles.gridContainer} container spacing={3}>
+		<Container maxWidth="100%" sx={styles.container}>
+				<Box sx={styles.boxContainer}>
 					{/* Left column */}
-					<Grid item xs={4} sx={{ padding: "0", margin: "0", width: "100%" }}>
+					<Box sx={{ padding: "0", margin: "0", width: "100%" }}>
 						<Link style={{ textDecoration: "none" }} to={'/'}>
 							<Box component="img" src={LogoBlanco} sx={styles.logoFooter} />
 						</Link>
-					</Grid>
+					</Box>
 
-					{/* Middle column */}
-					<Grid item xs={4} sx={{ height: 300 }}>
-						<></>
-					</Grid>
+					
 
 					{/* Right column */}
-					<Grid item xs={4} sx={styles.rightColumn}>
+					<Box sx={styles.rightColumn}>
+						{/* Phone */}
 						<Box
 							sx={{
 								textAlign: down900px ? "center" : "start",
@@ -122,6 +122,7 @@ export default function Footer() {
 								<Typography sx={styles.text}>+01 (305) 790 - 2129</Typography>
 							</Box>
 						</Box>
+						{/* Email */}
 						<Box
 							sx={{
 								textAlign: down900px ? "center" : "start",
@@ -138,6 +139,7 @@ export default function Footer() {
 								</Typography>
 							</Box>
 						</Box>
+						{/* Location */}
 						<Box
 							sx={{
 								textAlign: down900px ? "center" : "start",
@@ -159,6 +161,8 @@ export default function Footer() {
 								</Typography>
 							</Box>
 						</Box>
+
+						{/* Social Media */}
 						<Box
 							sx={{
 								textAlign: down900px ? "center" : "start",
@@ -183,9 +187,8 @@ export default function Footer() {
 								<Box component="img" src={ICON_FACEBOOK} sx={styles.icons} />
 							</a>
 						</Box>
-					</Grid>
-				</Grid>
-			</Box>
+					</Box>
+				</Box>
 		</Container>
 	);
 }
