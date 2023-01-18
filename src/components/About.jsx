@@ -90,7 +90,7 @@ export default function About() {
 	};
 
 	return (
-		<Container sx={styles.container}>
+		<Container maxWidth="100vw" sx={styles.container}>
 			<Box sx={styles.containerBoxed}>
 				{/* Left COLUMN */}
 				{!down1200px && (
