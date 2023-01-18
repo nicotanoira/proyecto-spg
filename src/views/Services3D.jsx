@@ -2,6 +2,7 @@ import React from 'react';
 import FourImagesDisplay from '../components/FourImagesDisplay';
 import ConfiguratorBanner from '../components/ConfiguratorBanner';
 import Contact from "../components/Contact";
+import { Box } from "@mui/system";
 import {
   topTitleBanner,
   bottomTitleBanner,
@@ -35,8 +36,18 @@ export default function Services3D() {
 		window.scrollTo(0, 0);
 	}, [pathname])
 
-  return (
-    <div>
+  const styles = {
+		container: {
+			display: "flex",
+			alignItems: "center",
+			justifyContent: "center",
+			flexDirection: "column",
+			overflowX: "hidden",
+		},
+	};
+
+	return (
+		<Box sx={styles.container}>
       <ConfiguratorBanner
         topTitleBanner={topTitleBanner}
         bottomTitleBanner={bottomTitleBanner}
@@ -61,6 +72,6 @@ export default function Services3D() {
       />
       <VideoBanner />
       <Contact />
-    </div>
+    </Box>
   );
 }
