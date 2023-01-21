@@ -45,13 +45,13 @@ const ForYou = () => {
 			fontSize: ".7rem",
 		},
 		boxLowerLeftListItems: { margin: "1rem", textAlign: "end" },
-		upperTitle: { fontSize: ".9rem", fontWeight: "bold" },
+		upperTitle: { fontSize: ".9rem", fontWeight: "500" },
 		lowerTitle: { fontSize: ".7rem" },
 		barra: {
 			height: "15rem",
 			border: "1px solid black",
 			width: "0px",
-			margin: "0 1rem ",
+			margin: "0 1rem 0 .5rem ",
 		},
 		text: { textAlign: "center", marginTop: "4rem" },
 
@@ -59,8 +59,8 @@ const ForYou = () => {
 			display: "flex",
 			alignItems: "center",
 			marginTop: { xs: "0", md: "-7rem" },
+			paddingBottom: down900px && "3rem",
 			marginRight: { xs: "-10rem", md: "0" },
-			// justifyContent: { xs: "end", md: "0" },
 			gap: { xs: "3px", md: "10rem" },
 			flexDirection: { xs: "column", md: "row" },
 			paddingRight: { xs: "2rem", md: "" },
@@ -69,16 +69,18 @@ const ForYou = () => {
 			display: "flex",
 			alignItems: "center",
 			justifyContent: "center",
+			textAlign: { xs: "start", md: "center" },
 			flexDirection: { xs: "row", md: "column" },
-			gap: { xs: ".5rem", md: "" },
+			gap: { xs: ".2rem", md: "" },
 		},
 		member2: {
 			display: "flex",
 			alignItems: "center",
 			justifyContent: "center",
+			textAlign: { xs: "start", md: "center" },
 			flexDirection: { xs: "row", md: "column" },
 			marginTop: { xs: "0", md: "10rem" },
-			gap: { xs: "1rem", md: "" },
+			gap: { xs: ".2rem", md: "" },
 		},
 	};
 	return (
@@ -94,10 +96,16 @@ const ForYou = () => {
 					<Box sx={styles.containerLeftColumn}>
 						{/* Upper Title */}
 						<Box sx={styles.boxLeftTitle}>
-							<Typography variant="span " sx={styles.upperTitle}>
+							<Typography
+								sx={{ fontSize: { xs: "17px", md: "20px" }, fontWeight: "200" }}
+							>
 								ABOUT
 							</Typography>
-							<Typography variant="h4">SPG</Typography>
+							<Typography
+								sx={{ fontSize: { xs: "35px", md: "50px" }, fontWeight: "" }}
+							>
+								SPG
+							</Typography>
 						</Box>
 
 						{/* Lower List */}
@@ -168,7 +176,7 @@ const ForYou = () => {
 							<Typography
 								sx={{
 									fontSize: { xs: ".85rem", md: "1.3rem" },
-									fontWeight: "bold",
+									fontWeight: "500",
 								}}
 								gutterBottom
 							>
@@ -176,7 +184,7 @@ const ForYou = () => {
 							</Typography>
 							<Typography
 								sx={{
-									fontSize: { xs: ".8rem", md: "" },
+									fontSize: { xs: ".8rem", md: "1rem" },
 								}}
 								gutterBottom
 							>
@@ -195,7 +203,7 @@ const ForYou = () => {
 							<Typography
 								sx={{
 									fontSize: { xs: ".85rem", md: "1.3rem" },
-									fontWeight: "bold",
+									fontWeight: "500",
 								}}
 								gutterBottom
 							>
@@ -203,7 +211,7 @@ const ForYou = () => {
 							</Typography>
 							<Typography
 								sx={{
-									fontSize: { xs: ".8rem", md: "" },
+									fontSize: { xs: ".8rem", md: "1rem" },
 								}}
 								gutterBottom
 							>
@@ -225,8 +233,8 @@ const ForYou = () => {
 						>
 							<Typography
 								sx={{
-									fontWeight: "bold",
-									fontSize: { xs: ".85rem", md: "" },
+									fontSize: { xs: ".85rem", md: "1.3rem" },
+									fontWeight: "500",
 								}}
 								gutterBottom
 							>
@@ -234,7 +242,7 @@ const ForYou = () => {
 							</Typography>
 							<Typography
 								sx={{
-									fontSize: { xs: ".8rem", md: "" },
+									fontSize: { xs: ".8rem", md: "1rem" },
 								}}
 								gutterBottom
 							>
