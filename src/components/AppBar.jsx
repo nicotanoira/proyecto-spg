@@ -172,6 +172,14 @@ function DrawerAppBar(props) {
       >
         <Toolbar>
           {/* Menu Hamburguesa */}
+          <Link style={{ textDecoration: 'none' }} to='/'>
+            <Typography
+              variant='body1'
+              sx={{ my: 1, color: '#73807F', left: '0', marginLeft: '5px' }}
+            >
+              SPG
+            </Typography>
+          </Link>
           <IconButton
             color='inherit'
             aria-label='open drawer'
