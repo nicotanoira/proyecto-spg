@@ -38,9 +38,11 @@ export default function Banner() {
 			position: "absolute",
 			display: "flex",
 			flexDirection: "column",
-			alignItems: { xs: "center" },
+			alignItems: { xs: "center", md: "end" },
 			justifyContent: { xs: "center" },
 			padding: { xs: "2rem" },
+			paddingRight: { xs: "2rem", md: "10vw" },
+			marginTop: { xs: "1vh", sm: "4vh", md: "8vh", lg: "13vh"},
 			// right: "8vw",
 			// top: "13vw",
 			textAlign: { xs: "center", md: "end" },
@@ -64,8 +66,10 @@ export default function Banner() {
 					<Typography
 						variant="h5"
 						sx={{
-							marginRight: { xs: "", md: "-10rem" },
-							fontSize: down900px ? "12px" : down1200px ? "16px" : "20px",
+							marginRight: { xs: "" },
+							fontSize: down900px ? "12px" : down1200px ? "16px" : "24px",
+							fontWeight: "400",
+							color: "#273339",
 						}}
 						gutterBottom
 					>
@@ -74,11 +78,27 @@ export default function Banner() {
 				</Box>
 
 				<Box sx={styles.middleTextBox}>
+					{down600px ? (
+						<Typography
+						variant="h2"
+						sx={{
+							height: "fit-content",
+							fontSize: down900px ? "25px" : down1200px ? "55px" : "74px",
+							fontWeight: 500,
+							color: "#273339",
+						}}
+						gutterBottom
+					>
+						TAILORING SOLUTIONS
+					</Typography>
+					) : (
 					<Typography
 						variant="h2"
 						sx={{
 							height: "fit-content",
-							fontSize: down900px ? "45px" : down1200px ? "55px" : "70px",
+							fontSize: down900px ? "30px" : down1200px ? "55px" : "74px",
+							fontWeight: 500,
+							color: "#273339",
 						}}
 						gutterBottom
 					>
@@ -86,6 +106,10 @@ export default function Banner() {
 						<br />
 						SOLUTIONS
 					</Typography>
+
+					)
+
+					}
 				</Box>
 
 				<Box sx={styles.lowerTextBox}>
@@ -93,7 +117,9 @@ export default function Banner() {
 						<Typography
 							variant="body1"
 							sx={{
-								fontSize: down900px ? "14px" : down1200px ? "18px" : "22px",
+								fontSize: down900px ? "6px" : down1200px ? "18px" : "25px",
+								fontWeight: 400,
+								color: "#273339",
 							}}
 						>
 							We have the power to help you strengthen
@@ -105,8 +131,10 @@ export default function Banner() {
 							<Typography
 								variant="body1"
 								sx={{
-									fontSize: down900px ? "14px" : down1200px ? "18px" : "22px",
+									fontSize: down900px ? "13px" : down1200px ? "1.3rem" : "2rem",
 									marginBottom: { xs: "12px" },
+									fontWeight: 400,
+									color: "#273339",
 								}}
 							>
 								We have the power to help you strengthen your customers'

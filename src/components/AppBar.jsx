@@ -124,7 +124,7 @@ function DrawerAppBar(props) {
                   sx={{
                     color: 'black',
                     textTransform: 'none',
-                    marginRight: '5rem',
+                    marginRight: { sm: "1rem", md: '5rem'},
                     fontSize: '1rem',
                   }}
                 >
