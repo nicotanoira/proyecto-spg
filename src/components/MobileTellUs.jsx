@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Button, Typography } from '@mui/material';
 import LogoBlanco from '../assets/LogoBlanco.svg';
+import logoChat from '../assets/chat_logo-14.svg';
 
 export default function TellUsYourIdea() {
   return (
@@ -22,9 +23,10 @@ export default function TellUsYourIdea() {
     >
       <Box
         component='img'
-        src={LogoBlanco}
+        src={logoChat}
         sx={{
           width: '35%',
+          marginRight: '20px',
         }}
       />
       <Box sx={{ color: 'white', textAlign: 'start' }}>
