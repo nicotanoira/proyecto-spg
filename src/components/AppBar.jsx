@@ -15,10 +15,17 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import LogoBlanco from '../assets/LogoBlanco.svg';
+import ICON_FACEBOOK from '../assets/ICON_FACEBOOK.svg';
+import ICON_INSTAGRAM from '../assets/ICON_INSTAGRAM.svg';
+import ICON_LINKEDIN from '../assets/ICON_LINKEDIN.svg';
+import TellUsYourIdea from './MobileTellUs';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { Link, useLocation, NavLink } from 'react-router-dom';
 import { BorderBottom, BorderColor } from '@mui/icons-material';
+import { Grid, Stack, useMediaQuery } from '@mui/material';
 
-const drawerWidth = 240;
+/* const drawerWidth = 240; */
 const navItems = [
   { name: '3D configurators', source: '/3D-configurators' },
   { name: '2D configurators', source: '/2D-configurators' },
@@ -34,21 +41,78 @@ function DrawerAppBar(props) {
   useEffect(() => {}, [pathname]);
 
   const handleDrawerToggle = () => {
-    setMobileOpen((prevState) => !prevState);
+    setMobileOpen(!mobileOpen);
+  };
+
+  const styles = {
+    button: {
+      flex: '1 0 90%',
+      display: 'flex',
+      alignSelf: 'center',
+      width: '90%',
+      borderRadius: '35px',
+      color: 'white',
+      padding: '8px 10px',
+      borderColor: 'gray',
+      fontSize: '90%',
+      fontWeight: '200',
+      letterSpacing: '0.5px',
+      backgroundColor: 'rgba(249, 248, 244, 0.15)',
+      textTransform: 'none',
+      '&:hover': {
+        borderColor: 'gray',
+        backgroundColor: 'gray',
+        color: 'white',
+      },
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      marginBottom: '2rem',
+    },
+    icons: {
+      color: 'white',
+      alignItems: 'center',
+      width: '45px',
+      margin: '1rem',
+    },
   };
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Link style={{ textDecoration: 'none' }} to='/'>
-        <Typography variant='h6' sx={{ my: 2, color: 'black' }}>
-          SPG
-        </Typography>
-      </Link>
-      <Divider />
-      <List>
+      <Grid
+        sx={{
+          display: 'flex',
+          alignItems: 'start',
+          alignItems: 'flex-start',
+          justifyContent: 'space-between',
+          padding: '0 1rem',
+          marginTop: '10px',
+        }}
+      >
+        <Link style={{ textDecoration: 'none' }} to='/'>
+          <Typography
+            variant='body1'
+            sx={{ my: 1, color: 'white', left: '0', marginLeft: '5px' }}
+          >
+            SPG
+          </Typography>
+        </Link>
+        <IconButton
+          onClick={handleDrawerToggle}
+          close={setMobileOpen}
+          size='small'
+          sx={{
+            color: 'white',
+            my: 1,
+          }}
+        >
+          <ArrowBackIosNewIcon fontSize='small' />
+        </IconButton>
+      </Grid>
+      <Box component='img' src={LogoBlanco} sx={{ width: '35%' }} />
+      <List sx={{ marginTop: '10px' }}>
         {navItems.map((item) => (
           <Link style={{ textDecoration: 'none' }} to={item.source}>
-            <ListItem key={item.name} sx={{ color: 'black' }} disablePadding>
+            <ListItem key={item.name} sx={styles.button} disablePadding>
               <ListItemButton sx={{ textAlign: 'center' }}>
                 <ListItemText primary={item.name} />
               </ListItemButton>
@@ -62,6 +126,32 @@ function DrawerAppBar(props) {
           </ListItemButton>
         </ListItem> */}
       </List>
+      <TellUsYourIdea />
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          marginTop: '2rem',
+        }}
+      >
+        <a target='_blank' href='https://www.instagram.com/spg_digital/'>
+          <Box component='img' src={ICON_INSTAGRAM} sx={styles.icons} />
+        </a>
+
+        <a
+          target='_blank'
+          href='https://www.linkedin.com/company/spg-digital/about//'
+        >
+          <Box component='img' src={ICON_LINKEDIN} sx={styles.icons} />
+        </a>
+
+        <a
+          target='_blank'
+          href='https://www.facebook.com/profile.php?id=100088834549930/'
+        >
+          <Box component='img' src={ICON_FACEBOOK} sx={styles.icons} />
+        </a>
+      </Box>
     </Box>
   );
 
@@ -69,9 +159,17 @@ function DrawerAppBar(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', height: { xs: 0, sm: '100%' } }}>
       <CssBaseline />
-      <AppBar component='nav' sx={{ backgroundColor: '#F3F2EE', padding: '0' }}>
+      <AppBar
+        component='nav'
+        sx={{
+          backgroundColor: { xs: 'transparent', sm: '#F3F2EE' },
+          padding: '0',
+        }}
+        elevation={{ xs: 0, sm: 3 }}
+        postition={{ xs: 'static', sm: 'absolute' }}
+      >
         <Toolbar>
           {/* Menu Hamburguesa */}
           <IconButton
@@ -85,6 +183,8 @@ function DrawerAppBar(props) {
                 sm: 'none',
                 color: '#73807F',
               },
+              position: 'absolute',
+              right: '0',
             }}
           >
             <MenuIcon />
@@ -150,8 +250,9 @@ function DrawerAppBar(props) {
           </Box>
         </Toolbar>
       </AppBar>
-      <Box component='nav' sx={{}}>
+      <Box /* component='nav' */>
         <Drawer
+          anchor='right'
           container={container}
           variant='temporary'
           open={mobileOpen}
@@ -163,7 +264,8 @@ function DrawerAppBar(props) {
             display: { xs: 'block', sm: 'none' },
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
-              width: drawerWidth,
+              width: '100%',
+              backgroundColor: '#273339',
             },
           }}
         >
