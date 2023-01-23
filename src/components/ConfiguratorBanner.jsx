@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Container } from "@mui/system";
 import LogoNegro from "../assets/LogoNegro.svg";
-import { Typography, useTheme, useMediaQuery } from "@mui/material";
+import { Typography } from "@mui/material";
 
 export default function ConfiguratorBanner({
 	topTitleBanner,
@@ -61,8 +61,7 @@ export default function ConfiguratorBanner({
 			transform: { xs: "translateX(-11rem)", lg: "unset" },
 		},
 	};
-	const theme = useTheme();
-	const down1200px = useMediaQuery(theme.breakpoints.down("lg"));
+
 	return (
 		<Container maxWidth="100vw" sx={styles.container}>
 			<Container maxWidth="100vw" sx={styles.contentContainer}>
