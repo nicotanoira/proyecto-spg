@@ -17,13 +17,21 @@ import {
   thirdImage,
   fourthImage,
   firstImageTitle,
+  firstImageTitleResp,
   secondImageTitle,
+  secondImageTitleResp,
   thirdImageTitle,
+  thirdImageTitleResp,
   fourthImageTitle,
+  fourthImageTitleResp,
   firstImageDescription,
   secondImageDescription,
   thirdImageDescription,
   fourthImageDescription,
+  firstImageDescriptionResp,
+  secondImageDescriptionResp,
+  thirdImageDescriptionResp,
+  fourthImageDescriptionResp,
 } from '../constants/services3D/constants';
 import VideoBanner from '../components/VideoBanner';
 import { useLocation } from "react-router-dom";
@@ -65,10 +73,18 @@ export default function Services3D() {
         secondImageTitle={secondImageTitle}
         thirdImageTitle={thirdImageTitle}
         fourthImageTitle={fourthImageTitle}
+        firstImageTitleResp={firstImageTitleResp}
+        secondImageTitleResp={secondImageTitleResp}
+        thirdImageTitleResp={thirdImageTitleResp}
+        fourthImageTitleResp={fourthImageTitleResp}
         firstImageDescription={firstImageDescription}
         secondImageDescription={secondImageDescription}
         thirdImageDescription={thirdImageDescription}
         fourthImageDescription={fourthImageDescription}
+        firstImageDescriptionResp={firstImageDescriptionResp}
+        secondImageDescriptionResp={secondImageDescriptionResp}
+        thirdImageDescriptionResp={thirdImageDescriptionResp}
+        fourthImageDescriptionResp={fourthImageDescriptionResp}
       />
       <VideoBanner />
       <Contact />
