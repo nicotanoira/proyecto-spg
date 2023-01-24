@@ -175,7 +175,7 @@ function DrawerAppBar(props) {
           <Link style={{ textDecoration: 'none' }} to='/'>
             <Typography
               variant='body1'
-              sx={{ my: 1, color: '#73807F', left: '0', marginLeft: '5px' }}
+              sx={{ my: 1, color: '#73807F', left: '0', marginLeft: '5px', display: {xs: "inline", sm: "none"} }}
             >
               SPG
             </Typography>

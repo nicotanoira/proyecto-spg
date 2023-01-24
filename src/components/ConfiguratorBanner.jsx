@@ -64,7 +64,7 @@ export default function ConfiguratorBanner({
       fontWeight: 400,
     },
     bottomTitle: {
-      fontSize: {xs: "2rem", sm: "3rem", md: "5rem", lg: '6.5rem'}, 
+      fontSize: {xs: "2rem", sm: "3rem", md: "5rem", lg: '5rem'}, 
       letterSpacing: {xs: "0", sm: "", md: "", lg: '5px'},
       fontWeight: 600,
     },
