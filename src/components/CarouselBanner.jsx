@@ -26,7 +26,8 @@ export default function CarouselBanner() {
             '@media (min-width: 600px)': {
                 padding: "5rem 0",
             },
-            background: "linear-gradient(90deg, rgba(235, 233, 228, 0.55) 0%, rgba(255, 255, 255, 0) 88.02%);",
+            background: 
+                "linear-gradient(180deg, #FFFFFF 0%, #F3F3EF 100%)",
         },
         carouselContainer: {
             display: 'flex', 
@@ -123,7 +124,7 @@ export default function CarouselBanner() {
                             width: '90%',
                             height: '77vh',
                         }}
-                        media={[{source: firstImage}, {source: thirdImage}, {source: fourthImage}]}
+                        media={[{source: firstImage}, {source: secondImage}, {source: thirdImage},]}
                     />
                     
                 </Box>

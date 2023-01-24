@@ -175,7 +175,7 @@ function DrawerAppBar(props) {
           <Link style={{ textDecoration: 'none' }} to='/'>
             <Typography
               variant='body1'
-              sx={{ my: 1, color: '#73807F', left: '0', marginLeft: '5px' }}
+              sx={{ my: 1, color: '#73807F', left: '0', marginLeft: '5px', display: {xs: "inline", sm: "none"} }}
             >
               SPG
             </Typography>
@@ -228,12 +228,16 @@ function DrawerAppBar(props) {
             {navItems.map((item) => (
               <NavLink style={{ textDecoration: 'none' }} to={item.source}>
                 <Button
+                  disableTouchRipple 
                   key={item.name}
                   sx={{
                     color: 'black',
                     textTransform: 'none',
-                    marginRight: '5rem',
+                    marginRight: { sm: "1rem", md: '5rem'},
                     fontSize: '1rem',
+                    '&:hover': {
+                      backgroundColor: 'transparent',
+                    },
                   }}
                 >
                   {item.source === pathname ? (

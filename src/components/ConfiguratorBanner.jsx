@@ -27,6 +27,7 @@ export default function ConfiguratorBanner({
       '@media (min-width: 600px)': {
         padding: 0,
       },
+      flexDirection: {xs: "column", lg: "row"}
     },
     rightContainer: {
       marginRight: '4rem',
@@ -34,22 +35,45 @@ export default function ConfiguratorBanner({
       justifyContent: 'start',
     },
     image: {
-      paddingTop: '3rem',
+      marginTop: {xs: "-3rem", lg: "3rem"},
       paddingLeft: '1rem',
       height: '100%',
+      zIndex: "0",
+    },
+    leftContainer: {
+      display: 'flex',
+      flex: '1 0 50%',
+      flexDirection: 'column',
+      marginLeft: {xs: "none", lg: '5rem'},
+      marginTop: {xs: "4rem", lg: "0"},
+      width: 'fit-content',
+      paddingBottom: {xs: 0, lg: "5rem"},
+      justifyContent: {xs: "center", lg: "start"},
+      textAlign: {xs: "center", lg: "start"},
     },
     logo: {
       width: 280,
       height: 280,
       marginBottom: '2rem',
       marginLeft: '-3.3rem',
+      display: {xs: "none", lg: "inline"}
     },
-    leftContainer: {
-      display: 'flex',
-      flex: '1 0 50%',
-      flexDirection: 'column',
-      marginLeft: '5rem',
-      width: 'fit-content',
+    topTitle: {
+      fontSize: {xs: "1rem", sm: "1.5", md: "2.5rem", lg: '260%'}, 
+      letterSpacing: {xs: "0", sm: "", md: "", lg: '3px'},
+      fontWeight: 400,
+    },
+    bottomTitle: {
+      fontSize: {xs: "2rem", sm: "3rem", md: "5rem", lg: '5rem'}, 
+      letterSpacing: {xs: "0", sm: "", md: "", lg: '5px'},
+      fontWeight: 600,
+    },
+    textDescription: {
+      fontSize: {xs: ".85rem", sm: "1.2rem", md: "2rem"},  
+      margin: {xs: "0 1rem", lg: '0'}, 
+      whiteSpace: 'pre-wrap',
+      zIndex: "1",
+      fontWeight: "400",
     },
   };
 
@@ -61,20 +85,20 @@ export default function ConfiguratorBanner({
 
           <Typography
             variant='h3'
-            sx={{ fontSize: '260%', letterSpacing: '3px' }}
+            sx={styles.topTitle}
           >
             {topTitleBanner}
           </Typography>
           <Typography
             variant='h1'
-            sx={{ fontSize: '500%', letterSpacing: '5px' }}
+            sx={styles.bottomTitle}
             gutterBottom
           >
             {bottomTitleBanner}
           </Typography>
           <Typography
             variant='body1'
-            sx={{ fontSize: '200%', whiteSpace: 'pre-wrap' }}
+            sx={styles.textDescription}
             dangerouslySetInnerHTML={{ __html: descriptionBanner }}
           />
         </Container>
