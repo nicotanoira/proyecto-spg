@@ -21,8 +21,8 @@ export default function VideoBanner() {
 			"@media (min-width: 600px)": {
 				padding: "5rem 0",
 			},
-			background:
-				"linear-gradient(90deg, rgba(235, 233, 228, 0.55) 0%, rgba(255, 255, 255, 0) 88.02%);",
+			background: 
+        		"linear-gradient(180deg, #FFFFFF 0%, #F3F3EF 100%)",
 		},
 		textContainer: {
 			display: "flex",
@@ -83,6 +83,7 @@ export default function VideoBanner() {
 
 	return (
 		<Container maxWidth="100vw" sx={styles.container}>
+  
 			<Box sx={styles.textContainer}>
 				<ReactPlayer
 					style={{

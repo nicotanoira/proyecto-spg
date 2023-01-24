@@ -1,181 +1,196 @@
-import { Typography } from "@mui/material";
-import { Box, Container } from "@mui/system";
-import React from "react";
+import React from 'react';
+import { Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Container } from '@mui/system';
 
 const styles = {
-	container: {
-		padding: "3rem 9rem",
-		display: { xs: "flex", lg: "unset" },
-		alignItems: { xs: "center", lg: "unset" },
-		justifyContent: { xs: "center", lg: "unset" },
-		flexDirection: { xs: "column", lg: "unset" },
-	},
-	mainBox: {
-		width: { xs: "100vw", lg: "80vw" },
-		margin: { xs: "unset", lg: "0 auto" },
-		display: "flex",
-		flexDirection: { xs: "column", lg: "row" },
-		alignItems: { xs: "start", lg: "center" },
-		gap: "4rem",
-		justifyContent: "start",
-	},
-	card: {
-		alignItems: "center",
-		textAlign: { xs: "start", lg: "center" },
-		flex: "25%",
-		width: { xs: "fit-content", lg: "20vw" },
-		display: "flex",
-		flexDirection: { xs: "row", lg: "column" },
-	},
-	title: {
-		display: { xs: "flex", lg: "unset" },
-		alignItems: { xs: "center", lg: "unset" },
-		justifyContent: { xs: "center", lg: "unset" },
-		flexDirection: { xs: "column", lg: "unset" },
-		width: { xs: "max-content", lg: "unset" },
-		padding: "0 8.5%",
-		marginBottom: "2.5rem",
-	},
-};
+  container: {
+    padding: {xs: "1rem 3rem", md: '3rem 9rem'},
+  },
 
+
+  mainBox: {
+    display: 'flex',
+    flexDirection: {xs: "column", md: "row"},
+    width: '80vw',
+    margin: '0 auto',
+    alignItems: 'center',
+    gap: {xs: "1rem", md: '4rem'},
+    justifyContent: 'start',
+  },
+  card: {
+    boxShadow: {xs: "0px 4px 10px rgba(123, 122, 120, 0.2)", md: 0},
+    borderRadius: {xs: "100px", md: 0},
+    display: "flex",
+    // padding: {xs: "1rem", md: "0"},
+    flexDirection: {xs: "row", md: 'column'},
+    alignItems: 'center',
+    textAlign: {xs: "start", md: 'center'},
+    flex: '25%',
+    width: {xs: "100%", md: '20vw'},
+    heigth: '180px',
+  },
+  responsiveText: {
+    display: {xs: "flex", md: "inline"},
+    flexDirection: "column",
+    width: "100%",
+    marginLeft: {xs: "1.5rem", md: 0},
+    marginRight: {xs: "1rem", md: 0},
+    fontSize: "20px"
+  },
+  image: {
+    width: {xs: 90, sm: 150, md: '90%'},
+    padding: {xs: "1rem 0 1rem 1rem", md: 0}
+    // marginLeft: {xs: "2rem", md: 0},
+    // height: {xs: "100%", md: 0}
+  },
+  textTitle: {
+    fontWeight: 'bold',
+    fontSize: {xs: ".8rem", sm: "1.4rem", md: "0.875rem"},
+  },
+  textDescription: {
+    fontSize: {xs: ".7rem", sm: "1.2rem", md: "0.875rem"},
+  },
+
+
+  // TOP TITLE
+  title: {
+    textAlign: {xs: "center", md: "start"},
+    fontSize: {},
+    padding: {xs: "1rem 0", sm: "1rem", md: '0 5%'},
+    marginBottom: {xs: "0", md: '2.5rem'},
+  },
+  topTitle: {
+    fontSize: {xs: "1.2rem", sm: "2rem", md: "1.25rem"},
+  },
+  bottomTitle: {
+    fontSize: {
+      xs: "2rem", 
+      sm: "3rem", 
+      md: "3rem"
+    }, 
+    padding: 0, 
+    fontWeight: 400,
+  },
+};
 /* const topTitle = 'WHY IT IMPROVES YOUR'; */
 
 export default function FourImagesDisplay({
-	topTitle,
-	bottomTitle,
-	firstImage,
-	secondImage,
-	thirdImage,
-	fourthImage,
-	firstImageTitle,
-	secondImageTitle,
-	thirdImageTitle,
-	fourthImageTitle,
-	firstImageDescription,
-	secondImageDescription,
-	thirdImageDescription,
-	fourthImageDescription,
+  topTitle,
+  bottomTitle,
+  firstImage,
+  secondImage,
+  thirdImage,
+  fourthImage,
+  firstImageTitle,
+  secondImageTitle,
+  thirdImageTitle,
+  fourthImageTitle,
+  firstImageTitleResp,
+  secondImageTitleResp,
+  thirdImageTitleResp,
+  fourthImageTitleResp,
+  firstImageDescription,
+  secondImageDescription,
+  thirdImageDescription,
+  fourthImageDescription,
+  firstImageDescriptionResp,
+  secondImageDescriptionResp,
+  thirdImageDescriptionResp,
+  fourthImageDescriptionResp,
 }) {
-	return (
-		<Container maxWidth="100vw" sx={styles.container}>
-			{/* TITULO */}
-			<Box sx={styles.title}>
-				<Typography
-					sx={{ fontSize: { xs: "100%", lg: "260%" } }}
-					gutterBottom
-					letterSpacing={2}
-				>
-					{topTitle}
-				</Typography>
-				<Typography
-					sx={{ fontSize: { xs: "100%", lg: "260%" } }}
-					gutterBottom
-					letterSpacing={3.1}
-				>
-					{bottomTitle}
-				</Typography>
-			</Box>
-			{/* CARTAS con IMG */}
-			<Box sx={styles.mainBox}>
-				{/* FIRST CARD */}
-				<Box sx={styles.card}>
-					<Box
-						component="img"
-						width={{ xs: "40%", lg: "90%" }}
-						src={firstImage}
-					/>
-
-					<Box sx={{ width: "max-content" }}>
-						{" "}
-						<Typography
-							variant="subtitle2"
-							gutterBottom
-							sx={{
-								fontWeight: "bold",
-								// width: { xs: "max-content", lg: "unset" },
-							}}
-							dangerouslySetInnerHTML={{ __html: firstImageTitle }}
-						/>
-						<Typography
-							variant="body2"
-							gutterBottom
-							dangerouslySetInnerHTML={{ __html: firstImageDescription }}
-						/>
-					</Box>
-				</Box>
-				{/* SECOND CARD */}
-				<Box sx={styles.card}>
-					<Box
-						component="img"
-						width={{ xs: "40%", lg: "90%" }}
-						src={secondImage}
-					/>
-					<Box sx={{ width: "max-content" }}>
-						<Typography
-							variant="subtitle2"
-							gutterBottom
-							sx={{
-								fontWeight: "bold",
-								// width: { xs: "max-content", lg: "unset" },
-							}}
-							dangerouslySetInnerHTML={{ __html: secondImageTitle }}
-						/>
-						<Typography
-							variant="body2"
-							gutterBottom
-							dangerouslySetInnerHTML={{ __html: secondImageDescription }}
-						/>
-					</Box>
-				</Box>
-				{/* THIRD CARD */}
-				<Box sx={styles.card}>
-					<Box
-						component="img"
-						width={{ xs: "40%", lg: "90%" }}
-						src={thirdImage}
-					/>
-					<Box sx={{ width: "max-content" }}>
-						<Typography
-							variant="subtitle2"
-							gutterBottom
-							sx={{
-								fontWeight: "bold",
-								// width: { xs: "max-content", lg: "unset" },
-							}}
-							dangerouslySetInnerHTML={{ __html: thirdImageTitle }}
-						/>
-						<Typography
-							variant="body2"
-							gutterBottom
-							dangerouslySetInnerHTML={{ __html: thirdImageDescription }}
-						/>
-					</Box>{" "}
-				</Box>
-				{/* FOURTH CARD */}
-				<Box sx={styles.card}>
-					<Box
-						component="img"
-						width={{ xs: "40%", lg: "90%" }}
-						src={fourthImage}
-					/>
-					<Box sx={{ width: "max-content" }}>
-						<Typography
-							variant="subtitle2"
-							gutterBottom
-							sx={{
-								fontWeight: "bold",
-								// width: { xs: "max-content", lg: "unset" },
-							}}
-							dangerouslySetInnerHTML={{ __html: fourthImageTitle }}
-						/>
-						<Typography
-							variant="body2"
-							gutterBottom
-							dangerouslySetInnerHTML={{ __html: fourthImageDescription }}
-						/>
-					</Box>
-				</Box>
-			</Box>
-		</Container>
-	);
+  const theme = useTheme();
+  const down600px = useMediaQuery(theme.breakpoints.down("xs"));
+  const down960px = useMediaQuery(theme.breakpoints.down("md"));
+  const down1200px = useMediaQuery(theme.breakpoints.down("lg"));
+  const down2000px = useMediaQuery(theme.breakpoints.down("xl"));
+  
+  return (
+    <Container maxWidth='100vw' sx={styles.container}>
+      {/* TITULO */}
+      <Box sx={styles.title}>
+        <Typography variant='h6' sx={styles.topTitle} gutterBottom letterSpacing={{xs: 0.5, md: 2}}>
+          {topTitle}
+        </Typography>
+        <Typography variant='h3' sx={styles.bottomTitle} gutterBottom letterSpacing={{xs: 0.2, md: 3.1}}>
+          {bottomTitle}
+        </Typography>
+      </Box>
+      {/* CARTAS con IMG */}
+      <Box sx={styles.mainBox}>
+        {/* FIRST CARD */}
+        <Box sx={styles.card}>
+          <Box component='img' sx={styles.image} src={firstImage} />
+          <Box sx={styles.responsiveText}>
+              <Typography
+                 variant='subtitle2'
+                 gutterBottom
+                 sx={styles.textTitle}
+                 dangerouslySetInnerHTML={down960px ? { __html: firstImageTitleResp } : { __html: firstImageTitle }}
+               />
+               <Typography
+                 variant='body2'
+                 gutterBottom
+                 sx={styles.textDescription}
+                 dangerouslySetInnerHTML={down960px ? { __html: firstImageDescriptionResp } : { __html: firstImageDescription }}
+               />
+          </Box>
+        </Box>
+        {/* SECOND CARD */}
+        <Box sx={styles.card}>
+          <Box component='img' sx={styles.image} src={secondImage} />
+          <Box sx={styles.responsiveText}>
+            <Typography
+              variant='subtitle2'
+              gutterBottom
+              sx={styles.textTitle}
+              dangerouslySetInnerHTML={down960px ? { __html: secondImageTitleResp } : { __html: secondImageTitle }}
+            />
+            <Typography
+              variant='body2'
+              gutterBottom
+              sx={styles.textDescription}
+              dangerouslySetInnerHTML={down960px ? { __html: secondImageDescriptionResp } : { __html: secondImageDescription }}
+            />
+          </Box>
+        </Box>
+        {/* THIRD CARD */}
+        <Box sx={styles.card}>
+          <Box component='img' sx={styles.image} src={thirdImage} />
+          <Box sx={styles.responsiveText}>
+            <Typography
+              variant='subtitle2'
+              gutterBottom
+              sx={styles.textTitle}
+              dangerouslySetInnerHTML={down960px ? { __html: thirdImageTitleResp } : { __html: thirdImageTitle }}
+            />
+            <Typography
+              variant='body2'
+              gutterBottom
+              sx={styles.textDescription}
+              dangerouslySetInnerHTML={down960px ? { __html: thirdImageDescriptionResp } : { __html: thirdImageDescription }}
+            />
+          </Box>
+        </Box>
+        {/* FOURTH CARD */}
+        <Box sx={styles.card}>
+          <Box component='img' sx={styles.image} src={fourthImage} />
+          <Box sx={styles.responsiveText}>
+            <Typography
+              variant='subtitle2'
+              gutterBottom
+              sx={styles.textTitle}
+              dangerouslySetInnerHTML={down960px ? { __html: fourthImageTitleResp } : { __html: fourthImageTitle }}
+            />
+            <Typography
+              variant='body2'
+              gutterBottom
+              sx={styles.textDescription}
+              dangerouslySetInnerHTML={down960px ? { __html: fourthImageDescriptionResp } : { __html: fourthImageDescription }}
+            />
+          </Box>
+        </Box>
+      </Box>
+    </Container>
+  );
 }
+

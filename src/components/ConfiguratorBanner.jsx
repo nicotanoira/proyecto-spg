@@ -1,106 +1,112 @@
-import React from "react";
-import { Box, Container } from "@mui/system";
-import LogoNegro from "../assets/LogoNegro.svg";
-import { Typography } from "@mui/material";
+import React from 'react';
+import { Box, Container } from '@mui/system';
+import LogoNegro from '../assets/LogoNegro.svg';
+import { Typography } from '@mui/material';
 
 export default function ConfiguratorBanner({
-	topTitleBanner,
-	bottomTitleBanner,
-	imageBanner,
-	descriptionBanner,
+  topTitleBanner,
+  bottomTitleBanner,
+  imageBanner,
+  descriptionBanner,
 }) {
-	const styles = {
-		container: {
-			padding: "0 0 ",
-			position: "relative",
-			padding: 0,
-			"@media (min-width: 600px)": {
-				padding: 0,
-			},
-			background:
-				"linear-gradient(90deg, rgba(235, 233, 228, 0.55) 0%, rgba(255, 255, 255, 0) 88.02%);",
-		},
-		contentContainer: {
-			paddingLeft: "2rem",
-			display: "flex",
-			alignItems: { xs: "center", lg: "unset" },
-			justifyContent: { xs: "center", lg: "unset" },
-			flexDirection: { xs: "column", lg: "row" },
-			padding: { xs: "5rem", lg: "0" },
-			"@media (min-width: 600px)": {
-				padding: 0,
-			},
-		},
-		rightContainer: {
-			width: { xs: "100vw", lg: "100%" },
-			transform: { xs: "translateX(-5.5rem)", lg: "unset" },
+  const styles = {
+    container: {
+      padding: '0 0 ',
+      position: 'relative',
+      padding: 0,
+      '@media (min-width: 600px)': {
+        padding: 0,
+      },
+      background:
+        'linear-gradient(90deg, rgba(235, 233, 228, 0.55) 0%, rgba(255, 255, 255, 0) 88.02%);',
+    },
+    contentContainer: {
+      paddingLeft: '2rem',
+      display: 'flex',
+      padding: 0,
+      '@media (min-width: 600px)': {
+        padding: 0,
+      },
+      flexDirection: {xs: "column", lg: "row"}
+    },
+    rightContainer: {
+      marginRight: '4rem',
+      display: 'flex',
+      justifyContent: 'start',
+    },
+    image: {
+      marginTop: {xs: "-3rem", lg: "3rem"},
+      paddingLeft: '1rem',
+      height: '100%',
+      zIndex: "0",
+    },
+    leftContainer: {
+      display: 'flex',
+      flex: '1 0 50%',
+      flexDirection: 'column',
+      marginLeft: {xs: "none", lg: '5rem'},
+      marginTop: {xs: "4rem", lg: "0"},
+      width: 'fit-content',
+      paddingBottom: {xs: 0, lg: "5rem"},
+      justifyContent: {xs: "center", lg: "start"},
+      textAlign: {xs: "center", lg: "start"},
+    },
+    logo: {
+      width: 280,
+      height: 280,
+      marginBottom: '2rem',
+      marginLeft: '-3.3rem',
+      display: {xs: "none", lg: "inline"}
+    },
+    topTitle: {
+      fontSize: {xs: "1rem", sm: "1.5", md: "2.5rem", lg: '260%'}, 
+      letterSpacing: {xs: "0", sm: "", md: "", lg: '3px'},
+      fontWeight: 400,
+    },
+    bottomTitle: {
+      fontSize: {xs: "2rem", sm: "3rem", md: "5rem", lg: '6.5rem'}, 
+      letterSpacing: {xs: "0", sm: "", md: "", lg: '5px'},
+      fontWeight: 600,
+    },
+    textDescription: {
+      fontSize: {xs: ".85rem", sm: "1.2rem", md: "2rem"},  
+      margin: {xs: "0 1rem", lg: '0'}, 
+      whiteSpace: 'pre-wrap',
+      zIndex: "1",
+      fontWeight: "400",
+    },
+  };
 
-			marginRight: "4rem",
-			display: "flex",
-			justifyContent: "start",
-		},
-		image: {
-			paddingTop: { xs: ".5rem", lg: "3rem" },
-			paddingLeft: "1rem",
-			height: "100%",
-		},
-		logo: {
-			display: { xs: "none", lg: "flex" },
-			width: 280,
-			height: 280,
-			marginBottom: "2rem",
-			marginLeft: "-3.3rem",
-		},
-		leftContainer: {
-			display: "flex",
-			flex: "1 0 50%",
-			flexDirection: "column",
-			marginLeft: "5rem",
-			width: "fit-content",
-			textAlign: { xs: "center", lg: "start" },
-			transform: { xs: "translateX(-11rem)", lg: "unset" },
-		},
-	};
+  return (
+    <Container maxWidth='100vw' sx={styles.container}>
+      <Container maxWidth='100vw' sx={styles.contentContainer}>
+        <Container sx={styles.leftContainer}>
+          <Box component='img' src={LogoNegro} sx={styles.logo} />
 
-	return (
-		<Container maxWidth="100vw" sx={styles.container}>
-			<Container maxWidth="100vw" sx={styles.contentContainer}>
-				<Container sx={styles.leftContainer}>
-					{/* //LOGO */}
-					<Box component="img" src={LogoNegro} sx={styles.logo} />
+          <Typography
+            variant='h3'
+            sx={styles.topTitle}
+          >
+            {topTitleBanner}
+          </Typography>
+          <Typography
+            variant='h1'
+            sx={styles.bottomTitle}
+            gutterBottom
+          >
+            {bottomTitleBanner}
+          </Typography>
+          <Typography
+            variant='body1'
+            sx={styles.textDescription}
+            dangerouslySetInnerHTML={{ __html: descriptionBanner }}
+          />
+        </Container>
 
-					<Typography
-						variant="h3"
-						sx={{ fontSize: { xs: "100%", lg: "260%" }, letterSpacing: "3px" }}
-					>
-						{topTitleBanner}
-					</Typography>
-					<Typography
-						variant="h1"
-						sx={{
-							fontSize: { xs: "160%", lg: "500%" },
-							fontWeight: "bold",
-							letterSpacing: { xs: "2px", lg: "5px" },
-							width: { xs: "100vw", lg: "auto" },
-						}}
-						gutterBottom
-					>
-						{bottomTitleBanner}
-					</Typography>
-					<Typography
-						variant="body1"
-						sx={{
-							fontSize: { xs: "80%", lg: "200%" },
-							whiteSpace: "pre-wrap",
-						}}
-						dangerouslySetInnerHTML={{ __html: descriptionBanner }}
-					/>
-				</Container>
-
-				<Container sx={styles.rightContainer}>
-					<Box component="img" src={imageBanner} sx={styles.image} />
-				</Container>
-			</Container>
-		</Container>
-	);
+        <Container sx={styles.rightContainer}>
+          <Box component='img' src={imageBanner} sx={styles.image} />
+        </Container>
+      </Container>
+    </Container>
+  );
 }

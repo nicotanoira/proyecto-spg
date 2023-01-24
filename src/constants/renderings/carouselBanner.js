@@ -15,7 +15,7 @@ const model = "405 CQT";
 const text = "Static rendering of 3D model for<br>catalogues and online showroom.";
 
 // Button text
-const buttonText = "See our work";
+const buttonText = "See this boat";
 
 export {
     firstImage,

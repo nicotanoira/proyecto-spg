@@ -26,8 +26,7 @@ const ForYou = () => {
 			"@media (min-width: 600px)": {
 				padding: 0,
 			},
-			background:
-				"linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #F3F3EF 100%)",
+			backgroundColor: "#F9F8F4",
 			// minWidth: "100vw",
 			maxWidth: "100vw",
 			padding: "2rem",
