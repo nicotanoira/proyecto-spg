@@ -124,7 +124,7 @@ export default function CarouselBanner() {
                             width: '90%',
                             height: '77vh',
                         }}
-                        media={[{source: firstImage}, {source: thirdImage}, {source: fourthImage}]}
+                        media={[{source: firstImage}, {source: secondImage}, {source: thirdImage},]}
                     />
                     
                 </Box>

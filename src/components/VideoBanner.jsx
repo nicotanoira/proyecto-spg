@@ -100,6 +100,13 @@ export default function VideoBanner() {
 					width="90%"
 					height={down1200px ? "35vh" : "77vh"}
 					url={video3D}
+					config={{
+						youtube: {
+						  playerVars: { showinfo: 1 }
+						},
+					}}
+					showChannel={false}
+					showBorder={false}
 				/>
 			</Box>
 

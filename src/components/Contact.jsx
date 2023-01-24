@@ -11,9 +11,9 @@ import {
 	useMediaQuery,
 	useTheme,
 } from "@mui/material";
-import ICON_FACEBOOK from "../assets/ICON_FACEBOOK.svg";
-import ICON_INSTAGRAM from "../assets/ICON_INSTAGRAM.svg";
-import ICON_LINKEDIN from "../assets/ICON_LINKEDIN.svg";
+import ICON_FACEBOOK from "../assets/facebookoscuro.svg";
+import ICON_INSTAGRAM from "../assets/instagramoscuro.svg";
+import ICON_LINKEDIN from "../assets/linkedinoscuro.svg";
 import { BorderColor } from "@mui/icons-material";
 
 const styles = {
