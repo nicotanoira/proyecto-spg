@@ -17,6 +17,7 @@ export default function VideoBanner() {
 			padding: "5rem",
 			backgroundColor: "red",
 			display: "flex",
+			flexDirection: { xs: "column", lg: "row" },
 			"@media (min-width: 600px)": {
 				padding: "5rem 0",
 			},
@@ -28,16 +29,23 @@ export default function VideoBanner() {
 			justifyContent: "flex-end",
 			flex: "1 0 75%",
 			alignItems: "flex-end",
+			width: { xs: "90vw", lg: "unset" },
+			transform: { xs: "translateX(-3.9rem)", lg: "unset" },
+			paddingBottom: { xs: "2rem", lg: "unset" },
 		},
 		videoContainer: {
 			flex: "1 0 25%",
 			display: "flex",
-			paddingLeft: "5rem",
+			paddingLeft: { xs: "unset", lg: "5rem" },
+			textAlign: { xs: "center", lg: "start" },
 			flexDirection: "column",
 			alignItems: "start",
 			justifyContent: "center",
 			width: "fit-content",
 		},
+		width: { xs: "90vw", lg: "unset" },
+		transform: { xs: "translateX(-3.9rem)", lg: "unset" },
+		paddingBottom: { xs: "2rem", lg: "unset" },
 		flexButton: {
 			width: 260,
 			display: "flex",
@@ -75,6 +83,7 @@ export default function VideoBanner() {
 
 	return (
 		<Container maxWidth="100vw" sx={styles.container}>
+  
 			<Box sx={styles.textContainer}>
 				<ReactPlayer
 					style={{
@@ -87,30 +96,37 @@ export default function VideoBanner() {
 			</Box>
 
 			<Box sx={styles.videoContainer}>
-				<Typography
-					variant="h2"
-					fontWeight="bold"
-					sx={{ fontSize: "100%", letterSpacing: "3px" }}
-				>
-					{company}
-				</Typography>
-				<Typography
-					variant="h1"
-					sx={{ fontSize: "350%", letterSpacing: "2px", marginBottom: "1rem" }}
-				>
-					{model}
-				</Typography>
-				<Typography
-					variant="body1"
-					sx={{
-						fontSize: "125%",
-						whiteSpace: "pre-wrap",
-						marginBottom: "1rem",
-					}}
-					gutterBottom
-					dangerouslySetInnerHTML={{ __html: text }}
-				/>
-				{/* <Box sx={styles.flexButton}>
+				<Box>
+					<Typography
+						variant="h2"
+						fontWeight="bold"
+						sx={{ fontSize: "100%", letterSpacing: "3px" }}
+					>
+						{company}
+					</Typography>
+					<Typography
+						variant="h1"
+						sx={{
+							fontSize: "350%",
+							letterSpacing: "2px",
+							marginBottom: "1rem",
+						}}
+					>
+						{model}
+					</Typography>
+					<Typography
+						variant="body1"
+						sx={{
+							fontSize: "125%",
+							whiteSpace: "pre-wrap",
+							marginBottom: "1rem",
+							width: { xs: "max-content", lg: "unset" },
+						}}
+						gutterBottom
+						dangerouslySetInnerHTML={{ __html: text }}
+					/>
+				</Box>
+				<Box sx={styles.flexButton}>
 					<Button
 						sx={styles.button}
 						// startIcon={<ArrowForwardIosIcon
@@ -130,7 +146,7 @@ export default function VideoBanner() {
 					>
 						{buttonText}
 					</Button>
-				</Box> */}
+				</Box>
 			</Box>
 		</Container>
 	);
