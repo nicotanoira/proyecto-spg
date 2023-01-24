@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Container } from "@mui/system";
-import { Typography, Button } from "@mui/material";
+import { Typography, Button, useTheme, useMediaQuery } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ReactPlayer from "react-player";
 import {
@@ -12,31 +12,40 @@ import {
 } from "../constants/services3D/videoBanner.js";
 
 export default function VideoBanner() {
+	const theme = useTheme();
+	const down1200px = useMediaQuery(theme.breakpoints.down("lg"));
 	const styles = {
 		container: {
 			padding: "5rem",
 			backgroundColor: "red",
 			display: "flex",
+			alignItems: { xs: "center", lg: "unset" },
 			flexDirection: { xs: "column", lg: "row" },
 			"@media (min-width: 600px)": {
 				padding: "5rem 0",
 			},
-			background: 
-        		"linear-gradient(180deg, #FFFFFF 0%, #F3F3EF 100%)",
+			background: "linear-gradient(180deg, #FFFFFF 0%, #F3F3EF 100%)",
 		},
 		textContainer: {
 			display: "flex",
 			justifyContent: "flex-end",
 			flex: "1 0 75%",
 			alignItems: "flex-end",
-			width: { xs: "90vw", lg: "unset" },
-			transform: { xs: "translateX(-3.9rem)", lg: "unset" },
+			width: { xs: "100vw", lg: "unset" },
+			transform: {
+				xs: "translateX(-1.3em)",
+				sm: "translateX(-2.6rem)",
+				md: "translateX(-3.5rem)",
+				// lg: "translateX(-3.5rem)",
+				xl: "unset",
+			},
 			paddingBottom: { xs: "2rem", lg: "unset" },
 		},
 		videoContainer: {
 			flex: "1 0 25%",
 			display: "flex",
 			paddingLeft: { xs: "unset", lg: "5rem" },
+
 			textAlign: { xs: "center", lg: "start" },
 			flexDirection: "column",
 			alignItems: "start",
@@ -44,7 +53,7 @@ export default function VideoBanner() {
 			width: "fit-content",
 		},
 		width: { xs: "90vw", lg: "unset" },
-		transform: { xs: "translateX(-3.9rem)", lg: "unset" },
+		transform: { xs: "translateX(-4.8rem)", lg: "unset" },
 		paddingBottom: { xs: "2rem", lg: "unset" },
 		flexButton: {
 			width: 260,
@@ -83,14 +92,13 @@ export default function VideoBanner() {
 
 	return (
 		<Container maxWidth="100vw" sx={styles.container}>
-  
 			<Box sx={styles.textContainer}>
 				<ReactPlayer
 					style={{
 						flexDirection: "flex-end",
 					}}
 					width="90%"
-					height="77vh"
+					height={down1200px ? "35vh" : "77vh"}
 					url={video3D}
 				/>
 			</Box>
