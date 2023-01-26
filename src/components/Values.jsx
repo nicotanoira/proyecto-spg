@@ -3,6 +3,9 @@ import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import Laptop from "../assets/Laptop.svg";
 import Magnet from "../assets/Magnet.svg";
 import Puzzle from "../assets/Puzzle.svg";
+import AwesomeSlider from 'react-awesome-slider';
+import 'react-awesome-slider/dist/styles.css';
+import { height } from "@mui/system";
 
 const Values = () => {
 	const theme = useTheme();
@@ -62,6 +65,7 @@ const Values = () => {
 			fontSize: { xs: "11px", sm: "17px", md: "18px" } 
 		},
 	};
+	
 	return (
 		<Box sx={styles.container}>
 			<Box sx={styles.text}>

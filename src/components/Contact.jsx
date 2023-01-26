@@ -79,7 +79,6 @@ export default function Contact({ myRef }) {
 
 	return (
 		<Container ref={myRef} sx={styles.container}>
-			
 			{/* TITULO */}
 			<Box sx={{ flexDirection: "column" }}>
 				<Box sx={{ textAlign: "start" }}>
@@ -153,7 +152,7 @@ export default function Contact({ myRef }) {
 										</a>
 										<a
 											target="_blank"
-											href="https://www.instagram.com/spg_digital/"
+											href="https://www.facebook.com/profile.php?id=100088834549930"
 										>
 											<Box
 												component="img"
