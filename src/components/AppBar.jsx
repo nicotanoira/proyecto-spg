@@ -228,12 +228,16 @@ function DrawerAppBar(props) {
             {navItems.map((item) => (
               <NavLink style={{ textDecoration: 'none' }} to={item.source}>
                 <Button
+                  disableTouchRipple 
                   key={item.name}
                   sx={{
                     color: 'black',
                     textTransform: 'none',
                     marginRight: { sm: "1rem", md: '5rem'},
                     fontSize: '1rem',
+                    '&:hover': {
+                      backgroundColor: 'transparent',
+                    },
                   }}
                 >
                   {item.source === pathname ? (
