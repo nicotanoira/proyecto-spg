@@ -60,7 +60,7 @@ const ForYou = () => {
 			marginRight: { xs: "-10rem", md: "0" },
 			gap: { xs: "3px", md: "10rem" },
 			flexDirection: { xs: "column", md: "row" },
-			paddingRight: { xs: "2rem", md: "" },
+			padding: { xs: "0 2rem", md: "" },
 		},
 		member: {
 			display: "flex",
