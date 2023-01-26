@@ -46,7 +46,7 @@ export default function RightVideoBanner() {
 		textContainer: {
 			flex: "1 0 25%",
 			display: "flex",
-			paddingRight: { xs: "unset", lg: "5rem" },
+
 			textAlign: { xs: "center", lg: "unset" },
 			flexDirection: "column",
 			alignItems: "end",
