@@ -11,11 +11,12 @@ import {
 	useTheme,
 } from "@mui/material";
 
-export default function Banner() {
+export default function Banner({ handleContactClick }) {
 	const theme = useTheme();
 	const down600px = useMediaQuery(theme.breakpoints.down("sm"));
 	const down900px = useMediaQuery(theme.breakpoints.down("md"));
 	const down1200px = useMediaQuery(theme.breakpoints.down("lg"));
+  	
 	const styles = {
 		container: {
 			padding: "0 0 ",
@@ -55,6 +56,11 @@ export default function Banner() {
 			color: "#ffffffce",
 			textTransform: "capitalize",
 			width: "10rem",
+			'&:hover': {
+				borderColor: 'gray',
+				backgroundColor: 'black',
+				color: 'white',
+			},
 		},
 		icon: { marginLeft: "2px", transform: "scale(.8)" },
 	};
@@ -146,6 +152,7 @@ export default function Banner() {
 								endIcon
 								variant="contained"
 								sx={styles.button}
+								onClick={handleContactClick}
 							>
 								Contact Us
 								<MailOutlineIcon sx={styles.icon} fontSize="small" />

@@ -37,7 +37,6 @@ function DrawerAppBar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const { pathname } = useLocation();
-  console.log(pathname);
   useEffect(() => {}, [pathname]);
 
   const handleDrawerToggle = () => {
@@ -126,7 +125,7 @@ function DrawerAppBar(props) {
           </ListItemButton>
         </ListItem> */}
       </List>
-      <TellUsYourIdea />
+      <TellUsYourIdea handleContactClick={props.handleContactClick} />
       <Box
         sx={{
           display: 'flex',
