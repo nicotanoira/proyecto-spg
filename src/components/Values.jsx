@@ -29,7 +29,7 @@ const Values = () => {
 			textAlign: "start",
 			transform: !down1200px && "translateX(-12rem)",
 			// marginLeft: !down900px && "30rem",
-
+			background: "linear-gradient(90deg, #EBE9E4 0%, #FFFFFF 100%)",
 			gap: down1200px ? ".8rem" : "4rem",
 		},
 
@@ -41,6 +41,7 @@ const Values = () => {
 			gap: down1200px ? ".2rem" : "4rem",
 			paddingLeft: "1rem",
 			textAlign: "end",
+			background: "linear-gradient(270deg, #EBE9E4 0%, #FFFFFF 100%)",
 		},
 		puzzle: {
 			display: "flex",
@@ -51,8 +52,14 @@ const Values = () => {
 			marginLeft: !down1200px && "30rem",
 			marginRight: !down1200px && "20rem",
 			gap: down1200px ? ".4rem" : "5rem",
-
+			background: "linear-gradient(90deg, #EBE9E4 0%, #FFFFFF 100%)",
 			paddingBottom: "4rem",
+		},
+		textTitle: {
+			fontSize: {  xs: "16px", sm: "20px", md: "25px" },
+		},
+		textDescription: { 
+			fontSize: { xs: "11px", sm: "17px", md: "18px" } 
 		},
 	};
 	return (
@@ -80,14 +87,14 @@ const Values = () => {
 					<Typography
 						variant="subtitle2"
 						gutterBottom
-						sx={{ fontSize: { xs: "20px", md: "25px" } }}
+						sx={styles.textTitle}
 					>
 						EVERY DETAIL IS IMPORTANT
 					</Typography>
 					<Typography
 						variant="body2"
 						gutterBottom
-						sx={{ fontSize: { xs: "16px", md: "18px" } }}
+						sx={styles.textDescription}
 					>
 						Design, development and technology teams focused on creating state
 						of the art atelier experiences for your customers
@@ -100,14 +107,14 @@ const Values = () => {
 					<Typography
 						variant="subtitle2"
 						gutterBottom
-						sx={{ fontSize: { xs: "20px", md: "25px" } }}
+						sx={styles.textTitle}
 					>
 						THE ACCURACY
 					</Typography>
 					<Typography
 						variant="body2"
 						gutterBottom
-						sx={{ fontSize: { xs: "16px", md: "18px" } }}
+						sx={styles.textDescription}
 					>
 						We are here to provide you the best solutions to enhance your
 						customer's experience. You have great products, we will make sure
@@ -119,21 +126,19 @@ const Values = () => {
 			{/* PUZZLE */}
 			<Box>
 				<Box sx={styles.puzzle}>
-					<Box component="img" src={Puzzle} width={down900px ? 175 : 400} />
+					<Box component="img" src={Puzzle} sx width={down900px ? 175 : 400} />
 					<Box width={down900px ? 200 : 400} sx={{ padding: ".4rem" }}>
 						<Typography
 							variant="subtitle2"
 							gutterBottom
-							sx={{
-								fontSize: { xs: "20px", md: "25px" },
-							}}
+							sx={styles.textTitle}
 						>
 							YOUR CLIENTS ARE OUR CLIENTS
 						</Typography>
 						<Typography
 							variant="body2"
 							gutterBottom
-							sx={{ fontSize: { xs: "16px", md: "18px" } }}
+							sx={styles.textDescription}
 						>
 							Your customer's buying experience is your brand and the image you
 							sell them; we know that. We have the tools to make them inmerse
