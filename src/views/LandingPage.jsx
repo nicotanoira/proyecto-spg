@@ -7,10 +7,11 @@ import Banner from "../components/Banner";
 import Contact from "../components/Contact";
 import ForYou from "../components/ForYou";
 import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
-export default function LandingPage() {
+export default function LandingPage({ myRef, handleContactClick }) {
 	const { pathname } = useLocation();
+	
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -27,12 +28,12 @@ export default function LandingPage() {
 	};
 	return (
 		<Box sx={styles.container}>
-			<Banner />
+			<Banner handleContactClick={handleContactClick} />
 			<About />
 			<Brands />
 			<Values />
 			<ForYou />
-			<Contact />
+			<Contact myRef={myRef} />
 		</Box>
 	);
 }

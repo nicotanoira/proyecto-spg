@@ -18,6 +18,14 @@ import {
   secondImageDescription,
   thirdImageDescription,
   fourthImageDescription,
+  firstImageTitleResp,
+  secondImageTitleResp,
+  thirdImageTitleResp,
+  fourthImageTitleResp,
+  firstImageDescriptionResp,
+  secondImageDescriptionResp,
+  thirdImageDescriptionResp,
+  fourthImageDescriptionResp,
 } from '../constants/renderings/fourImagesDisplay';
 import {
   topTitleBanner,
@@ -70,6 +78,14 @@ export default function RendersAndModelServices() {
         secondImageDescription={secondImageDescription}
         thirdImageDescription={thirdImageDescription}
         fourthImageDescription={fourthImageDescription}
+        firstImageTitleResp={firstImageTitleResp}
+        secondImageTitleResp={secondImageTitleResp}
+        thirdImageTitleResp={thirdImageTitleResp}
+        fourthImageTitleResp={fourthImageTitleResp}
+        firstImageDescriptionResp={firstImageDescriptionResp}
+        secondImageDescriptionResp={secondImageDescriptionResp}
+        thirdImageDescriptionResp={thirdImageDescriptionResp}
+        fourthImageDescriptionResp={fourthImageDescriptionResp}
       />
       <CarouselBanner />
       <Contact />

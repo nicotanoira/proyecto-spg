@@ -30,9 +30,6 @@ export default function Footer() {
 	const down1200px = useMediaQuery(theme.breakpoints.down("lg"));
 	const down2000px = useMediaQuery(theme.breakpoints.down("xl"));
 
-	console.log("md", down960px);
-	console.log("lg", down1200px);
-	console.log("xl", down2000px);
 	const styles = {
 		container: {
 			display: "flex",

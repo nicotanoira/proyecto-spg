@@ -1,4 +1,5 @@
 import React from "react";
+import { useRef } from "react";
 import { Container, width } from "@mui/system";
 import {
 	Box,
@@ -11,9 +12,9 @@ import {
 	useMediaQuery,
 	useTheme,
 } from "@mui/material";
-import ICON_FACEBOOK from "../assets/ICON_FACEBOOK.svg";
-import ICON_INSTAGRAM from "../assets/ICON_INSTAGRAM.svg";
-import ICON_LINKEDIN from "../assets/ICON_LINKEDIN.svg";
+import ICON_FACEBOOK from "../assets/facebookoscuro.svg";
+import ICON_INSTAGRAM from "../assets/instagramoscuro.svg";
+import ICON_LINKEDIN from "../assets/linkedinoscuro.svg";
 import { BorderColor } from "@mui/icons-material";
 
 const styles = {
@@ -23,7 +24,7 @@ const styles = {
 		alignItems: "center",
 		backgroundColor: "White",
 		borderRadius: "6px",
-		margin: "8.5rem 0",
+		padding: "8.5rem 0",
 	},
 	mainBox: {
 		textAlign: "start",
@@ -72,11 +73,13 @@ const styles = {
 	},
 };
 
-export default function Contact() {
+export default function Contact({ myRef }) {
 	const theme = useTheme();
 	const down900px = useMediaQuery(theme.breakpoints.down("md"));
+
 	return (
-		<Container sx={styles.container}>
+		<Container ref={myRef} sx={styles.container}>
+			
 			{/* TITULO */}
 			<Box sx={{ flexDirection: "column" }}>
 				<Box sx={{ textAlign: "start" }}>

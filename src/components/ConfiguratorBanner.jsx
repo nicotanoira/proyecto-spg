@@ -84,7 +84,6 @@ export default function ConfiguratorBanner({
 		<Container maxWidth="100vw" sx={styles.container}>
 			<Container maxWidth="100vw" sx={styles.contentContainer}>
 				<Container sx={styles.leftContainer}>
-					{/* //LOGO */}
 					<Box component="img" src={LogoNegro} sx={styles.logo} />
           <Typography
             variant='h3'
@@ -109,7 +108,7 @@ export default function ConfiguratorBanner({
 				<Container sx={styles.rightContainer}>
 					<Box component="img" src={imageBanner} sx={styles.image} />
 				</Container>
-        
+
 			</Container>
 		</Container>
 	);

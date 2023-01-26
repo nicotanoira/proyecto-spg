@@ -36,7 +36,13 @@ export default function About() {
 		},
 		upperTitle: {},
 		lowerTitle: {
-			xs: "11px",
+			fontSize: { xs: "10px",
+				sm: "13px",
+				md: "1rem",
+				lg: "1.3rem",
+			},
+
+			xs: "10px",
 			sm: "13px",
 			// md: "210px",
 			// lg: "280px",
@@ -67,20 +73,20 @@ export default function About() {
 		},
 		images: {
 			width: {
-				xs: "110px",
+				xs: "100px",
 				sm: "180px",
 				md: "210px",
 				lg: "280px",
 				xl: "320px",
 			},
 			height: {
-				xs: "90px",
+				xs: "85px",
 				sm: "130px",
 				md: "160px",
 				lg: "190px",
 				xl: "230px",
 			},
-			backgroundColor: "#F5F5F5",
+			backgroundColor: "#F9F8F4",
 			borderRadius: "18rem",
 			"&:hover": {
 				transition: "all .35s ease-out",

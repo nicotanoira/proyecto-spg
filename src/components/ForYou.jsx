@@ -21,16 +21,11 @@ const ForYou = () => {
 			display: "flex",
 			alignItems: "center",
 			justifyContent: "center",
-			flexDirection: "column",
-			padding: 0,
-			"@media (min-width: 600px)": {
-				padding: 0,
-			},
-			background:
-				"linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #F3F3EF 100%)",
+			flexDirection: "column",		
+			backgroundColor: "#F9F8F4",
 			// minWidth: "100vw",
 			maxWidth: "100vw",
-			padding: "2rem",
+			padding: "4rem",
 		},
 		containerLeftColumn: {
 			display: "flex",
@@ -58,13 +53,14 @@ const ForYou = () => {
 
 		team: {
 			display: "flex",
+			justifyContent: "space-around",
 			alignItems: "center",
 			marginTop: { xs: "0", md: "-7rem" },
-			paddingBottom: down900px && "3rem",
+			// paddingBottom: down900px && "3rem",
 			marginRight: { xs: "-10rem", md: "0" },
 			gap: { xs: "3px", md: "10rem" },
 			flexDirection: { xs: "column", md: "row" },
-			paddingRight: { xs: "2rem", md: "" },
+			padding: { xs: "0 2rem", md: "" },
 		},
 		member: {
 			display: "flex",
