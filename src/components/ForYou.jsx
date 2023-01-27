@@ -7,9 +7,9 @@ import {
 } from "@mui/material";
 import React from "react";
 
-import Member1 from "../assets/Member1.png";
+import Member1 from "../assets/FOTOS-12-13.png";
 import Member2 from "../assets/Member2.png";
-import Member3 from "../assets/Member3.png";
+import Member3 from "../assets/FOTOS-12-14.png";
 const ForYou = () => {
 	const theme = useTheme();
 	const down600px = useMediaQuery(theme.breakpoints.down("sm"));
@@ -21,7 +21,7 @@ const ForYou = () => {
 			display: "flex",
 			alignItems: "center",
 			justifyContent: "center",
-			flexDirection: "column",		
+			flexDirection: "column",
 			backgroundColor: "#F9F8F4",
 			// minWidth: "100vw",
 			maxWidth: "100vw",
@@ -57,10 +57,9 @@ const ForYou = () => {
 			alignItems: "center",
 			marginTop: { xs: "0", md: "-7rem" },
 			// paddingBottom: down900px && "3rem",
-			marginRight: { xs: "-10rem", md: "0" },
+			marginRight: { xs: "-8rem", md: "0" },
 			gap: { xs: "3px", md: "10rem" },
 			flexDirection: { xs: "column", md: "row" },
-			padding: { xs: "0 2rem", md: "" },
 		},
 		member: {
 			display: "flex",
