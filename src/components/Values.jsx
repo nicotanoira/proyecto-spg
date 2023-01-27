@@ -80,14 +80,14 @@ const Values = () => {
 					<Typography
 						variant="subtitle2"
 						gutterBottom
-						sx={{ fontSize: { xs: "20px", md: "25px" } }}
+						sx={{ fontSize: { xs: "18px", md: "25px" } }}
 					>
 						EVERY DETAIL IS IMPORTANT
 					</Typography>
 					<Typography
 						variant="body2"
 						gutterBottom
-						sx={{ fontSize: { xs: "16px", md: "18px" } }}
+						sx={{ fontSize: { xs: "15px", md: "18px" } }}
 					>
 						Design, development and technology teams focused on creating state
 						of the art atelier experiences for your customers
@@ -100,14 +100,14 @@ const Values = () => {
 					<Typography
 						variant="subtitle2"
 						gutterBottom
-						sx={{ fontSize: { xs: "20px", md: "25px" } }}
+						sx={{ fontSize: { xs: "18px", md: "25px" } }}
 					>
 						THE ACCURACY
 					</Typography>
 					<Typography
 						variant="body2"
 						gutterBottom
-						sx={{ fontSize: { xs: "16px", md: "18px" } }}
+						sx={{ fontSize: { xs: "15px", md: "18px" } }}
 					>
 						We are here to provide you the best solutions to enhance your
 						customer's experience. You have great products, we will make sure
@@ -125,7 +125,7 @@ const Values = () => {
 							variant="subtitle2"
 							gutterBottom
 							sx={{
-								fontSize: { xs: "20px", md: "25px" },
+								fontSize: { xs: "18px", md: "25px" },
 							}}
 						>
 							YOUR CLIENTS ARE OUR CLIENTS
@@ -133,7 +133,7 @@ const Values = () => {
 						<Typography
 							variant="body2"
 							gutterBottom
-							sx={{ fontSize: { xs: "16px", md: "18px" } }}
+							sx={{ fontSize: { xs: "15px", md: "18px" } }}
 						>
 							Your customer's buying experience is your brand and the image you
 							sell them; we know that. We have the tools to make them inmerse

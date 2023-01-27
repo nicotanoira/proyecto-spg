@@ -3,7 +3,7 @@ import { Box, Button, Typography } from '@mui/material';
 import LogoBlanco from '../assets/LogoBlanco.svg';
 import logoChat from '../assets/chat_logo-14.svg';
 
-export default function TellUsYourIdea() {
+export default function TellUsYourIdea({ handleContactClick }) {
   return (
     <Box
       sx={{
@@ -51,6 +51,7 @@ export default function TellUsYourIdea() {
             },
           }}
           variant='outlined'
+          onClick={handleContactClick}
         >
           Contact us
         </Button>
