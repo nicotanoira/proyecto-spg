@@ -36,13 +36,9 @@ export default function About() {
 		},
 		upperTitle: {},
 		lowerTitle: {
-			fontSize: { xs: "10px",
-				sm: "13px",
-				md: "1rem",
-				lg: "1.3rem",
-			},
+			fontSize: { xs: "10px", sm: "13px", md: "1rem", lg: "1.3rem" },
 
-			xs: "10px",
+			xs: "11px",
 			sm: "13px",
 			// md: "210px",
 			// lg: "280px",
