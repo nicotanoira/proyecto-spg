@@ -1,5 +1,5 @@
-import React from "react";
-import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import React, { useRef } from "react";
 import { Container, width } from "@mui/system";
 import {
 	Box,
@@ -76,6 +76,24 @@ const styles = {
 export default function Contact({ myRef }) {
 	const theme = useTheme();
 	const down900px = useMediaQuery(theme.breakpoints.down("md"));
+	const serviceID = "service_9ytf5z9";
+	const templateID = "template_gqo9571";
+	const publicKey = "XJHP8cVGvoyOfhWum";
+	const form = useRef();
+
+	const sendEmail = (e) => {
+		e.preventDefault();
+
+		emailjs
+			.sendForm(serviceID, templateID, form.current, publicKey)
+			.then((result) => {
+				console.log(result.text);
+				console.log("message sent");
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+	};
 
 	return (
 		<Container ref={myRef} sx={styles.container}>
@@ -109,7 +127,12 @@ export default function Contact({ myRef }) {
 							</Box>
 							<Box sx={{ display: "flex" }}>
 								<Box sx={{ flexDirection: "column" }}>
-									<Box sx={{ textAlign: "start", display: "flex" }}>
+									<Box
+										sx={{
+											textAlign: "start",
+											display: "flex",
+										}}
+									>
 										<Box>
 											<Typography sx={styles.textTitle} mt={2}>
 												Email
@@ -119,7 +142,12 @@ export default function Contact({ myRef }) {
 											</Typography>
 										</Box>
 									</Box>
-									<Box sx={{ textAlign: "start", display: "flex" }}>
+									<Box
+										sx={{
+											textAlign: "start",
+											display: "flex",
+										}}
+									>
 										<Box>
 											<Typography sx={styles.textTitle} mt={2}>
 												Location
@@ -129,7 +157,12 @@ export default function Contact({ myRef }) {
 											</Typography>
 										</Box>
 									</Box>
-									<Box sx={{ textAlign: "start", marginBottom: "0.25rem" }}>
+									<Box
+										sx={{
+											textAlign: "start",
+											marginBottom: "0.25rem",
+										}}
+									>
 										<a
 											target="_blank"
 											href="https://www.instagram.com/spg_digital/"
@@ -152,7 +185,7 @@ export default function Contact({ myRef }) {
 										</a>
 										<a
 											target="_blank"
-											href="https://www.facebook.com/profile.php?id=100088834549930"
+											href="https://www.instagram.com/spg_digital/"
 										>
 											<Box
 												component="img"
@@ -169,14 +202,15 @@ export default function Contact({ myRef }) {
 
 					{!down900px && <Box sx={styles.barra} />}
 					{/* INPUT */}
-					<Box sx={styles.inputs}>
+					<form sx={styles.inputs} ref={form} onSubmit={sendEmail}>
 						<Box sx={{}}>
 							<TextField
 								sx={{ marginRight: "2rem" }}
 								id="standard-helperText"
-								type="email"
 								label="Your e-mail"
 								variant="outlined"
+								type="email"
+								name="email_id"
 							/>
 
 							{!down900px && (
@@ -184,6 +218,8 @@ export default function Contact({ myRef }) {
 									id="standard-helperText"
 									label="Your name"
 									variant="outlined"
+									type="text"
+									name="user_name"
 								/>
 							)}
 						</Box>
@@ -195,6 +231,7 @@ export default function Contact({ myRef }) {
 								multiline
 								rows={3}
 								fullWidth
+								name="message"
 							/>
 						</Box>
 						<FormControlLabel
@@ -213,6 +250,8 @@ export default function Contact({ myRef }) {
 						/>
 						<Box sx={{ textAlign: { xs: "center", md: "start" } }}>
 							<Button
+								type="submit"
+								value="Send"
 								sx={{
 									width: "175px",
 									borderRadius: "20px",
@@ -230,7 +269,7 @@ export default function Contact({ myRef }) {
 								Send!
 							</Button>
 						</Box>
-					</Box>
+					</form>
 				</Box>
 			</Box>
 		</Container>
