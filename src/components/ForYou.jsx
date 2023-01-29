@@ -203,7 +203,7 @@ const ForYou = () => {
 								}}
 								gutterBottom
 							>
-								Andrea La Rosa
+								Guillermina Gara
 							</Typography>
 							<Typography
 								sx={{

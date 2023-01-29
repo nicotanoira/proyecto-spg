@@ -79,7 +79,6 @@ export default function Contact({ myRef }) {
     const serviceID = 'service_9ytf5z9';
     const templateID = 'template_gqo9571';
     const publicKey = 'XJHP8cVGvoyOfhWum';
-
     const form = useRef();
 
     const sendEmail = (e) => {

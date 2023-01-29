@@ -41,7 +41,7 @@ export default function Footer() {
 			backgroundColor: down960px ? "#273339" : "#AABDBD",
 			borderRadius: "6px",
 			minWidth: "0",
-			display: "flex"
+			display: "flex",
 		},
 		boxContainer: {
 			width: "100%",
@@ -49,7 +49,7 @@ export default function Footer() {
 			display: "flex",
 			alignItems: "center",
 			justifyContent: "space-between",
-			flexDirection:  down960px ? "column" : "row",
+			flexDirection: down960px ? "column" : "row",
 			padding: "2rem 9rem",
 		},
 		text: {
@@ -65,6 +65,7 @@ export default function Footer() {
 			display: "flex",
 			flexDirection: "column",
 			padding: "0 2rem",
+			gap: !down960px && "2rem",
 		},
 		rightColumnRow: {
 			textAlign: down960px ? "center" : "start",
@@ -80,8 +81,6 @@ export default function Footer() {
 			marginTop: !down960px ? "15px" : "6rem",
 			marginRight: !down960px ? "1.5rem" : 0,
 			alignItems: "center",
-			
-
 		},
 		iconsContact: {
 			textAlign: "start",
@@ -98,98 +97,76 @@ export default function Footer() {
 
 	return (
 		<Container maxWidth="100%" sx={styles.container}>
-				<Box sx={styles.boxContainer}>
-					{/* Left column */}
-					<Box sx={{ padding: "0", margin: "0" }}>
-						<Link style={{ textDecoration: "none" }} to={'/'}>
-							<Box component="img" src={LogoBlanco} sx={styles.logoFooter} />
-						</Link>
+			<Box sx={styles.boxContainer}>
+				{/* Left column */}
+				<Box sx={{ padding: "0", margin: "0" }}>
+					<Link style={{ textDecoration: "none" }} to={"/"}>
+						<Box component="img" src={LogoBlanco} sx={styles.logoFooter} />
+					</Link>
+				</Box>
+
+				{/* Right column */}
+				<Box sx={styles.rightColumn}>
+					{/* Phone */}
+					<Box
+						// SX for MARGIN TOP for LOGO REPSONSIVE
+						sx={{
+							textAlign: down960px ? "center" : "start",
+							display: "flex",
+							flexDirection: down960px && "column",
+							alignItems: "center",
+							marginTop: down960px ? "4rem" : "0",
+						}}
+					>
+						<Box component="img" src={ICON_PHONE} sx={styles.iconsContact} />
+						<Box>
+							<Typography sx={styles.textTitle}>Phone</Typography>
+							<Typography sx={styles.text}>+01 (305) 790 - 2129</Typography>
+						</Box>
 					</Box>
 
-					
-
-					{/* Right column */}
-					<Box sx={styles.rightColumn}>
-
-						{/* Phone */}
-						<Box
-							// SX for MARGIN TOP for LOGO REPSONSIVE
-							sx={{
-								textAlign: down960px ? "center" : "start",
-								display: "flex",
-								flexDirection: down960px && "column",
-								alignItems: "center",
-								marginTop: down960px ? "4rem" : "0",
-							}}
-						>
-							<Box component="img" src={ICON_PHONE} sx={styles.iconsContact} />
-							<Box>
-								<Typography sx={styles.textTitle}>
-									Phone
-								</Typography>
-								<Typography sx={styles.text}>+01 (305) 790 - 2129</Typography>
-							</Box>
+					{/* Email */}
+					<Box sx={styles.rightColumnRow}>
+						<Box component="img" src={ICON_EMAIL} sx={styles.iconsContact} />
+						<Box sx={{}}>
+							<Typography sx={styles.textTitle}>Email</Typography>
+							<Typography sx={styles.text}>
+								Sebastian@spgdigitalcorp.com
+							</Typography>
 						</Box>
+					</Box>
 
-						{/* Email */}
-						<Box
-							sx={styles.rightColumnRow}
+					{/* Location */}
+
+					{/* Social Media */}
+					<Box
+						sx={{
+							textAlign: "start",
+							marginBottom: "0.25rem",
+							display: "flex",
+							justifyContent: down960px ? "space-around" : "start",
+						}}
+					>
+						<a target="_blank" href="https://www.instagram.com/spg_digital/">
+							<Box component="img" src={ICON_INSTAGRAM} sx={styles.icons} />
+						</a>
+
+						<a
+							target="_blank"
+							href="https://www.linkedin.com/company/spg-digital/about//"
 						>
-							<Box component="img" src={ICON_EMAIL} sx={styles.iconsContact} />
-							<Box sx={{}}>
-								<Typography sx={styles.textTitle} >
-									Email
-								</Typography>
-								<Typography sx={styles.text}>
-									Sebastian@spgdigitalcorp.com
-								</Typography>
-							</Box>
-						</Box>
+							<Box component="img" src={ICON_LINKEDIN} sx={styles.icons} />
+						</a>
 
-						{/* Location */}
-						<Box
-							sx={styles.rightColumnRow}
+						<a
+							target="_blank"
+							href="https://www.facebook.com/profile.php?id=100088834549930"
 						>
-							<Box component="img" src={ICON_LOCATION} sx={styles.iconsContact} />
-							<Box>
-								<Typography sx={styles.textTitle}>
-									Location
-								</Typography>
-								<Typography sx={styles.text}>
-									550 ocean 2c drive key Biscayne 33149 
-								</Typography>
-							</Box>
-						</Box>
-
-						{/* Social Media */}
-						<Box
-							sx={{
-								textAlign: "start",
-								marginBottom: "0.25rem",
-								display: "flex",
-								justifyContent: down960px ? "space-around" : "start",
-							}}
-						>
-							<a target="_blank" href="https://www.instagram.com/spg_digital/">
-								<Box component="img" src={ICON_INSTAGRAM} sx={styles.icons} />
-							</a>
-
-							<a
-								target="_blank"
-								href="https://www.linkedin.com/company/spg-digital/about//"
-							>
-								<Box component="img" src={ICON_LINKEDIN} sx={styles.icons} />
-							</a>
-
-							<a
-								target="_blank"
-								href="https://www.facebook.com/profile.php?id=100088834549930/"
-							>
-								<Box component="img" src={ICON_FACEBOOK} sx={styles.icons} />
-							</a>
-						</Box>
+							<Box component="img" src={ICON_FACEBOOK} sx={styles.icons} />
+						</a>
 					</Box>
 				</Box>
+			</Box>
 		</Container>
 	);
 }
