@@ -3,6 +3,7 @@ import { Box, Container } from "@mui/system";
 import { Typography, Button, useTheme, useMediaQuery } from "@mui/material";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+
 import {
 	firstImage,
 	secondImage,
@@ -72,6 +73,7 @@ export default function CarouselBanner() {
 			// justifyContent: 'center',
 
 			// Text
+			gap: "2rem",
 			width: "100%",
 			borderRadius: "20px",
 			color: "white",
@@ -94,18 +96,17 @@ export default function CarouselBanner() {
 		<Container maxWidth="100vw" sx={styles.container}>
 			<Box sx={styles.textContainer}>
 				<Box sx={styles.textBox}>
-					<Box sx={{ textAlign: "end" }}>
+					<Box sx={{ textAlign: { xs: "center", lg: "end" }, width: "100%" }}>
 						<Typography
 							variant="h2"
-							fontWeight="bold"
-							sx={{ fontSize: "100%", letterSpacing: "3px" }}
+							sx={{ fontSize: "130%", letterSpacing: "3px", fontWeight: "500" }}
 						>
 							{company}
 						</Typography>
 						<Typography
 							variant="h1"
 							sx={{
-								fontSize: { xs: "260%", xl: "350%" },
+								fontSize: { xs: "260%", xl: "310%" },
 								letterSpacing: "2px",
 								marginBottom: "1rem",
 								fontWeight: "500",
@@ -120,7 +121,7 @@ export default function CarouselBanner() {
 							sx={{
 								fontSize: { xs: "100%", xl: "125%" },
 								whiteSpace: "pre-wrap",
-								marginBottom: "1rem",
+								marginBottom: "2rem",
 							}}
 							gutterBottom
 							dangerouslySetInnerHTML={{ __html: text }}
@@ -129,19 +130,14 @@ export default function CarouselBanner() {
 					<Box sx={styles.flexButton}>
 						<Button
 							sx={styles.button}
-							// startIcon={<ArrowForwardIosIcon
-							//     sx={{
-							//         ml: "0",
-							//         visibility: "hidden",
-							//         alignSelf: 'flex-start',
-							//     }}
-							// />}
-							// endIcon={<ArrowForwardIosIcon
-							//     sx={{
-							//         mr: "0",
-							//         alignSelf: "flex-end",
-							//     }}
-							// />}
+							endIcon={
+								<ArrowForwardIosIcon
+									sx={{
+										mr: "-3rem",
+										alignSelf: "flex-end",
+									}}
+								/>
+							}
 							// variant='outlined'
 						>
 							{buttonText}

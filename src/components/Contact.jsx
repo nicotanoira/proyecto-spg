@@ -174,6 +174,7 @@ export default function Contact({ myRef }) {
 							<TextField
 								sx={{ marginRight: "2rem" }}
 								id="standard-helperText"
+								type="email"
 								label="Your e-mail"
 								variant="outlined"
 							/>
