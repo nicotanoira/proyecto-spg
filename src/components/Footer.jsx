@@ -160,7 +160,7 @@ export default function Footer() {
 
 						<a
 							target="_blank"
-							href="https://www.facebook.com/profile.php?id=100088834549930/"
+							href="https://www.facebook.com/profile.php?id=100088834549930"
 						>
 							<Box component="img" src={ICON_FACEBOOK} sx={styles.icons} />
 						</a>
