@@ -33,6 +33,7 @@ import {
   bottomTitleBanner,
   imageBanner,
   descriptionBanner,
+  descriptionBannerResp
 } from '../constants/services2D/Banner';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -61,6 +62,7 @@ export default function Services2D() {
         bottomTitleBanner={bottomTitleBanner}
         imageBanner={imageBanner}
         descriptionBanner={descriptionBanner}
+        descriptionBannerResp={descriptionBannerResp}
       />
       <FourImagesDisplay
         topTitle={topTitle}

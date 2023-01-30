@@ -8,6 +8,7 @@ import {
   bottomTitleBanner,
   imageBanner,
   descriptionBanner,
+  descriptionBannerResp,
 } from '../constants/services3D/Banner';
 import {
   topTitle,
@@ -61,6 +62,7 @@ export default function Services3D() {
         bottomTitleBanner={bottomTitleBanner}
         imageBanner={imageBanner}
         descriptionBanner={descriptionBanner}
+        descriptionBannerResp={descriptionBannerResp}
       />
       <FourImagesDisplay
         topTitle={topTitle}
