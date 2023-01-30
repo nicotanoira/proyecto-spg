@@ -1,14 +1,12 @@
 import React from "react";
 import { Box, Container } from "@mui/system";
-import { Typography, Button, useTheme, useMediaQuery } from "@mui/material";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { Typography, useTheme, useMediaQuery } from "@mui/material";
 import ReactPlayer from "react-player";
 import {
 	video3D,
 	company,
 	model,
 	text,
-	buttonText,
 } from "../constants/services3D/videoBanner.js";
 
 export default function VideoBanner() {
@@ -64,12 +62,8 @@ export default function VideoBanner() {
 		},
 		button: {
 			flex: "1 0 90%",
-			// flex: "1 0 95%",
 			display: "flex",
 			alignSelf: "center",
-			display: "flex",
-			// alignItems: 'center',
-			// justifyContent: 'center',
 
 			// Text
 			width: "100%",

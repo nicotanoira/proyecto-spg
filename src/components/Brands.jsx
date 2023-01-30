@@ -2,7 +2,6 @@ import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import React from "react";
 import BostonWhaler from "../assets/boston-whaler.svg";
 import SeaRay from "../assets/sea-ray.svg";
-import { Link } from "react-router-dom";
 
 const Brands = () => {
 	const theme = useTheme();
@@ -54,12 +53,12 @@ const Brands = () => {
 			{/* //logos */}
 			<Box sx={styles.logos}>
 				<Box>
-					<a target="_blank" href="https://www.searay.lat/lat/en.html">
+					<a rel="noreferrer" target="_blank" href="https://www.searay.lat/lat/en.html">
 						<Box component="img" src={SeaRay} width={down900px ? 190 : 350} />
 					</a>
 				</Box>
 				<Box>
-					<a target="_blank" href="https://www.bostonwhaler.com/">
+					<a rel="noreferrer" target="_blank" href="https://www.bostonwhaler.com/">
 						<Box
 							component="img"
 							src={BostonWhaler}

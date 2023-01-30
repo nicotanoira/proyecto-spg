@@ -1,34 +1,26 @@
 import React from "react";
-import { borderRadius, Container } from "@mui/system";
-import { Box, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
-import { styled } from "@mui/material/styles";
-import Paper from "@mui/material/Paper";
+import { Container } from "@mui/system";
+import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import LogoBlanco from "../assets/LogoBlanco.svg";
 import ICON_FACEBOOK from "../assets/ICON_FACEBOOK.svg";
 import ICON_INSTAGRAM from "../assets/ICON_INSTAGRAM.svg";
 import ICON_LINKEDIN from "../assets/ICON_LINKEDIN.svg";
 import ICON_EMAIL from "../assets/ICON_EMAIL.svg";
 import ICON_PHONE from "../assets/ICON_PHONE.svg";
-import ICON_LOCATION from "../assets/ICON_LOCATION.svg";
 
 import { Link } from "react-router-dom";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import { Facebook } from "@mui/icons-material";
-//
 
-const Item = styled(Paper)(({ theme }) => ({
-	backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-	...theme.typography.body2,
-	padding: theme.spacing(1),
-	textAlign: "center",
-	color: theme.palette.text.secondary,
-}));
+// const Item = styled(Paper)(({ theme }) => ({
+// 	backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+// 	...theme.typography.body2,
+// 	padding: theme.spacing(1),
+// 	textAlign: "center",
+// 	color: theme.palette.text.secondary,
+// }));
 
 export default function Footer() {
 	const theme = useTheme();
 	const down960px = useMediaQuery(theme.breakpoints.down("md"));
-	const down1200px = useMediaQuery(theme.breakpoints.down("lg"));
-	const down2000px = useMediaQuery(theme.breakpoints.down("xl"));
 
 	const styles = {
 		container: {
@@ -41,7 +33,6 @@ export default function Footer() {
 			backgroundColor: down960px ? "#273339" : "#AABDBD",
 			borderRadius: "6px",
 			minWidth: "0",
-			display: "flex",
 		},
 		boxContainer: {
 			width: "100%",
@@ -147,19 +138,19 @@ export default function Footer() {
 							justifyContent: down960px ? "space-around" : "start",
 						}}
 					>
-						<a target="_blank" href="https://www.instagram.com/spg_digital/">
+						<a rel="noreferrer" target="_blank" href="https://www.instagram.com/spg_digital/">
 							<Box component="img" src={ICON_INSTAGRAM} sx={styles.icons} />
 						</a>
 
 						<a
-							target="_blank"
+							rel="noreferrer" target="_blank"
 							href="https://www.linkedin.com/company/spg-digital/about//"
 						>
 							<Box component="img" src={ICON_LINKEDIN} sx={styles.icons} />
 						</a>
 
 						<a
-							target="_blank"
+							rel="noreferrer" target="_blank"
 							href="https://www.facebook.com/profile.php?id=100088834549930"
 						>
 							<Box component="img" src={ICON_FACEBOOK} sx={styles.icons} />

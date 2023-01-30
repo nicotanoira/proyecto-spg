@@ -105,10 +105,7 @@ export default function FourImagesDisplay({
 	fourthImageDescriptionResp,
 }) {
 	const theme = useTheme();
-	const down600px = useMediaQuery(theme.breakpoints.down("xs"));
-	const down960px = useMediaQuery(theme.breakpoints.down("md"));
 	const down1200px = useMediaQuery(theme.breakpoints.down("lg"));
-	const down2000px = useMediaQuery(theme.breakpoints.down("xl"));
 
 	return (
 		<Container maxWidth="100vw" sx={styles.container}>

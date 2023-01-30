@@ -8,7 +8,6 @@ import {
 	firstImage,
 	secondImage,
 	thirdImage,
-	fourthImage,
 	company,
 	model,
 	text,
@@ -65,12 +64,8 @@ export default function CarouselBanner() {
 		},
 		button: {
 			flex: "1 0 90%",
-			// flex: "1 0 95%",
-			display: "flex",
 			alignSelf: "center",
 			display: "flex",
-			// alignItems: 'center',
-			// justifyContent: 'center',
 
 			// Text
 			gap: "2rem",
@@ -159,8 +154,8 @@ export default function CarouselBanner() {
 					}}
 					media={[
 						{ source: firstImage },
+						{ source: secondImage },
 						{ source: thirdImage },
-						{ source: fourthImage },
 					]}
 				/>
 			</Box>

@@ -14,7 +14,6 @@ export default function ConfiguratorBanner({
   const down960px = useMediaQuery(theme.breakpoints.down("md"));
   const styles = {
     container: {
-      padding: '0 0 ',
       position: 'relative',
       padding: 0,
       '@media (min-width: 600px)': {

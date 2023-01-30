@@ -1,10 +1,8 @@
 import React from 'react';
 import { useEffect } from 'react';
-import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
@@ -22,8 +20,7 @@ import ICON_LINKEDIN from '../assets/ICON_LINKEDIN.svg';
 import TellUsYourIdea from './MobileTellUs';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { Link, useLocation, NavLink } from 'react-router-dom';
-import { BorderBottom, BorderColor } from '@mui/icons-material';
-import { Grid, Stack, useMediaQuery } from '@mui/material';
+import { Grid } from '@mui/material';
 
 /* const drawerWidth = 240; */
 const navItems = [
@@ -80,7 +77,6 @@ function DrawerAppBar(props) {
       <Grid
         sx={{
           display: 'flex',
-          alignItems: 'start',
           alignItems: 'flex-start',
           justifyContent: 'space-between',
           padding: '0 1rem',
@@ -133,19 +129,19 @@ function DrawerAppBar(props) {
           marginTop: '2rem',
         }}
       >
-        <a target='_blank' href='https://www.instagram.com/spg_digital/'>
+        <a rel="noreferrer" target='_blank' href='https://www.instagram.com/spg_digital/'>
           <Box component='img' src={ICON_INSTAGRAM} sx={styles.icons} />
         </a>
 
         <a
-          target='_blank'
+          rel="noreferrer" target='_blank'
           href='https://www.linkedin.com/company/spg-digital/about//'
         >
           <Box component='img' src={ICON_LINKEDIN} sx={styles.icons} />
         </a>
 
         <a
-          target='_blank'
+          rel="noreferrer" target='_blank'
           href='https://www.facebook.com/profile.php?id=100088834549930/'
         >
           <Box component='img' src={ICON_FACEBOOK} sx={styles.icons} />
@@ -204,7 +200,6 @@ function DrawerAppBar(props) {
                 display: {
                   xs: 'none',
                   sm: 'block',
-                  color: 'black',
                   marginLeft: '2rem',
                   fontSize: '1.6rem',
                   color: '#73807F',

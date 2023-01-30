@@ -68,12 +68,8 @@ export default function RightVideoBanner() {
 		},
 		button: {
 			flex: "1 0 90%",
-			// flex: "1 0 95%",
-			display: "flex",
 			alignSelf: "center",
 			display: "flex",
-			// alignItems: 'center',
-			// justifyContent: 'center',
 
 			// Text
 			gap: "2rem",
@@ -130,6 +126,7 @@ export default function RightVideoBanner() {
 					/>
 					<a
 						target="_blank"
+						rel="noreferrer"
 						style={{ textDecoration: "none" }}
 						href="https://www.bostonwhaler.com/build-and-price/boat-configurator.420OR.html"
 					>

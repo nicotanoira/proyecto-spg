@@ -1,13 +1,11 @@
 import emailjs from '@emailjs/browser';
 import React, { useRef, useState, useEffect } from 'react';
-import { Container, width } from '@mui/system';
+import { Container } from '@mui/system';
 import {
-    Alert,
     Box,
     Button,
     Checkbox,
     FormControlLabel,
-    Grid,
     Snackbar,
     TextField,
     Typography,
@@ -17,7 +15,6 @@ import {
 import ICON_FACEBOOK from '../assets/facebookoscuro.svg';
 import ICON_INSTAGRAM from '../assets/instagramoscuro.svg';
 import ICON_LINKEDIN from '../assets/linkedinoscuro.svg';
-import { BorderColor } from '@mui/icons-material';
 
 const styles = {
     container: {
@@ -218,7 +215,7 @@ export default function Contact({ myRef }) {
                                 }}
                             >
                                 <a
-                                    target='_blank'
+                                    rel="noreferrer" target='_blank'
                                     href='https://www.instagram.com/spg_digital/'
                                 >
                                     <Box
@@ -228,7 +225,7 @@ export default function Contact({ myRef }) {
                                     />
                                 </a>
                                 <a
-                                    target='_blank'
+                                    rel="noreferrer" target='_blank'
                                     href='https://www.linkedin.com/company/spg-digital/about//'
                                 >
                                     <Box
@@ -238,7 +235,7 @@ export default function Contact({ myRef }) {
                                     />
                                 </a>
                                 <a
-                                    target='_blank'
+                                    rel="noreferrer" target='_blank'
                                     href='https://www.instagram.com/spg_digital/'
                                 >
                                     <Box
