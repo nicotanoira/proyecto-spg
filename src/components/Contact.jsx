@@ -65,7 +65,7 @@ const styles = {
         marginBottom: '-4rem',
     },
     barra: {
-        height: '19.3rem',
+        height: '22.4rem',
         border: '1px solid black',
         width: '0px',
         margin: '0 10rem 0 9rem',
