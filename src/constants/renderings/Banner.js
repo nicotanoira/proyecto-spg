@@ -7,9 +7,8 @@ const bottomTitleBanner = 'RENDERINGS';
 
 // DESCRIPTION
 
-const descriptionBanner =
-  'Content creation for you catalogs and website. Completely customizable images to help you show your products exactly the way you need.';
-
+const descriptionBanner = 'Content creation for you catalogs and website. Completely customizable images to help you show your products exactly the way you need.';
+const descriptionBannerResp = 'Content creation for you catalogs and website. Completely customizable images to help you show your products exactly the way you need.';
 // IMAGE
 
 const imageBanner = image;
@@ -20,5 +19,6 @@ export {
   topTitleBanner, 
   bottomTitleBanner, 
   imageBanner, 
-  descriptionBanner 
+  descriptionBanner,
+  descriptionBannerResp
 };

@@ -102,7 +102,7 @@ export default function VideoBanner() {
 					url={video3D}
 					config={{
 						youtube: {
-						  playerVars: { showinfo: 1 }
+							playerVars: { showinfo: 1 },
 						},
 					}}
 					showChannel={false}
@@ -140,27 +140,6 @@ export default function VideoBanner() {
 						gutterBottom
 						dangerouslySetInnerHTML={{ __html: text }}
 					/>
-				</Box>
-				<Box sx={styles.flexButton}>
-					<Button
-						sx={styles.button}
-						// startIcon={<ArrowForwardIosIcon
-						//     sx={{
-						//         ml: "0",
-						//         visibility: "hidden",
-						//         alignSelf: 'flex-start',
-						//     }}
-						// />}
-						// endIcon={<ArrowForwardIosIcon
-						//     sx={{
-						//         mr: "0",
-						//         alignSelf: "flex-end",
-						//     }}
-						// />}
-						// variant='outlined'
-					>
-						{buttonText}
-					</Button>
 				</Box>
 			</Box>
 		</Container>

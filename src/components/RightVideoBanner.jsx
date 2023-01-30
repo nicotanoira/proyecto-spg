@@ -46,8 +46,8 @@ export default function RightVideoBanner() {
 		textContainer: {
 			flex: "1 0 25%",
 			display: "flex",
+			padding: { xs: "unset", lg: "4rem" },
 
-			textAlign: { xs: "center", lg: "unset" },
 			flexDirection: "column",
 			alignItems: "end",
 			justifyContent: "center",
@@ -57,6 +57,7 @@ export default function RightVideoBanner() {
 			display: "flex",
 			flexDirection: "column",
 			alignItems: "center",
+			textAlign: { xs: "center", lg: "right" },
 		},
 		flexButton: {
 			width: 260,
@@ -75,6 +76,7 @@ export default function RightVideoBanner() {
 			// justifyContent: 'center',
 
 			// Text
+			gap: "2rem",
 			width: "100%",
 			borderRadius: "20px",
 			color: "white",
@@ -97,29 +99,31 @@ export default function RightVideoBanner() {
 		<Container maxWidth="100vw" sx={styles.container}>
 			<Box sx={styles.textContainer}>
 				<Box sx={styles.textBox}>
-					<Typography
-						variant="h2"
-						fontWeight="bold"
-						sx={{ fontSize: "100%", letterSpacing: "3px" }}
-					>
-						{company}
-					</Typography>
-					<Typography
-						variant="h1"
-						sx={{
-							fontSize: "350%",
-							letterSpacing: "2px",
-							marginBottom: "1rem",
-						}}
-					>
-						{model}
-					</Typography>
+					<Box sx={{ width: "100%" }}>
+						<Typography
+							variant="h2"
+							sx={{ fontSize: "130%", letterSpacing: "3px", fontWeight: "500" }}
+						>
+							{company}
+						</Typography>
+						<Typography
+							variant="h1"
+							sx={{
+								fontSize: { xs: "350%", lg: "310%" },
+								fontWeight: 500,
+								letterSpacing: "2px",
+								marginBottom: "rem",
+							}}
+						>
+							{model}
+						</Typography>
+					</Box>
 					<Typography
 						variant="body1"
 						sx={{
 							fontSize: { xs: "100%", lg: "120%" },
 							whiteSpace: "pre-wrap",
-							marginBottom: "1rem",
+							marginBottom: "2rem",
 						}}
 						gutterBottom
 						dangerouslySetInnerHTML={{ __html: text }}
@@ -132,20 +136,14 @@ export default function RightVideoBanner() {
 						<Box sx={styles.flexButton}>
 							<Button
 								sx={styles.button}
-								// startIcon={<ArrowForwardIosIcon
-								//     sx={{
-								//         ml: "0",
-								//         visibility: "hidden",
-								//         alignSelf: 'flex-start',
-								//     }}
-								// />}
-								// endIcon={<ArrowForwardIosIcon
-								//     sx={{
-								//         mr: "0",
-								//         alignSelf: "flex-end",
-								//     }}
-								// />}
-								// variant='outlined'
+								endIcon={
+									<ArrowForwardIosIcon
+										sx={{
+											mr: "-3rem",
+											alignSelf: "flex-end",
+										}}
+									/>
+								}
 							>
 								{buttonText}
 							</Button>

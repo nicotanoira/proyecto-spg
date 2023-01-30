@@ -32,6 +32,7 @@ import {
   bottomTitleBanner,
   imageBanner,
   descriptionBanner,
+  descriptionBannerResp
 } from '../constants/renderings/Banner';
 import CarouselBanner from '../components/CarouselBanner';
 import { useLocation } from "react-router-dom";
@@ -60,6 +61,7 @@ export default function RendersAndModelServices() {
         bottomTitleBanner={bottomTitleBanner}
         imageBanner={imageBanner}
         descriptionBanner={descriptionBanner}
+        descriptionBannerResp={descriptionBannerResp}
       />
       <FourImagesDisplay
         topTitle={topTitle}
