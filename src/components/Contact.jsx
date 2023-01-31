@@ -88,9 +88,9 @@ export default function Contact({ myRef }) {
     });
     const [disableButton, setDisableButton] = useState(true);
     const down900px = useMediaQuery(theme.breakpoints.down('md'));
-    const serviceID = /* 'service_9ytf5z9' */ 'service_qha78bw';
-    const templateID = /* 'template_gqo9571' */ 'template_v630gae';
-    const publicKey = /* 'XJHP8cVGvoyOfhWum' */ 'iI2OYvN-gYUGuR3CD';
+    const serviceID = 'service_9ytf5z9'; /* 'service_qha78bw' */
+    const templateID = 'template_gqo9571'; /* 'template_v630gae' */
+    const publicKey = 'XJHP8cVGvoyOfhWum'; /* 'iI2OYvN-gYUGuR3CD' */
     const form = useRef();
 
     const handleChange = (e) => {
@@ -308,6 +308,9 @@ export default function Contact({ myRef }) {
                                     }}
                                 />
                             }
+                            type='checkbox'
+                            name='toolmakerID'
+                            value='subscribedToNewsletter'
                             label='Subscribe to newsletter'
                         />
                         <Box sx={{ textAlign: { xs: 'center', md: 'start' } }}>
