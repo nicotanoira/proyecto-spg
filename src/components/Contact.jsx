@@ -133,7 +133,7 @@ export default function Contact({ myRef }) {
         <Container ref={myRef} sx={styles.container}>
             {/* TITULO */}
             <Box sx={{ flexDirection: 'column' }}>
-                <Box sx={{ textAlign: 'start' }}>
+                <Box sx={{ textAlign: 'start', marginLeft: {xs: "5%", md: "0",} }}>
                     <Typography
                         sx={{ fontSize: { xs: '1rem', md: '1.25rem' } }}
                         gutterBottom
