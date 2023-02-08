@@ -4,6 +4,13 @@ import LogoBlanco from '../assets/LogoBlanco.svg';
 import logoChat from '../assets/chat_logo-14.svg';
 
 export default function TellUsYourIdea(props) {
+
+  const handleButton = () => {
+    props.onClick();
+    props.handleContactClick();
+
+  }
+
   return (
     <Box
       sx={{
@@ -51,7 +58,7 @@ export default function TellUsYourIdea(props) {
             },
           }}
           variant='outlined'
-          onClick={() => props.handleContactClick()}
+          onClick={handleButton}
         >
           Contact Us
         </Button>

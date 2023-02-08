@@ -16,9 +16,11 @@ const useGlobalRef = initialValue => {
 function SPG() {
   const myRef = useGlobalRef(null);
   const handleContactClick = () => {
-    console.log("Se ejectuo el HANDLECLICK SCROLL", myRef)
-		myRef.current.scrollIntoView({ behavior: 'smooth', offsetTop: "-2rem"  });
+    setTimeout(() => {
+      myRef.current.scrollIntoView({ behavior: "smooth", offsetTop: "-2rem" })
+    }, 50)
 	};
+
   return (
     <BrowserRouter>
         <AppBar handleContactClick={handleContactClick} />

@@ -74,18 +74,19 @@ function DrawerAppBar(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+    <Box  sx={{ textAlign: 'center' }}>
       <Grid
         sx={{
           display: 'flex',
-          alignItems: 'flex-start',
+          alignItems: 'center',
           justifyContent: 'space-between',
+          position: "relative",
           padding: '0 1rem',
           marginTop: '10px',
         }}
       >
         {/* PIN */}
-        <Link style={{ textDecoration: 'none' }} to='/'>
+        <Link onClick={handleDrawerToggle} style={{ textDecoration: 'none' }} to='/'>
           <Typography
             variant='body1'
             sx={{ my: 1, color: 'white', left: '0', marginLeft: '5px', postition: 'static', }}
@@ -100,7 +101,26 @@ function DrawerAppBar(props) {
           sx={{
             color: 'white',
             my: 1,
-            postition: 'static',
+            justifyContent: "center",
+            position: "relative",
+            backgroundColor: "transparent",
+            outline: "0",
+            border: "0",
+            margin: "0",
+            borderRadius: "0",
+            cursor: "pointer",
+            userSelect: "none",
+            verticalAlign: "middle",
+            textDecoration: "none",
+            textAlign: "center",
+            flex: "0 0 auto",
+            fontSize: "1.5rem",
+            padding: "8px",
+            overflow: "visible",
+            marginLeft: "-12px",
+            marginRight: "16px",
+            position: "absolute",
+            right: "0",
           }}
         >
           <ArrowBackIosNewIcon fontSize='small' />
@@ -109,7 +129,7 @@ function DrawerAppBar(props) {
       <Box component='img' src={LogoBlanco} sx={{ width: '35%' }} />
       <List sx={{ marginTop: '10px' }}>
         {navItems.map((item) => (
-          <Link style={{ textDecoration: 'none' }} to={item.source}>
+          <Link onClick={handleDrawerToggle} style={{ textDecoration: 'none' }} to={item.source}>
             <ListItem key={item.name} sx={styles.button} disablePadding>
               <ListItemButton sx={{ textAlign: 'center' }}>
                 <ListItemText primary={item.name} />
@@ -124,7 +144,7 @@ function DrawerAppBar(props) {
           </ListItemButton>
         </ListItem> */}
       </List>
-      <TellUsYourIdea handleContactClick={props.handleContactClick} />
+      <TellUsYourIdea onClick={handleDrawerToggle} handleContactClick={props.handleContactClick} />
       <Box
         sx={{
           display: 'flex',
@@ -132,18 +152,20 @@ function DrawerAppBar(props) {
           marginTop: '2rem',
         }}
       >
-        <a rel="noreferrer" target='_blank' href='https://www.instagram.com/spg_digital/'>
+        <a onClick={handleDrawerToggle} rel="noreferrer" target='_blank' href='https://www.instagram.com/spg_digital/'>
           <Box component='img' src={ICON_INSTAGRAM} sx={styles.icons} />
         </a>
 
-        <a
+        <a 
+          onClick={handleDrawerToggle}
           rel="noreferrer" target='_blank'
           href='https://www.linkedin.com/company/spg-digital/about//'
         >
           <Box component='img' src={ICON_LINKEDIN} sx={styles.icons} />
         </a>
 
-        <a
+        <a 
+          onClick={handleDrawerToggle}
           rel="noreferrer" target='_blank'
           href='https://www.facebook.com/profile.php?id=100088834549930/'
         >
