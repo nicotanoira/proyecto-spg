@@ -135,13 +135,13 @@ export default function Contact({ myRef }) {
 			<Box sx={{ flexDirection: "column" }}>
 				<Box sx={{ textAlign: "start" }}>
 					<Typography
-						sx={{ fontSize: { xs: "1rem", md: "1.25rem" } }}
+						sx={{ fontSize: { xs: "1rem", md: "1.25rem" }, marginLeft: {xs: "1.1rem", md: 0} }}
 						gutterBottom
 					>
 						LET US HELP YOU
 					</Typography>
 					<Typography
-						sx={{ fontSize: { xs: "1.8rem", md: "3rem" } }}
+						sx={{ fontSize: { xs: "1.8rem", md: "3rem" }, marginLeft: {xs: "1rem", md: 0} }}
 						gutterBottom
 					>
 						TELL US YOUR IDEA
