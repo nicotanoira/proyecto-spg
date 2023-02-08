@@ -38,7 +38,7 @@ import CarouselBanner from '../components/CarouselBanner';
 import { useLocation } from "react-router-dom";
 import { useEffect } from 'react';
 
-export default function RendersAndModelServices() {
+export default function RendersAndModelServices({ myRef }) {
   const { pathname } = useLocation();
 	
 	useEffect(() => {
@@ -88,7 +88,7 @@ export default function RendersAndModelServices() {
         fourthImageDescriptionResp={fourthImageDescriptionResp}
       />
       <CarouselBanner />
-      <Contact />
+      <Contact myRef={myRef}/>
     </Box>
   );
 }

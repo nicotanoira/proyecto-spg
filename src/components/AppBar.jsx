@@ -88,7 +88,11 @@ function DrawerAppBar(props) {
 				}}
 			>
 				{/* PIN */}
-				<Link style={{ textDecoration: "none" }} to="/">
+				<Link
+					onClick={handleDrawerToggle}
+					style={{ textDecoration: "none" }}
+					to="/"
+				>
 					<Typography
 						variant="body1"
 						sx={{
@@ -133,7 +137,10 @@ function DrawerAppBar(props) {
           </ListItemButton>
         </ListItem> */}
 			</List>
-			<TellUsYourIdea handleContactClick={props.handleContactClick} />
+			<TellUsYourIdea
+				onClick={handleDrawerToggle}
+				handleContactClick={props.handleContactClick}
+			/>
 			<Box
 				sx={{
 					display: "flex",
@@ -142,6 +149,7 @@ function DrawerAppBar(props) {
 				}}
 			>
 				<a
+					onClick={handleDrawerToggle}
 					rel="noreferrer"
 					target="_blank"
 					href="https://www.instagram.com/spg_digital/"
@@ -150,6 +158,7 @@ function DrawerAppBar(props) {
 				</a>
 
 				<a
+					onClick={handleDrawerToggle}
 					rel="noreferrer"
 					target="_blank"
 					href="https://www.linkedin.com/company/spg-digital/about//"
@@ -158,6 +167,7 @@ function DrawerAppBar(props) {
 				</a>
 
 				<a
+					onClick={handleDrawerToggle}
 					rel="noreferrer"
 					target="_blank"
 					href="https://www.facebook.com/profile.php?id=100088834549930/"

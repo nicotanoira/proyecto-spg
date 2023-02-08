@@ -38,7 +38,7 @@ import {
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
-export default function Services2D() {
+export default function Services2D({ myRef }) {
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -89,7 +89,7 @@ export default function Services2D() {
         fourthImageDescriptionResp={fourthImageDescriptionResp}
       />
       <RightVideoBanner />
-      <Contact />
+      <Contact myRef={myRef}/>
     </Box>
   );
 }

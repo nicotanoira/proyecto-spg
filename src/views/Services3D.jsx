@@ -38,7 +38,7 @@ import VideoBanner from '../components/VideoBanner';
 import { useLocation } from "react-router-dom";
 import { useEffect } from 'react';
 
-export default function Services3D() {
+export default function Services3D({ myRef }) {
   const { pathname } = useLocation();
 	
 	useEffect(() => {
@@ -89,7 +89,7 @@ export default function Services3D() {
         fourthImageDescriptionResp={fourthImageDescriptionResp}
       />
       <VideoBanner />
-      <Contact />
+      <Contact myRef={myRef} />
     </Box>
   );
 }
