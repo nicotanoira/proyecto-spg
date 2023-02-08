@@ -4,7 +4,6 @@ import BannerWeb from "../assets/banner_web-01.png";
 import BannerMobile from "../assets/banner-mobile.png";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import {
-	Button,
 	IconButton,
 	Typography,
 	useMediaQuery,
@@ -19,8 +18,6 @@ export default function Banner({ handleContactClick }) {
   	
 	const styles = {
 		container: {
-			padding: "0 0 ",
-
 			position: "relative",
 			padding: 0,
 			display: "flex",
