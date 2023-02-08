@@ -39,6 +39,8 @@ const ForYou = () => {
 			textAlign: "center",
 			marginBottom: "-1rem",
 			fontSize: ".7rem",
+			display: "flex",
+			flexDirection: "column"
 		},
 		boxLowerLeftListItems: { margin: "1rem", textAlign: "end" },
 		upperTitle: { fontSize: ".9rem", fontWeight: "500" },
@@ -93,12 +95,12 @@ const ForYou = () => {
 						{/* Upper Title */}
 						<Box sx={styles.boxLeftTitle}>
 							<Typography
-								sx={{ fontSize: { xs: "17px", md: "20px" }, fontWeight: "200" }}
+								sx={{ fontSize: { xs: "17px", md: "20px" }, fontWeight: "200", alignSelf: {xs: "flex-end", md: "center"}, marginRight: "1rem" }}
 							>
 								ABOUT
 							</Typography>
 							<Typography
-								sx={{ fontSize: { xs: "35px", md: "50px" }, fontWeight: "" }}
+								sx={{ fontSize: { xs: "35px", md: "50px" }, fontWeight: "", alignSelf: {xs: "flex-end", md: "center"}, marginRight: "1rem" }}
 							>
 								SPG
 							</Typography>

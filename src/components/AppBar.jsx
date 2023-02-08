@@ -34,6 +34,7 @@ function DrawerAppBar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const { pathname } = useLocation();
+
   useEffect(() => {}, [pathname]);
 
   const handleDrawerToggle = () => {
@@ -83,10 +84,11 @@ function DrawerAppBar(props) {
           marginTop: '10px',
         }}
       >
+        {/* PIN */}
         <Link style={{ textDecoration: 'none' }} to='/'>
           <Typography
             variant='body1'
-            sx={{ my: 1, color: 'white', left: '0', marginLeft: '5px' }}
+            sx={{ my: 1, color: 'white', left: '0', marginLeft: '5px', postition: 'static', }}
           >
             SPG
           </Typography>
@@ -98,6 +100,7 @@ function DrawerAppBar(props) {
           sx={{
             color: 'white',
             my: 1,
+            postition: 'static',
           }}
         >
           <ArrowBackIosNewIcon fontSize='small' />
@@ -263,6 +266,7 @@ function DrawerAppBar(props) {
           variant='temporary'
           open={mobileOpen}
           onClose={handleDrawerToggle}
+          // handleContactClick={props.handleContactClick}
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}
