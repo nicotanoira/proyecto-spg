@@ -8,9 +8,15 @@ import RendersAndModelServices from './views/RendersAndModelServices.jsx';
 import AppBar from './components/AppBar';
 import Footer from './components/Footer';
 
+const useGlobalRef = initialValue => {
+  const ref = useRef(initialValue);
+  return ref;
+};
+
 function SPG() {
-  const myRef = useRef(null);
+  const myRef = useGlobalRef(null);
   const handleContactClick = () => {
+    console.log("Se ejectuo el HANDLECLICK SCROLL", myRef)
 		myRef.current.scrollIntoView({ behavior: 'smooth', offsetTop: "-2rem"  });
 	};
   return (

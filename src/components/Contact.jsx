@@ -89,6 +89,7 @@ export default function Contact({ myRef }) {
     const templateID = 'template_sgo6kcl';
     const publicKey = 'gkS6zUdsnIda6h8zh';
     const form = useRef();
+    
 
     const handleChange = (e) => {
         setData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
