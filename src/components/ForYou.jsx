@@ -12,9 +12,7 @@ import Member2 from "../assets/Member2.png";
 import Member3 from "../assets/FOTOS-12-14.png";
 const ForYou = () => {
 	const theme = useTheme();
-	const down600px = useMediaQuery(theme.breakpoints.down("sm"));
 	const down900px = useMediaQuery(theme.breakpoints.down("md"));
-	const down1200px = useMediaQuery(theme.breakpoints.down("lg"));
 
 	const styles = {
 		container: {
@@ -35,7 +33,6 @@ const ForYou = () => {
 			marginLeft: { xs: "-10rem" },
 		},
 		boxLeftTitle: {
-			textAlign: "right",
 			textAlign: "center",
 			marginBottom: "-1rem",
 			fontSize: ".7rem",

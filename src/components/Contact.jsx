@@ -1,9 +1,9 @@
 import emailjs from "@emailjs/browser";
 import React, { useRef, useState, useEffect } from "react";
 import { Container } from "@mui/system";
+import { LoadingButton } from "@mui/lab";
 import {
 	Box,
-	Button,
 	Checkbox,
 	FormControlLabel,
 	Snackbar,
@@ -78,12 +78,12 @@ const styles = {
 export default function Contact({ myRef }) {
 	const theme = useTheme();
 	const [open, setOpen] = useState(false);
+	const [loading, setLoading] = useState(false);
 	const [data, setData] = useState({
 		email_id: "",
 		user_name: "",
 		message: "",
 	});
-	const [disableButton, setDisableButton] = useState(true);
 	const down900px = useMediaQuery(theme.breakpoints.down("md"));
 	const serviceID = "service_tzznub5";
 	const templateID = "template_sgo6kcl";
@@ -96,17 +96,23 @@ export default function Contact({ myRef }) {
 
 	const sendEmail = (e) => {
 		e.preventDefault();
-
-		emailjs
-			.sendForm(serviceID, templateID, form.current, publicKey)
-			.then((result) => {
-				console.log(result.text);
-				setOpen(true);
-				console.log("message sent");
-			})
-			.catch((error) => {
-				console.log(error);
-			});
+		setLoading(true)
+		setTimeout(() => {
+			// emailjs
+			// 	.sendForm(serviceID, templateID, form.current, publicKey)
+			// 	.then((result) => {
+			// 		console.log(result.text);
+			// 		setOpen(true);
+			//		setLoading(false)
+			// 		console.log("message sent");
+			// 	})
+			// 	.catch((error) => {
+			// 		console.log(error);
+			// 	});
+			setLoading(false);
+			setOpen(true)
+		}, 3500);
+		return;
 	};
 
 	const handleClose = (event, reason) => {
@@ -117,17 +123,16 @@ export default function Contact({ myRef }) {
 		setOpen(false);
 	};
 
-	// useEffect(() => {
-	//     if (
-	//         data.email_id.length > 4 &&
-	//         data.user_name.length > 2 &&
-	//         data.message.length > 5
-	//     ) {
-	//         setDisableButton(false);
-	//     } else {
-	//         setDisableButton(true);
-	//     }
-	// }, [data]);
+	const validate = () => {
+		return (
+			data?.email_id.length > 4 &&
+			data?.user_name.length > 2 &&
+			data?.message.length > 5
+		);
+	}
+
+	useEffect(() => {
+	}, [loading]);
 
 	return (
 		<Container ref={myRef} sx={styles.container}>
@@ -292,7 +297,7 @@ export default function Contact({ myRef }) {
 							label="Subscribe to newsletter"
 						/>
 						<Box sx={{ textAlign: { xs: "center", md: "start" } }}>
-							<Button
+							{/* <Button
 								type="submit"
 								value="Send"
 								// disabled={disableButton}
@@ -311,7 +316,29 @@ export default function Contact({ myRef }) {
 								variant="outlined"
 							>
 								Send!
-							</Button>
+							</Button> */}
+							<LoadingButton
+								variant="outlined"
+								loading={loading}
+								value="Send"
+								sx={{
+									width: "175px",
+									borderRadius: "20px",
+									color: "black",
+									borderColor: "gray",
+									textTransform: "capitalize",
+									textAlign: "center",
+									"&:hover": {
+										borderColor: "black",
+										backgroundColor: "black",
+										color: "white",
+									},
+								}}
+								disabled={!validate()}
+								type="submit"
+							>
+								Send!
+							</LoadingButton>
 						</Box>
 						<Snackbar
 							open={open}

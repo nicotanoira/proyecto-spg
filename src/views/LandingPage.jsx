@@ -7,7 +7,7 @@ import Banner from "../components/Banner";
 import Contact from "../components/Contact";
 import ForYou from "../components/ForYou";
 import { useLocation } from "react-router-dom";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 export default function LandingPage({ myRef, handleContactClick }) {
 	const { pathname } = useLocation();
