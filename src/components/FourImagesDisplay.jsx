@@ -4,7 +4,7 @@ import { Box, Container } from "@mui/system";
 
 const styles = {
 	container: {
-		// padding: { xs: "1rem 0rem", md: "3rem 9rem" },
+		padding: { xs: "0", md: "3rem 9rem" },
 		display: "flex",
 		flexDirection: "column",
 		alignItems: "center",

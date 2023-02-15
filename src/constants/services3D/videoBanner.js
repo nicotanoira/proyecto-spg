@@ -1,5 +1,5 @@
 // Video
-const video3D = "https://www.youtube.com/watch?v=Yu7myWY8tVU&ab_channel=ConstanzaAgnoletti";
+const video3D = "https://www.youtube.com/watch?v=sLZK0UmGYXI";
 
 // Text
 const company = "SEARAY"
