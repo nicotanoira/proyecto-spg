@@ -85,9 +85,9 @@ export default function Contact({ myRef }) {
 		message: "",
 	});
 	const down900px = useMediaQuery(theme.breakpoints.down("md"));
-	const serviceID = "service_tzznub5";
-	const templateID = "template_sgo6kcl";
-	const publicKey = "gkS6zUdsnIda6h8zh";
+	const serviceID = process.env.SERVICE_ID;
+	const templateID = process.env.TEMPLATE_ID;
+	const publicKey = process.env.PUBLIC_KEY;
 	const form = useRef();
 
 	const handleChange = (e) => {
